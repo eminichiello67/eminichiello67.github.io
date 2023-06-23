@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diffeological Spaces, Part 1 | Emilio Minichiello</title>
+    <meta name="author" content="Emilio  Minichiello">
+    <meta name="description" content="The inaugural post! What is a diffeological space?">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://eminichiello67.github.io/blog/2023/diffeological_spaces_1/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class=" ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm sticky-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/">Emilio Minichiello</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">research</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/talks/">talks</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Diffeological Spaces, Part 1</h1>
+    <p class="post-meta">June 21, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/diffeological-spaces">
+          <i class="fas fa-hashtag fa-sm"></i> diffeological_spaces</a>  
+          
+        ·  
+        <a href="/blog/category/sample-posts">
+          <i class="fas fa-tag fa-sm"></i> sample-posts</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>For the first post on my blog, I thought it only appropriate to get started on some posts about diffeological spaces. This is the main subject of study in my PhD research, and will be the topic of my thesis. So in this post, I want to answer the question “What the hell is a diffeological space, and why should I care?”</p>
+
+<p>Okay, so that’s actually two questions, and I will handle the second one (“why should I care?”) first. There are actually many different ways to approach this question, and rather than list a bunch of them, I’ll pick one for this post.</p>
+
+<p>So imagine you are a differential geometer. Your research revolves around finite dimensional smooth manifolds, well behaved mathematical objects with a long history (something like 200 years) of study. You know that whatever tools you need, there will be something in the enormous toolbox of classical differential geometry to suit your needs. Hell, partitions of unity probably get you most of the way.</p>
+
+<p>One day you come across some kind of smooth space, maybe a group of diffeomorphisms, or possibly an orbifold of some kind, which is not a finite dimensional smooth manifold! You want to prove some theorems about this misbehaving space, but when you flip through your textbooks on classical differential geometry, there’s nothing! All of its theorems are about finite dimensional smooth manifolds. You glance over at the dusty tome on your shelf about Banach manifolds, with its hundreds of pages of hardcore functional analysis, and cower in fear.</p>
+
+<p>Okay, maybe that’s a little dramatic. But its something that happens all the time in differential geometry. The truth is, modern differential geometry wishes to study all kinds of crazy spaces that are not finite dimensional smooth manifolds. Yet, the way these crazy spaces are usually dealt with is in an ad hoc manner, and sometimes require lots of functional analysis. When a new kind of crazy space comes along, and we wish to study it, none of the tools we’ve developed thus far will help us. We need to redefine all the concepts of differential geometry we’d like to use on this new kind of crazy space.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/domain_of_diffeology.png" alt="domain of diffeology" width="500"></p>
+  <figcaption>Figure 1: from <a href="http://math.huji.ac.il/~piz/documents/AITD.pdf" rel="external nofollow noopener" target="_blank">Introduction to Diffeology</a>, by Patrick Iglesias-Zemmour</figcaption>
+</figure>
+</div>
+
+<p>Diffeology is a new, modern framework for differential geometry that says “enough is enough, we need a big box of smooth spaces that includes manifolds and all kinds of crazy spaces us modern differential geometers care about, and we need a uniform way of reasoning about these spaces, and extending our old theorems to them.” This might sound like wishful thinking. What mathematics will guide us in this new world, far out from our cozy land of Euclidean spaces and tori? That tool is <strong>Category Theory</strong>.</p>
+
+<p>You’ve probably heard about category theory already if you are looking at this blog, so I won’t bother trying to explain what it is, as any attempts by myself to do so would probably be embarassing anyway. Why category theory matters here is because there is a category staring us in the face. That category is \(\mathsf{Man}\), the category whose objects are finite dimensional smooth manifolds and whose morphisms are smooth functions between them.</p>
+
+<p>This category <strong>sucks</strong>!</p>
+
+<p>Indeed, the category \(\mathsf{Man}\) has finite products, transverse pullbacks and a few colimits (but noticeably not any coproducts between manifolds of different dimension!). This is not enough for the working category theorist or really for the working geometer. We want to glue things together willy-nilly, like for instance, this is my favorite example, take two copies of the real line, and glue them together at the origin. We’ll call this space the Axes.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/axes.png" alt="axes" width="300"></p>
+  <figcaption>Figure 2: Axes, the result of gluing two copies of \(\mathbb{R}\) at the origin.</figcaption>
+</figure>
+</div>
+
+<p>This is not a manifold! If it were, then it would be the colimit of the following diagram in \(\mathsf{Man}\).</p>
+
+\[0 \rightrightarrows \mathbb{R} \sqcup \mathbb{R},\]
+
+<p>where each map is the inclusion of the origin into either the left or right copy of \(\mathbb{R}\). But c’mon now, this is a simple space! We should be able to have the usual concepts of differential geometry (tangent spaces, bundles, deRham cohomology, etc.) apply to this thing!</p>
+
+<p>Diffeology is an attempt to do just this. It provides us with a category, \(\mathsf{Diff}\), whose objects are diffeological spaces, which is complete, cocomplete, and locally presentable. If you don’t know what that means exactly, don’t worry about it. The point is that it is a wayyy better category than \(\mathsf{Man}\), it lets us glue stuff together however we like. Our friend the Axes is an object in this category, as are all finite dimensional smooth manifolds, and thus the diagram above can be considered in \(\mathsf{Diff}\), and its colimit is precisely Axes!</p>
+
+<p>This was a super rough, motivational post. I’ll be back next time to delve into some more motivation and some of the history of diffeological spaces.</p>
+
+
+    </div>
+  </article>
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Emilio  Minichiello. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+Last updated: June 23, 2023.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
