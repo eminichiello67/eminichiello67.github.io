@@ -4,7 +4,7 @@ title:  Diffeological Spaces, Part 1
 date:   June 21, 2023
 description: The inaugural post! What is a diffeological space?
 tags: diffeological_spaces
-categories: sample-posts
+categories: math
 ---
 
 For the first post on my blog, I thought it only appropriate to get started on some posts about diffeological spaces. This is the main subject of study in my PhD research, and will be the topic of my thesis. So in this post, I want to answer the question "What the hell is a diffeological space, and why should I care?" 
