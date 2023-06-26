@@ -1,13 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-26T14:06:09+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">Diffeological Spaces, Part 2</title><link href="https://eminichiello67.github.io/blog/2023/diffeological_spaces_2/" rel="alternate" type="text/html" title="Diffeological Spaces, Part 2" /><published>2023-06-23T00:00:00+00:00</published><updated>2023-06-23T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2023/diffeological_spaces_2</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2023/diffeological_spaces_2/"><![CDATA[<p>Let’s dive into the history of diffeological spaces.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-26T23:43:24+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">Diffeological Spaces, Part 2</title><link href="https://eminichiello67.github.io/blog/2023/diffeological_spaces_2/" rel="alternate" type="text/html" title="Diffeological Spaces, Part 2" /><published>2023-06-23T00:00:00+00:00</published><updated>2023-06-23T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2023/diffeological_spaces_2</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2023/diffeological_spaces_2/"><![CDATA[<p>Let’s dive into the history of diffeological spaces. Note that this is a history very biased towards my interests in diffeology and leaves out many important developments in the theory.</p>
+
+<ul>
+  <li>(1973): Kuo-Tsai Chen wrote a <a href="https://www.jstor.org/stable/1970846?origin=crossref">paper</a> where he introduced Chen spaces, a class of smooth spaces very similar to diffeological spaces, for the purpose of proving a “loop space deRham Theorem” (his words). This Theorem states that one can calculate the cohomology of the loop space of a manifold using a technique called “iterated integrals.” The important point here is being able to define differential forms on the loop space of a manifold, which is almost never a finite dimensional smooth manifold. While this is not directly relevant<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> to diffeological spaces, it shows that such ideas about generalized smooth spaces were “in the air.”</li>
+</ul>
+
+<ul>
+  <li>(1980): Jean-Marie Souriau wrote a <a href="https://link.springer.com/chapter/10.1007/bfb0089728">paper</a> where he introduced diffeological groups. His motivation was based in defining certain infinite dimensional smooth groups (such as groups of diffeomorphisms or symplectomorphisms) appearing in symplectic geometry.</li>
+</ul>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/souriau.jpeg" alt="axes" width="250" /></p>
+  <figcaption>Figure 1: Jean-Marie Souriau.</figcaption>
+</figure>
+</div>
+
+<ul>
+  <li>(1983): Souriau’s students Patrick Iglesias-Zemmour (PIZ) and Paul Donato write <a href="http://math.huji.ac.il/~piz/documents/EDGDFISLT.pdf">“Exemple de groupes différentiels : flots irrationnels sur le
+tore”</a>, which studies what will become the most famous example of a diffeological space, the Irrational Torus. Later that year, Souriau gives the first general definition of a diffeological space in his paper <a href="http://math.huji.ac.il/~piz/documents-others/JMS-GDEPM-1983.pdf">“Groupes Differentiels Et Physique Mathematique”</a>.</li>
+</ul>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/iglesias-zemmour.jpeg" alt="axes" width="250" /></p>
+  <figcaption>Figure 2: Patrick Iglesias-Zemmour.</figcaption>
+</figure>
+</div>
 
 <ul>
   <li>
-    <p>First, some prehistory: In 1973, Kuo-Tsai Chen wrote a <a href="https://www.jstor.org/stable/1970846?origin=crossref">paper</a> where he introduced Chen spaces, a class of smooth spaces very similar to diffeological spaces, for the purpose of proving a “loop space deRham Theorem” (his words). This Theorem states that one can calculate the cohomology of the loop space of a manifold using a technique called “iterated integrals.” The important point here is being to define differential forms on the loop space of a manifold, which is almost never a finite dimensional smooth manifold.</p>
+    <p>(1988): PIZ writes a <a href="http://math.huji.ac.il/~piz/documents/BCCED.pdf">preprint</a> showing that there is an obstruction between Cech cohomology and deRham cohomology for diffeological spaces given by the diffeological principal \(\mathbb{R}\)-bundles with connection. It is never published.</p>
   </li>
   <li>
-    <p>(198)</p>
+    <p>(Late 1980s-2000s): PIZ develops a large amount of the theory of diffeological spaces in his thesis and several papers throughout this period. There are a couple of papers from other people, but overall not a large amount of activity.</p>
   </li>
-</ul>]]></content><author><name></name></author><category term="sample-posts" /><category term="diffeological_spaces" /><summary type="html"><![CDATA[Some history of diffeological spaces.]]></summary></entry><entry><title type="html">Diffeological Spaces, Part 1</title><link href="https://eminichiello67.github.io/blog/2023/diffeological_spaces_1-copy/" rel="alternate" type="text/html" title="Diffeological Spaces, Part 1" /><published>2023-06-21T00:00:00+00:00</published><updated>2023-06-21T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2023/diffeological_spaces_1%20copy</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2023/diffeological_spaces_1-copy/"><![CDATA[<p>For the first post on my blog, I thought it only appropriate to get started on some posts about diffeological spaces. This is the main subject of study in my PhD research, and will be the topic of my thesis. So in this post, I want to answer the question “What the hell is a diffeological space, and why should I care?”</p>
+  <li>
+    <p>(2009): Baez and Hoffnung prove that diffeological spaces are precisely concrete sheaves on the site of open subsets of euclidean spaces in their paper <a href="https://arxiv.org/abs/0807.1704">“Convenient Categories of Smooth Spaces.”</a> This provides an important bridge connecting diffeology to sheaf theory.</p>
+  </li>
+  <li>
+    <p>(2013): PIZ publishes the first (and currently only) textbook on diffeology, appropriately named <a href="https://www.google.com/books/edition/Diffeology/Nb0xAAAAQBAJ?hl=en">“Diffeology.”</a> This helps attract a new generation of mathematicians to the subject.</p>
+  </li>
+  <li>
+    <p>(2010s): There is a huge influx of interest in diffeology. Papers are written about diffeology with connections to <a href="https://arxiv.org/abs/0911.3212">mathematical physics</a>, <a href="https://arxiv.org/abs/1309.3001">Lie groupoid theory</a>, <a href="https://arxiv.org/abs/0903.2871">foliations</a>, <a href="https://arxiv.org/abs/1311.6394">homotopy theory</a>, and more. Some particularly important papers are written in this period.</p>
+    <ul>
+      <li>Two definitions of tangent spaces, the internal and external, are given for diffeological spaces in <a href="https://arxiv.org/abs/1411.5425">“Tangent Spaces and Tangent Bundles for Diffeological Spaces.”</a> by Christensen and Wu. They are shown to be isomorphic for manifolds, and agree with the usual definition of tangent space. They are shown not to agree in general, and many fascinating examples are given.</li>
+      <li>A compactly generated model structure<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> is proven to exist for diffeological spaces by Kihara in <a href="https://arxiv.org/abs/1605.06794">“Model category for Diffeological Spaces.”</a> In order to make this model structure work, Kihara alters the diffeology on simplices.</li>
+      <li>A deep study of diffeological vector spaces is made in <a href="https://arxiv.org/abs/1703.07564">“Diffeological Vector Spaces”</a> by Christensen and Wu. Many new fascinating examples of misbehaving diffeological spaces are given.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <p>(2021): Out of the pandemic sprouts the Monthly Global Diffeology Seminar and a website hub <a href="https://diffeology.net/">diffeology.net</a> for everything diffeology.</p>
+  </li>
+  <li>
+    <p>(2020s): With the start of the new decade comes a newly energized and diverse community of diffeologists. Some notable papers are:</p>
+    <ul>
+      <li>In <a href="https://arxiv.org/abs/2210.12845">“Projective model structures on diffeological spaces and smooth sets and the smooth Oka principle”</a>, Pavlov settles in the negative a long-standing conjecture, he proves that there does not exist a model structure on diffeological spaces that is right transferred from the Kan-Quillen model structure on simplicial sets. Instead, he proves the existence of a right transferred model structure on all sheaves on \(\mathsf{Cart}\), which the category of diffeological spaces is a full subcategory of.</li>
+      <li>Two important papers on diffeological groupoids are written, <a href="https://arxiv.org/abs/2007.09901">“Diffeological Morita Equivalence”</a> by van der Schaaf and <a href="https://arxiv.org/abs/2206.12730">“Bicategories of Diffeological Groupoids”</a> by Watts, providing a solid framework for future work generalizing Lie groupoid theory.</li>
+      <li>In <a href="https://arxiv.org/abs/2301.02583">“Elastic Diffeological Spaces”</a> by Blohmann, a subclass of diffeological spaces, known as elastic diffeological spaces, is shown to admit a tangent category structure. This implies that elastic diffeological spaces have a Lie algebra structure on their set of vector fields, providing a “Cartan Calculus” for elastic diffeological spaces. This sets up a powerful framework for future work in symplectic geometry.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>(2023): PIZ finally publishes his paper <a href="https://link.springer.com/article/10.1007/s11856-023-2486-8">“Cech-deRham bicomplex in diffeology”</a> on the Cech-deRham obstruction for diffeological spaces that was originally written in 1988.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup></li>
+</ul>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>However, Iglesias-Zemmour writes in his <a href="http://math.huji.ac.il/~piz/documents/AITD.pdf">Introduction to Diffeology</a> (where I obtained much of this history) that diffeological spaces were “built on the model” of Chen spaces. Later work by <a href="https://arxiv.org/abs/0802.2225">Stacey</a> and <a href="https://arxiv.org/abs/0807.1704">Baez-Hoffnung</a> showed how Chen spaces are directly comparable to diffeological spaces. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Another model structure was proven to exist on diffeological spaces in <a href="https://arxiv.org/abs/2011.12842">“A model structure on diffeological spaces, I”</a>, though it took many years to develop and Kihara’s help in amending previous proofs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>I can’t help but mention that at the time of writing, there are four different versions of Cech cohomology for diffeological spaces in the literature. Indeed, there is PIZ’s, defined in his paper above. There is Krepski, Watts and Wolbert’s diffeological Cech cohomology given in <a href="https://arxiv.org/abs/2111.01032">“Sheaves, principal bundles, and Čech cohomology for diffeological spaces”</a>. There is my version of Cech cohomology for diffeological spaces defined in <a href="https://arxiv.org/abs/2202.11023">“Diffeological Principal Bundles and Principal Infinity Bundles”</a> which is called \(\infty\)-stack cohomology. Finally there is Ahmadi’s version of diffeological Cech cohomology given in <a href="https://arxiv.org/abs/2303.03251">“Diffeological Cech Cohomology.”</a> It is currently an open question as to whether any of these cohomologies agree for all diffeological spaces. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="math" /><category term="diffeological_spaces" /><summary type="html"><![CDATA[Some history of diffeological spaces.]]></summary></entry><entry><title type="html">Diffeological Spaces, Part 1</title><link href="https://eminichiello67.github.io/blog/2023/diffeological_spaces_1-copy/" rel="alternate" type="text/html" title="Diffeological Spaces, Part 1" /><published>2023-06-21T00:00:00+00:00</published><updated>2023-06-21T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2023/diffeological_spaces_1%20copy</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2023/diffeological_spaces_1-copy/"><![CDATA[<p>For the first post on my blog, I thought it only appropriate to get started on some posts about diffeological spaces. This is the main subject of study in my PhD research, and will be the topic of my thesis. So in this post, I want to answer the question “What the hell is a diffeological space, and why should I care?”</p>
 
 <p>Okay, so that’s actually two questions, and I will handle the second one (“why should I care?”) first. There are actually many different ways to approach this question, and rather than list a bunch of them, I’ll pick one for this post.</p>
 
@@ -47,4 +124,4 @@
 
 <p>Diffeology is an attempt to do just this. It provides us with a category, \(\mathsf{Diff}\), whose objects are diffeological spaces, which is complete, cocomplete, and locally presentable. If you don’t know what that means exactly, don’t worry about it. The point is that it is a wayyy better category than \(\mathsf{Man}\), it lets us glue stuff together however we like. Our friend the Axes is an object in this category, as are all finite dimensional smooth manifolds, and thus the diagram above can be considered in \(\mathsf{Diff}\), and its colimit is precisely Axes!</p>
 
-<p>This was a super rough, motivational post. I’ll be back next time to delve into some more motivation and some of the history of diffeological spaces.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="diffeological_spaces" /><summary type="html"><![CDATA[The inaugural post! What is a diffeological space?]]></summary></entry></feed>
+<p>This was a super rough, motivational post. I’ll be back next time to delve into some more motivation and some of the history of diffeological spaces.</p>]]></content><author><name></name></author><category term="math" /><category term="diffeological_spaces" /><summary type="html"><![CDATA[The inaugural post! What is a diffeological space?]]></summary></entry></feed>
