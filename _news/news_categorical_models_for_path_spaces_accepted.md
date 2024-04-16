@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Categorical Models for Path Spaces](https://arxiv.org/abs/2201.03046) is accepted into Advances in Mathematics!
+[Categorical Models for Path Spaces](https://www.sciencedirect.com/science/article/abs/pii/S0001870823000415) is accepted into [Advances in Mathematics](https://www.sciencedirect.com/journal/advances-in-mathematics)!
