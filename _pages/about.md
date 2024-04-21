@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: flipped_gooder_phot.jpg
+  image: better_photo.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>Location: New York City</p>
