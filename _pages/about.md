@@ -19,10 +19,6 @@ social: true  # includes social icons at the bottom of the page
 
 Hello!
 
-My name is Emilio Minichiello, I am a math PhD student at the CUNY Graduate Center, and my advisor is [Mahmoud Zeinalian](https://www.zeinalian.com/).
-
-I also work part time at [Conexus AI](https://conexus.com/) doing research related to categorical database theory.
-
-My work during my PhD has been at the intersection of Differential Geometry, Homotopy Theory and Category Theory. My focus has been on studying diffeological spaces using higher stacks. 
+My name is Emilio Minichiello, I am a mathematician working on categorical database theory at [Conexus AI](https://conexus.com/). I got my PhD in pure mathematics at the CUNY Graduate Center, studying the intersection of category theory and differential geometry. My thesis is composed of [this paper](https://arxiv.org/abs/2202.11023) and [this paper](https://arxiv.org/abs/2401.09400), on applying homotopical and categorical methods to diffeological spaces. [Mahmoud Zeinalian](https://www.zeinalian.com/) was my advisor.
 
 You can reach me best at [eminichiello67@gmail.com](mailto:eminichiello67@gmail.com).
