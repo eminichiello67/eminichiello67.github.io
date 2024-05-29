@@ -12,7 +12,7 @@ The purpose of this page is to collect and organize some of the vast literature 
 There are many papers on categorical database theory, but two research programs stand out in particular: the Functorial Data Model of Spivak, Wisnesky and the EASIK (Sketch Data Model) of Rosebrugh, Johnson et al.
 
 
-This list was helped out a ton by these [slides](https://www.appliedcategorytheory.org/wp-content/uploads/2017/09/Rosebrugh-Implementing-database-design-and-manipulation-categorically.pdf) by Robert Rosebrugh.
+This list was helped out a ton by these [slides]("codd1970.pdf) by Robert Rosebrugh.
 
 Database theory proper starts with:
 * Codd, (1970) [A Relational Model of Data for Large Shared Data Banks](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf).
@@ -21,7 +21,9 @@ A decade later, the view-update problem is formalized in Bancilhon, Spyratos (19
 
 
 The Rosebrugh, Johnson Program:
-
+* 
+Johnson, Rosebrugh (2002) - [Sketch Data Models, Relational Schema and
+Data Specification](https://www.mta.ca/~rrosebru/articles/sdmrsds.pdf). Compares the Relational Model and the Sketch Data Model. Compares the "data specficiations" Sketches model of Piessens-Steegmans and the Sketch Data Model.
 
 
 The Spivak-Wisnesky Program:
