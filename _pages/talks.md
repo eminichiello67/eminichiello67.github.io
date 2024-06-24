@@ -7,6 +7,7 @@ nav: true
 nav_order: 2
 ---
 
+* Presenting Profunctors (2024), NYC Category Theory Seminar - [Video](https://www.youtube.com/watch?v=0bquvu-kWRA&t=3203s), [Slides]({% link assets/slides/slides_presentingprofunctors.pdf %})
 * A Mathematical Model for Package Management Systems (2023) - [Video](https://www.youtube.com/watch?v=tbygkBD2dHc&t=43s)
 * Diffeological Principal Bundles and Principal Infinity Bundles (2023) – [Slides](https://drive.google.com/file/d/1BbGaYnPOLn8CZGGBq3Khs44ztLSESGl2/view)
 * Introduction to Diffeological Spaces (2022): – [Slides](https://drive.google.com/file/d/1laorxybBP3UQYgtbtdx0gA7vqMvBdaix/view)
