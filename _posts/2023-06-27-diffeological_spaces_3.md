@@ -30,6 +30,11 @@ $$ \mathcal{D}_{(-)} : \mathsf{Man} \hookrightarrow \mathsf{Diff}.$$
 Intuitively, this means that we lose nothing by considering manifolds as diffeological spaces via their manifold diffeology. We could also characterize finite dimensional smooth manifolds as those diffeological spaces which have local diffeomorphisms to a fixed $$\mathbb{R}^n$$ and satisfy some additional conditions. 
 
 
+I think this is a really powerful, and quite different way to think about smooth spaces. For smooth manifolds, we typically fix an atlas (a collection of compatible charts) and root around in the charts, making constructions and then checking that they are independent of the chart we chose. Much of the machinery of an introductory class in differential geometry is devoted to developing technology that hides the complexity of this "chartwise" thinking. 
+
+For diffeological spaces, we don't think about charts at all. Instead we do constructions "plotwise." It might not sound like we've really achieved all that much, just substituted chart for plot, but in doing so, we've actually obtained something really interesting and different.
+
+
 
 ---
 [^1]: The astute reader will note that this is not the definition of a diffeogical space as given in the ["Diffeology textbook"](https://www.google.com/books/edition/Diffeology/Nb0xAAAAQBAJ?hl=en). However, in [my paper](https://arxiv.org/abs/2202.11023), I prove that the category of diffeological spaces as given in the Diffeology textbook and the category of diffeological spaces as given in the definition above are equivalent. The above definition is far more convenient to work with for my purposes.
