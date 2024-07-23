@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: better_photo.png
+  image: profile_pics/better_photo.png
   image_circular: false # crops the image to make it circular
   address: >
     <p>Location: New York City</p>
@@ -19,8 +19,12 @@ social: true  # includes social icons at the bottom of the page
 
 Hello!
 
-My name is Emilio Minichiello, I am a mathematician working on categorical database theory at [Conexus AI](https://conexus.com/). 
+My name is Emilio Minichiello (he/him), I am a mathematician based in New York City. I like to apply category theory to other areas of mathematics and science, like differential geometry and database theory.
 
-I got my PhD in pure mathematics at the CUNY Graduate Center, studying the intersection of category theory and differential geometry. My thesis is composed of [this paper](https://arxiv.org/abs/2202.11023) and [this paper](https://arxiv.org/abs/2401.09400), on applying homotopical and categorical methods to diffeological spaces. [Mahmoud Zeinalian](https://www.zeinalian.com/) was my advisor.
+Currently, I am an Assistant Professor in the [Mathematics department](https://www.citytech.cuny.edu/mathematics/#) at [CUNY CityTech](https://www.citytech.cuny.edu/). 
 
-You can reach me best at [eminichiello67@gmail.com](mailto:eminichiello67@gmail.com).
+Before that I was a pure mathematics PhD student at the CUNY Graduate Center, studying the intersection of category theory and differential geometry. My PhD thesis was [Higher Diffeology Theory](https://academicworks.cuny.edu/gc_etds/5759/), applying homotopical and categorical methods to [diffeological spaces](https://math.huji.ac.il/~piz/documents/AITD.pdf). My advisor was [Mahmoud Zeinalian](https://www.zeinalian.com/). 
+
+During the last year of my PhD I also worked part-time at [Conexus AI](https://conexus.com/) studying [Categorical Database Theory](https://www.categoricaldata.net/).
+
+The best way to reach me is by email [eminichiello67@gmail.com](mailto:eminichiello67@gmail.com).

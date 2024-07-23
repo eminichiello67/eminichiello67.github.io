@@ -18,7 +18,7 @@ Let's dive into the history of diffeological spaces. Note that this is a history
 
 <div align="center">
 {% figure caption:"Figure 1: Jean-Marie Souriau." %}
-<img src="../../../assets/img/souriau.jpeg" alt="axes" width="250"/>
+<img src="../../../assets/img/posts/diffeology/souriau.jpeg" alt="axes" width="250"/>
 {% endfigure %}
 </div>
 
@@ -27,7 +27,7 @@ tore”](http://math.huji.ac.il/~piz/documents/EDGDFISLT.pdf), which studies wha
 
 <div align="center">
 {% figure caption:"Figure 2: Patrick Iglesias-Zemmour." %}
-<img src="../../../assets/img/iglesias-zemmour.jpeg" alt="axes" width="250"/>
+<img src="../../../assets/img/posts/diffeology/iglesias-zemmour.jpeg" alt="axes" width="250"/>
 {% endfigure %}
 </div>
 

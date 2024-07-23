@@ -19,7 +19,7 @@ Okay, maybe that's a little dramatic. But its something that happens all the tim
 
 <div align="center">
 {% figure caption:"Figure 1: from [Introduction to Diffeology](http://math.huji.ac.il/~piz/documents/AITD.pdf), by Patrick Iglesias-Zemmour" %}
-<img src="../../../assets/img/domain_of_diffeology.png" alt="domain of diffeology" width="500"/>
+<img src="../../../assets/img/posts/diffeology/domain_of_diffeology.png" alt="domain of diffeology" width="500"/>
 {% endfigure %}
 </div>
 
@@ -33,7 +33,7 @@ Indeed, the category $$\mathsf{Man}$$ has finite products, transverse pullbacks 
 
 <div align="center">
 {% figure caption:"Figure 2: Axes, the result of gluing two copies of $$\mathbb{R}$$ at the origin." %}
-<img src="../../../assets/img/axes.png" alt="axes" width="300"/>
+<img src="../../../assets/img/posts/diffeology/axes.png" alt="axes" width="300"/>
 {% endfigure %}
 </div>
 
