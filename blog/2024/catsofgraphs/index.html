@@ -36,7 +36,7 @@
     <!-- Styles -->
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://eminichiello67.github.io/drafts/2024-07-11-catsofgraphs/">
+    <link rel="canonical" href="https://eminichiello67.github.io/blog/2024/catsofgraphs/">
 
     <!-- Dark Mode -->
     
@@ -75,8 +75,8 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/blog/">blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Other pages -->
@@ -87,7 +87,13 @@
                 <a class="nav-link" href="/talks/">talks</a>
               </li>
               <li class="nav-item ">
+                <a class="nav-link" href="/compassion/">compassion</a>
+              </li>
+              <li class="nav-item ">
                 <a class="nav-link" href="/notes/">notes</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">teaching</a>
               </li>
 
               <!-- Toogle theme mode -->
@@ -124,8 +130,10 @@
     <p class="post-tags">
       <a href="/blog/2024"> <i class="fas fa-calendar fa-sm"></i> 2024 </a>
         ·  
-        <a href="/blog/tag/graphs-category-theory">
-          <i class="fas fa-hashtag fa-sm"></i> graphs, category-theory</a>  
+        <a href="/blog/tag/graphs">
+          <i class="fas fa-hashtag fa-sm"></i> graphs,</a>  
+          <a href="/blog/tag/category-theory">
+          <i class="fas fa-hashtag fa-sm"></i> category-theory</a>  
           
         ·  
         <a href="/blog/category/math">
@@ -172,7 +180,7 @@
       <td>loop graph</td>
       <td>No</td>
       <td>No</td>
-      <td>$\leq 1$</td>
+      <td>\(\leq 1\)</td>
     </tr>
     <tr>
       <td>pseudograph</td>
@@ -196,7 +204,7 @@
       <td>directed loop graph</td>
       <td>Yes</td>
       <td>No</td>
-      <td>$\leq 1$</td>
+      <td>\(\leq 1\)</td>
     </tr>
     <tr>
       <td>directed pseudograph</td>
@@ -211,35 +219,75 @@
 
 <p>Category theorists are probably most used to working with directed pseudographs, since categories are directed pseudographs with extra structure (identity loops and composition).</p>
 
-<p>Right off the bat, let us note that the category $\mathsf{DPGrph}$ of directed pseudographs is super nice. Indeed, if we let $(* \rightrightarrows <em>)$ denote the category with two objects $E$ and $V$ and two non-identity morphisms $s, t : E \to V$, then a directed pseudograph is the same thing as a functor $G : (</em> \rightrightarrows <em>) \to \mathbf{Set}$. Thus $\mathsf{DPGrph} = \mathbf{Set}^{</em> \rightrightarrows *}$ is a Grothendieck topos, in particular it is a copresheaf category, really the nicest kind of category around. Doing any sort of construction in this category should be dumb simple, as (co)limits in copresheaf categories are computed objectwise<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
+<p>Right off the bat, let us note that the category \(\mathsf{DPGrph}\) of directed pseudographs is super nice. Indeed, if we let \((* \rightrightarrows *)\) denote the category with two objects \(E\) and \(V\) and two non-identity morphisms \(s, t : E \to V\), then a directed pseudograph is the same thing as a functor \(G : (* \rightrightarrows *) \to \mathbf{Set}\). Thus \(\mathsf{DPGrph} = \mathbf{Set}^{* \rightrightarrows *}\) is a Grothendieck topos, in particular it is a copresheaf category, really the nicest kind of category around. Doing any sort of construction in this category should be dumb simple, as (co)limits in copresheaf categories are computed objectwise<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
 
-<p>So let’s get into the math. By a simple graph $G$, what I mean is a set $V(G)$ of <strong>vertices</strong> equipped with a binary, irreflexive, symmetric relation $(E(G) \subseteq V(G)^2)$, called the <strong>edge relation</strong>. So if $u,v \in V$, then $(u,v) \in E(G)$, which we will also write as $uv$ or $u \sim v$ if there is an edge connecting $u$ and $v$.</p>
+<p>So let’s get into the math. By a simple graph \(G\), what I mean is a set \(V(G)\) of <strong>vertices</strong> equipped with a binary, irreflexive, symmetric relation \((E(G) \subseteq V(G)^2)\), called the <strong>edge relation</strong>. So if \(u,v \in V\), then \((u,v) \in E(G)\), which we will also write as \(uv\) or \(u \sim v\) if there is an edge connecting \(u\) and \(v\).</p>
 
-<p>A map $f: G \to G’$ of simple graphs is a function $V(f): V(G) \to V(G’)$ such that if $uv \in E(G)$, then $f(u)f(v) \in E(G’)$. This gives us the category $\mathsf{Grph}$ of simple graphs.</p>
+<p>A map \(f: G \to G'\) of simple graphs is a function \(V(f): V(G) \to V(G')\) such that if \(uv \in E(G)\), then \(f(u)f(v) \in E(G')\). This gives us the category \(\mathsf{Grph}\) of simple graphs.</p>
 
-<p>But wait…this isn’t actually what we want! There’s a small, kind of annoying thing we notice right away from this definition. With the above definition, the two inclusions $* \to [<em>-</em>]$ of a simple graph with one vertex and no edges into the simple graph with two vertices and one edge are morphisms, which is good. However, there is <strong>no</strong> morphism in the other direction $[<em>-</em>] \to *$. This is because if we call the first graph $G$ with vertices $u$ and $v$ and the second graph $G’$ with single vertex $w$, then $uv \in E(G)$, but since $E(G’)$ is irreflexive, $ww \notin E(G’)$. Thus the function sending $u$ and $v$ to $w$ does not define a morphism of simple graphs.</p>
+<p>But wait…is this actually what we want? There’s a small, kind of annoying thing we notice right away from this definition. With the above definition, the two inclusions \(* \to [*-*]\) of a simple graph with one vertex and no edges into the simple graph with two vertices and one edge are morphisms, which is good. However, there is <strong>no</strong> morphism in the other direction \([*-*] \to *\). This is because if we call the first graph \(G\) with vertices \(u\) and \(v\) and the second graph \(G'\) with single vertex \(w\), then \(uv \in E(G)\), but since \(E(G')\) is irreflexive, \(ww \notin E(G')\). Thus the function sending \(u\) and \(v\) to \(w\) does not define a morphism of simple graphs.</p>
 
-<p>So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don’t know, I’d like to consider some cases where you can collapse edges, that seems more natural and fun to me.</p>
+<p>So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don’t know, I’d like to consider some cases where you can collapse edges, that seems more natural and fun to me<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">3</a></sup>.</p>
 
-<p>Alright, so let’s redo this. Lets redefine a simple graph $G$ to consist of a set $V(G)$ of vertices and a binary, <strong>reflexive</strong>, symmetric relation $(E(G) \subseteq V(G)^2)$. So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can’t map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren’t there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges. Lets call the objects of $\mathsf{Grph}$ just <em>graphs</em> from now on.</p>
+<p>Alright, so let’s redo this. Lets redefine a simple graph \(G\) to consist of a set \(V(G)\) of vertices and a binary, <strong>reflexive</strong>, symmetric relation \((E(G) \subseteq V(G)^2)\). So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can’t map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren’t there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges. Lets call the objects of \(\mathsf{Grph}\) just <em>graphs</em> from now on.</p>
 
-<p>Let’s use the same notion we described as above for morphisms, and use the same name $\mathsf{Grph}$. Okay, now this is a nice category. I can visualize its objects easily, its got a concrete mathematical description, and its got some nice morphisms. So let’s see how to compute some limits and colimits here.</p>
+<p>Let’s use the same notion we described as above for morphisms, and use the same name \(\mathsf{Grph}\). Okay, now this is a nice category. I can visualize its objects easily, its got a concrete mathematical description, and its got some nice morphisms. So let’s see how to compute some limits and colimits here.</p>
 
-<p>Now if you check the <a href="https://ncatlab.org/nlab/show/category+of+simple+graphs" rel="external nofollow noopener" target="_blank">nlab page for simple graphs</a>, you’ll see a fancy result identifying $\mathsf{Grph}$ as a Grothendieck quasitopos, which is a very nice category. For this post, let’s just do things by hand to get a feel for this category. But from this abstract result, we know that $\mathsf{Grph}$ has all limits, colimits and be cartesian closed.</p>
+<p>Now if you check the <a href="https://ncatlab.org/nlab/show/category+of+simple+graphs" rel="external nofollow noopener" target="_blank">nlab page for simple graphs</a>, you’ll see a fancy result identifying \(\mathsf{Grph}\) as a Grothendieck quasitopos, which is a very nice category. For this post, let’s just do things by hand to get a feel for this category. But from this abstract result, we know that \(\mathsf{Grph}\) has all limits, colimits and is cartesian closed.</p>
 
-<p>First off, lets notice there is a nice functor $V : \mathsf{Grph} \to \mathbf{Set}$ that sends a graph to its set of vertices. If I have a map of graphs, then I get a map of their corresponding sets of vertices. This functor has a left adjoint $F : \mathbf{Set} \to \mathsf{Grph}$ that sends a set $S$ to the graph $F(S)$, which has $V(F(S)) = S$ and $E(F(S)) = \varnothing$<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. In other words $F(S)$ is the <strong>discrete graph</strong> on the set $S$.</p>
+<p>Note that making even small changes to this definition can have pretty drastic consequences categorically. For example, if we kept the definition before, where we weren’t allowed to smush edges, then we end up with a category that doesn’t even have all pushouts! See <a href="https://arxiv.org/abs/2104.01841" rel="external nofollow noopener" target="_blank">Spined Categories by Bumpus and Kocsis Page 7</a>.</p>
 
-<p>Okay, so $V$ is a right adjoint, so that means it preserves whatever limits exist in $\mathsf{Grph}$, and we know what limits in $\mathbf{Set}$ look like. So if we take a limit $\lim_i G_i$ of graphs, we know that $V(\lim_i G_i) \cong \lim_i V(G_i)$. So that helps us guess what the product of two graphs should be.</p>
+<p>Also note that Wikipedia considers for its <a href="https://en.wikipedia.org/wiki/Graph_homomorphism" rel="external nofollow noopener" target="_blank">definition of graph homomorphism</a> to be loop graphs with maps between them that aren’t allowed to collapse loops or edges.</p>
 
-<p>Given graphs $G$ and $H$, let $G \times H$ denote the graph with $V(G \times H) = V(G) \times V(H)$ and $E(G \times H) \subseteq V(G \times H)^2$ is the relation where $(g,h) \sim_{G \times H} (g’,h’)$ if $g \sim_G g’$ and $h \sim_H h’$. There are maps $\pi_G : G \times H \to G$ in $\mathsf{Grph}$, with $\pi_G(g,h) = g$ and $\pi_H : G \times H \to H$, with $\pi_H(g,h) = h$.</p>
+<p>First off, lets notice there is a nice functor \(V : \mathsf{Grph} \to \mathbf{Set}\) that sends a graph to its set of vertices. If I have a map of graphs, then I get a map of their corresponding sets of vertices. This functor has a left adjoint \(\text{Disc} : \mathbf{Set} \to \mathsf{Grph}\) that sends a set \(S\) to the graph \(\text{Disc}(S)\), which has \(V(\text{Disc}(S)) = S\) and \(E(\text{Disc}(S)) = \varnothing\)<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">4</a></sup>. In other words \(\text{Disc}(S)\) is the <strong>discrete graph</strong> on the set \(S\). Now \(V\) also has a right adjoint \(\text{CoDisc}: \mathbf{Set} \to \mathsf{Grph}\) which sends a set \(S\) to the graph \(\text{CoDisc}(S)\), whose set of vertices is \(S\), and where every pair of vertices is connected by an edge.</p>
 
-<p><strong>Lemma</strong>: $G \times H$ is the product of $G$ and $H$ in the category $\mathsf{Grph}$.</p>
+<p>Okay, so \(V\) has left and right adjoints, so that means it preserves whatever (co)limits exist in \(\mathsf{Grph}\), and we know what (co)limits in \(\mathbf{Set}\) look like. So if we take a (co)imit \(\lim_i G_i\) of graphs, we know that \(V(\lim_i G_i) \cong \lim_i V(G_i)\). So that helps us guess what (co)limits should be in \(\mathsf{Grph}\).</p>
 
-<p><strong>Proof</strong>: Suppose that we have maps $g : Q \to G$ and $h: Q \to H$. We want to define a map $k : Q \to G \times H$ such that $\pi_G k = g$ and $\pi_H k = h$. Let $k(q) = (g(q), h(q))$. Now this is a map of graphs, because if $q \sim q’$, then $g(q) \sim g(q’)$ and $h(q) \sim h(q’)$ since $g$ and $h$ are maps of graphs, and so $k(q) = (g(q), h(q)) \sim (g(q’),h(q’)) = k(q’)$. It is easy to check that this is the unique map such that $\pi_G k = g$ and $\pi_H k = h$, and hence is the categorical product. $\square$</p>
+<p>Given graphs \(G\) and \(H\), let \(G \times H\) denote the graph with \(V(G \times H) = V(G) \times V(H)\) and \(E(G \times H) \subseteq V(G \times H)^2\) is the relation where \((g,h) \sim_{G \times H} (g',h')\) if \(g \sim_G g'\) and \(h \sim_H h'\). There are maps \(\pi_G : G \times H \to G\) in \(\mathsf{Grph}\), with \(\pi_G(g,h) = g\) and \(\pi_H : G \times H \to H\), with \(\pi_H(g,h) = h\).</p>
+
+<p><strong>Lemma</strong>: \(G \times H\) is the product of \(G\) and \(H\) in the category \(\mathsf{Grph}\).</p>
+
+<p><strong>Proof</strong>: Suppose that we have maps \(g : Q \to G\) and \(h: Q \to H\). We want to define a map \(k : Q \to G \times H\) such that \(\pi_G k = g\) and \(\pi_H k = h\). Let \(k(q) = (g(q), h(q))\). Now this is a map of graphs, because if \(q \sim q'\), then \(g(q) \sim g(q')\) and \(h(q) \sim h(q')\) since \(g\) and \(h\) are maps of graphs, and so \(k(q) = (g(q), h(q)) \sim (g(q'),h(q')) = k(q')\). It is easy to check that this is the unique map such that \(\pi_G k = g\) and \(\pi_H k = h\), and hence is the categorical product. \(\square\)</p>
 
 <p>Now let us try coproducts.</p>
 
+<p>Given graphs \(G\) and \(H\), let \(G + H\) denote the graph with \(V(G + H) = V(G) + V(H)\) and \(E(G + H)\) is the relation where \(v \sim_{G + H} v'\) if \(v, v' \in G\) and \(v \sim_G v'\) or \(v,v' \in H\) and \(v \sim_H v'\). There are inclusion maps \(i_G : G \to G + H\) and \(i_H : H \to G + H\).</p>
+
+<p><strong>Lemma</strong>: \(G + H\) is the coproduct of \(G\) and \(H\) in the category \(\mathsf{Grph}\).</p>
+
+<p>The proof is the same idea as for products.</p>
+
+<p>I’ll also leave it to you to check that \(\varnothing\), the graph with no vertices, is the intial object in \(\mathbf{Grph}\) and \(*\), the graph with one vertex, is the terminal object in \(\mathbf{Grph}\).</p>
+
+<p>Now for pushouts. Given maps of graphs \(f: A \to B\) and \(g: A \to C\), let \(B+_A C\) denote the graph with \(V(B +_A C) = V(B) +_{V(A)} V(C)\), (i.e. \(V(B +_A C)\) is the set \(V(B) + V(C)\) quotiented by the equivalence relation \(\simeq\) where \(v \simeq w\) if there exist \(a \in V(A)\) such that \(v = f(a)\) and \(w = g(a)\)) and let \(E(B +_A C)\) be defined as follows. If \(x,y \in V(B +_A C)\), then \(x \sim_{B +_A C} y\) if there exists \(v,v' \in V(B)\) with \(v \sim_B v'\), \([v] = x\) and \([v'] = y\) or \(w,w' \in V(C)\) with \(w \sim_C w'\), \([w] = x\) and \([w'] = y\). In other words, there is an edge between \([v]\) and \([w]\) if there is some representative edge in \(B\) or \(C\).</p>
+
+<p>There are maps \(i_B : B \to B+_A C\) and \(i_C : C \to B +_A C\) given by inclusion.</p>
+
+\[\begin{CD}
+ A @&gt;g&gt;&gt; C\\
+ @VfVV @Vi_CVV \\
+ B @&gt;i_B&gt;&gt; B+_A C
+\end{CD}\]
+
+<p><strong>Lemma</strong>: \(B+_A C\) is the pushout of \(f\) and \(g\) in \(\mathsf{Grph}\).</p>
+
+<p><strong>Proof</strong>: Suppose that we have maps \(n : B \to Q\) and \(m : C \to Q\) such that \(nf = mg\). We want to define a map \(k : B+_A C \to Q\) such that \(k i_B = n\) and \(k i_C = m\). On vertices, define it as you would in \(\mathsf{Set}\), i.e. send \(x \mapsto n(x)\) if \(x = [b]\) for some \(b \in B\) and \(x \mapsto m(x)\) if \(x = [c]\) for some \(c \in C\). If \([b] = [c]\), then there exists an \(a\in A\) with \(f(a) = b\) and \(g(a) = c\), so \(n(b) = nf(a) = mg(a) = m(c)\). So our map \(k\) is well defined. If \([v] \sim_{B+_A C} [w]\), then \(k[v] \sim_Q k[w]\), because in order for \([v] \sim [w]\), there has to be some representative of the edge in \(B\) or \(C\), and \(n\) and \(m\) preserve the edges of \(B\) and \(C\) respectively. Its now not hard to see that \(k\) satisfies the necessary properties for \(B +_A C\) to be a pushout.</p>
+
+<p>Note that this is a generalization of the well-known <a href="https://en.wikipedia.org/wiki/Clique-sum" rel="external nofollow noopener" target="_blank">clique sum construction</a> in graph theory.</p>
+
+<p>Finally, let’s look at pullbacks.</p>
+
+<p>Given maps \(f : A \to B\) and \(g: A \to C\) of graphs, let \(B \times_A C\) denote the graph with \(V(B \times_A C) = V(B) \times_{V(A)} V(C)\) and with \(E(B \times_A C)\) defined as follows. We have \((b,c) \sim_{B \times_A C} (b',c')\) if \(b \sim_B b'\) and \(c \sim_C c'\).</p>
+
+<p><strong>Lemma</strong>: \(B \times_A C\) is the pullback of \(f\) and \(g\) in \(\mathsf{Grph}\).</p>
+
+<p><strong>Proof</strong>: Suppose we have maps \(n : Q \to B\) and \(m : Q \to C\) such that \(fn = gm\). We want to define a map \(k : Q \to B\times_A C\) such that \(\pi_B k = n\) and \(\pi_C k = m\). Well define \(k(q) = (n(q), m(q))\). Its now easy to check that since \(n\) and \(m\) preserve edges that \(k\) will as well, and it’s clearly unique and satisfies the required conditions.</p>
+
+<p>So the basic categorical constructions for \(\mathsf{Grph}\) are pretty straightforward and nice. It would be interesting to compare this to all these other kinds of categories of graphs!</p>
+
 <hr>
+
+<p>Fun aside that I haven’t really thought through too much: If we consider the category \(\mathsf{orGrph}\), whose objects are simple graphs with an ordering on their vertices, then we get a cosimplicial object \(K^\bullet : \mathsf{\Delta} \to \mathsf{orGrph}\) given by the cliques and inclusion or collapse maps between them. Anytime we have such a cosimplicial object in a cocomplete category, we get an adjunction \(\text{Re}: \mathsf{sSet} \rightleftarrows \mathsf{orGrph} : \text{Sing}\). In this case, if \(G\) is a graph, then \(\text{Sing}(G)\) is a simplicial set gotten by mapping cliques into \(G\). The homotopy type of \(\text{Sing}(G)\) is thus the same as the <a href="https://en.wikipedia.org/wiki/Clique_complex" rel="external nofollow noopener" target="_blank">clique complex</a> of \(G\). Neat! Then \(\text{Re}\) is like gluing cliques together according to a simplicial set “recipe.”</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
@@ -249,8 +297,11 @@
     <li id="fn:2" role="doc-endnote">
       <p>See Riehl’s <a href="https://math.jhu.edu/~eriehl/context.pdf" rel="external nofollow noopener" target="_blank">Category Theory in Context</a> Proposition 3.3.9 for a more precise description of what I mean. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>However we do lose something really important when we use these morphisms and not the more strict ones. If we let \(K^n\) denote the \(n\)-clique, i.e. the complete graph on \(n\) vertices, then with the strict morphisms that don’t collapse edges, maps of graphs \(G \to K^n\) are equivalent to \(n\)-colorings of \(G\). If we allow morphisms to collapse edges, then there are always such maps, we can just collapse everything to a single vertex for instance, so we lose the correspondence. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
     <li id="fn:3" role="doc-endnote">
-      <p>Technically it should be $E(F(S)) = \Delta_{S}$, the diagonal, i.e. the set $\Delta_S = { (s, s) \in S \times S }$ since we are asking for the edge relation to be reflexive, but going forward, let’s just ignore these “ghost edges.” <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>Technically it should be \(E(F(S)) = \Delta_{S}\), the diagonal, i.e. the set \(\Delta_S = \{ (s, s) \in S \times S \}\) since we are asking for the edge relation to be reflexive, but going forward, let’s just ignore these “ghost edges.” <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
@@ -266,7 +317,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Emilio  Minichiello. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: July 23, 2024.
+Last updated: August 16, 2024.
       </div>
     </footer>
 
