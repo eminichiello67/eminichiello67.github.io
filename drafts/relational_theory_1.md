@@ -2,8 +2,8 @@
 layout: post
 title:  Introduction to Relational Theory
 date:  N/A 
-description: The inaugural post! What is a diffeological space?
-tags: diffeological_spaces
+description: Let's learn a little basic database theory.
+tags: database_theory
 categories: math
 ---
 
