@@ -25,4 +25,4 @@ I am an Assistant Professor in the [Mathematics department](https://www.citytech
 
 During the last year of my PhD I also worked part-time at [Conexus AI](https://conexus.com/) studying [Categorical Database Theory](https://www.categoricaldata.net/).
 
-The best way to reach me is by [email](mailto:Emilio.Minichielloepstein@citytech.cuny.edu).
+The best way to reach me is by [email](mailto:Emilio.Minichielloepstein04@citytech.cuny.edu).
