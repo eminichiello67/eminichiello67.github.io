@@ -15,7 +15,7 @@ This is the class page for Fall 2024, MAT1375 - Precalculus at CUNY CityTech.
 
 **Meeting Time:** Tuesdays, Thursdays 8am - 9:40am.
 
-**Location:** ---
+**Location:** Namm Hall N-1005
 
 **Office Hours:** Tuesdays, 12:30 - 2:30pm, Namm Hall --- or by appointment.
 
@@ -27,10 +27,14 @@ This is the class page for Fall 2024, MAT1375 - Precalculus at CUNY CityTech.
 
 **Grading:** 3 exams (15% each, 45% total), 1 final (25%), in-class quizzes (20%), class participation (10%).
 
-**Homework:** I will be collecting homework, but students should be expected to present their solutions to the class at the start of the next lecture.
+**Homework:** I will not be collecting homework, but students should be expected to present their solutions to the class at the start of the next lecture.
 
 **Student Wellness:** We all experience stressful and difficult events as a normal part of life. As your instructor, I
 believe your mental health is an important part of your academic success. Success in this course depends heavily on your personal health and wellbeing. Be sure to check out the [Student Wellness Center](https://www.citytech.cuny.edu/wellness-center/) and CityTech's [Counseling Services](https://www.citytech.cuny.edu/counseling/).
+
+**Academic Integrity:**
+The instructor of the course has the authority to give a grade of F if the student submits the work of another person in a manner that
+represents their work, or knowingly permits one’s work to be submitted by another person without the instructor’s permission. For further information see the [NYCCT Student Handbook](https://www.citytech.cuny.edu/current-student/docs/StudentHandbook.pdf), pages 95-99.
 
 **[Final Exam Review](https://www.citytech.cuny.edu/mathematics/docs/review/MAT1375FinalReview.pdf)** 
 
