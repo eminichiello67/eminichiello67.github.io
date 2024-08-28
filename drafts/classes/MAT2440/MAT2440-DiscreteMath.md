@@ -21,13 +21,15 @@ This is the class page for Fall 2024, MAT2440 - Discrete Structures and Algorith
 
 **Prerequisites:** (MAT 1375 or higher) and (CST 1201 or CST 2403 or MAT 1630)
 
-**Course Information:** In this course you'll start your journey as an applied mathematician. We'll learn how to prove mathematical statements, which is really what math is all about. We'll come to understand propositional logic and set theory, the basic language of all mathematics. Then we'll move on to analyzing basic algorithms and number theory. 
+**Course Information:** In this course you'll start your journey as an applied mathematician. We'll learn how to prove mathematical statements, which is really what math is all about. We'll come to understand propositional logic and set theory, the basic language of all mathematics. Then we'll move on to analyzing basic algorithms and number theory. All the while we'll get use Python as a way to 
 
 **Textbook:** Discrete Mathematics and its Applications, 8th edition by Kenneth H. Rosen (Sections 1 - 5)
 
-**Grading:** 3 exams (15% each, 45% total), 1 final (25%), in-class quizzes (20%), class participation (10%).
+**Grading:** 3 exams (15% each, 45% total), 1 final (25%), programming assignments (20%), class participation (10%).
 
 **Homework:** I will not be collecting homework, but students should be expected to present their solutions to the class at the start of the next lecture.
+
+**Programming Assignments:** There will be at least 4 programming assignments during the course. We will use Python for these assignments. You will not need to download Python, instead you can use an online IDE like [https://www.online-python.com/](https://www.online-python.com/). We will not have time in the course to learn the basics of Python. There are tons of great, free online resources to learn Python such as [codeacademy](https://www.codecademy.com/learn/learn-python-3). 
 
 **Student Wellness:** We all experience stressful and difficult events as a normal part of life. As your instructor, I
 believe your mental health is an important part of your academic success. Success in this course depends heavily on your personal health and wellbeing. Be sure to check out the [Student Wellness Center](https://www.citytech.cuny.edu/wellness-center/) and CityTech's [Counseling Services](https://www.citytech.cuny.edu/counseling/).
