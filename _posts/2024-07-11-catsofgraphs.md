@@ -19,11 +19,11 @@ Now there's quite a bit written about this zoo of kinds of graphs, such as the t
 | - | - | - | - |
 | simple graph | No | No | No |
 | multigraph | No | Yes | No |
-| loop graph | No | No | $$\leq 1$$ |
+| loop graph | No | No | $\leq 1$ |
 | pseudograph | No | Yes | Yes |
 | directed graph | Yes | No | No |
 | directed multigraph | Yes | Yes | No |
-| directed loop graph | Yes | No | $$\leq 1$$ |
+| directed loop graph | Yes | No | $\leq 1$ |
 | directed pseudograph | Yes | Yes | Yes |
 
 **Caveat:** Pseudographs can have *multiple loops* on a vertex. We assume (directed) loop graphs can have at most *one* loop on a vertex.
@@ -34,15 +34,17 @@ Right off the bat, let us note that the category $$\mathsf{DPGrph}$$ of directed
 
 So let's get into the math. By a simple graph $$G$$, what I mean is a set $$V(G)$$ of **vertices** equipped with a binary, irreflexive, symmetric relation $$(E(G) \subseteq V(G)^2)$$, called the **edge relation**. So if $$u,v \in V$$, then $$(u,v) \in E(G)$$, which we will also write as $$uv$$ or $$u \sim v$$ if there is an edge connecting $$u$$ and $$v$$.
 
-A map $$f: G \to G'$$ of simple graphs is a function $$V(f): V(G) \to V(G')$$ such that if $$uv \in E(G)$$, then $$f(u)f(v) \in E(G')$$. This gives us the category $$\mathsf{Grph}$$ of simple graphs.
+A map $$f: G \to G'$$ of simple graphs is a function $$V(f): V(G) \to V(G')$$ such that if $$uv \in E(G)$$, then $$f(u)f(v) \in E(G')$$.
 
 But wait...is this actually what we want? There's a small, kind of annoying thing we notice right away from this definition. With the above definition, the two inclusions $$* \to [*-*]$$ of a simple graph with one vertex and no edges into the simple graph with two vertices and one edge are morphisms, which is good. However, there is **no** morphism in the other direction $$[*-*] \to *$$. This is because if we call the first graph $$G$$ with vertices $$u$$ and $$v$$ and the second graph $$G'$$ with single vertex $$w$$, then $$uv \in E(G)$$, but since $$E(G')$$ is irreflexive, $$ww \notin E(G')$$. Thus the function sending $$u$$ and $$v$$ to $$w$$ does not define a morphism of simple graphs.
 
 So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don't know, I'd like to consider some cases where you can collapse edges, that seems more natural and fun to me[^4].
 
-Alright, so let's redo this. Lets redefine a simple graph $$G$$ to consist of a set $$V(G)$$ of vertices and a binary, **reflexive**, symmetric relation $$(E(G) \subseteq V(G)^2)$$. So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can't map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren't there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges. Lets call the objects of $$\mathsf{Grph}$$ just *graphs* from now on.
+Alright, so let's redo this. Lets redefine a simple graph $$G$$ to consist of a set $$V(G)$$ of vertices and a binary, **reflexive**, symmetric relation $$(E(G) \subseteq V(G)^2)$$. So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can't map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren't there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges. 
 
-Let's use the same notion we described as above for morphisms, and use the same name $$\mathsf{Grph}$$. Okay, now this is a nice category. I can visualize its objects easily, its got a concrete mathematical description, and its got some nice morphisms. So let's see how to compute some limits and colimits here.
+Let $$\mathsf{Grph}$$ denote the category whose objects are simple graphs and whose morphisms are allowed to collapse edges. In other words, the category of binary, reflexive, symmetric relations. Let $$\mathsf{rGrph}$$ denote the category of simple graphs whose morphisms are **not** allowed to collapse edges. We can call this the category of **rigid** simple graphs. Lets call the objects of $$\mathsf{Grph}$$ just *graphs* from now on.
+
+Okay, now lets explore $$\mathsf{Grph}$$ some more. I can visualize its objects easily, its got a concrete mathematical description, and its got some nice morphisms. So let's see how to compute some limits and colimits here.
 
 Now if you check the [nlab page for simple graphs](https://ncatlab.org/nlab/show/category+of+simple+graphs), you'll see a fancy result identifying $$\mathsf{Grph}$$ as a Grothendieck quasitopos, which is a very nice category. For this post, let's just do things by hand to get a feel for this category. But from this abstract result, we know that $$\mathsf{Grph}$$ has all limits, colimits and is cartesian closed.
 
