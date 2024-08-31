@@ -1,4 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-08-28T19:18:27+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">The Category of Simple Graphs</title><link href="https://eminichiello67.github.io/blog/2024/catsofgraphs/" rel="alternate" type="text/html" title="The Category of Simple Graphs" /><published>2024-07-11T00:00:00+00:00</published><updated>2024-07-11T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2024/catsofgraphs</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2024/catsofgraphs/"><![CDATA[<p>I’ve been trying to learn more about algorithms and computer science lately, and so wanted to nail down how to do some simple categorical constructions with graphs.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-08-31T12:38:58+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">The Category of Simple Graphs, Pt. 2</title><link href="https://eminichiello67.github.io/blog/2024/catsographs2/" rel="alternate" type="text/html" title="The Category of Simple Graphs, Pt. 2" /><published>2024-08-30T00:00:00+00:00</published><updated>2024-08-30T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2024/catsographs2</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2024/catsographs2/"><![CDATA[<p>I’ve decided that I’m going to write a sequence of blog posts to help me understand the following papers:</p>
+<ul>
+  <li><a href="https://arxiv.org/abs/2302.05575">Compositional Algorithms on Compositional Data: Deciding  Sheaves on Presheaves</a> by Althaus, Bumpus, Fairbanks and Rosiak,</li>
+  <li><a href="https://arxiv.org/abs/2207.06091">Structured Decompositions: Structural and Algorithmic Compositionality</a> by Bumpus, Kocsis, and Master,</li>
+  <li><a href="https://arxiv.org/abs/2104.01841">Spined categories: generalizing tree-width beyond graphs
+</a> by Bumpus and Kocsis.</li>
+</ul>
+
+<p>To do so, first we’ll get comfortable with the categories of graphs we wish to consider, then moving on to adhesive categories and then to structural decompositions.</p>
+
+<p>In this post I’m going to revisit the category \(\mathsf{Grph}\) and compare it to its variant \(\mathsf{rGrph}\), which we also introduced last time. They are both categories whose objects are simple graphs, but the morphisms in \(\mathsf{Grph}\) are allowed to collapse edges into vertices. The category \(\mathsf{rGrph}\) has morphisms that don’t allow edges to be collapsed. Thus we call this the category of rigid simple graphs. In the last post we looked at how to compute some simple (co)limits in \(\mathsf{Grph}\).</p>
+
+<p>In some ways I found \(\mathsf{Grph}\) a more intuitive category, but there is a pretty major big advantage to working with \(\mathsf{rGrph}\) over \(\mathsf{Grph}\). Let \(K^n\) denote the \(n\)-clique, i.e. the complete, connected graph on \((n+1)\)-vertices. Then there exists a bijection</p>
+
+\[\{ \text{Morphisms } f : G \to K^n \text{ in } \mathsf{rGrph} \} \cong \{ \text{$(n + 1)$-colorings of $G$} \}.\]
+
+<p>This isn’t true for morphisms in \(\mathsf{Grph}\) because there are always many maps \(G \to K^n\) for any graph \(G\). We can simply map all of \(G\) to any vertex of \(K^n\), as an example.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/catsofgraphs/cliques.png" alt="cliques" width="600" /></p>
+  <figcaption>Figure 1: The first three cliques.</figcaption>
+</figure>
+</div>
+
+<p>So in this sense, \(\mathsf{rGrph}\) is preferable, as it provides a link to the following key \(\mathbf{NP}\)-complete computational problem: Given a graph \(G\) and \(n \geq 3\), does \(G\) have an \(n\)-coloring? The theory of this computational problem ties into many areas of computer science<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/catsofgraphs/exofcoloring.png" alt="coloring" width="600" /></p>
+  <figcaption>Figure 2: An example \(3\)-coloring of \(G\).</figcaption>
+</figure>
+</div>
+
+<p>So now let us inspect \(\mathsf{rGrph}\). We know from last time that we should not expect \(\mathsf{rGrph}\) to be as nice a category as \(\mathsf{Grph}\). It is not hard to see that they have the same coproducts, but the latter category doesn’t have all pushouts (though it does have all pushouts of monomorphisms, more on this later).</p>
+
+<p>Let us also show that it doesn’t have binary products. Let \(A = K^0\) be the graph with one vertex and no edges and let \(B = K^1\) be the graph with two vertices \(0\) and \(1\) and a single edge connecting them.</p>
+
+<p>Now as last time, we have an adjunction \(\text{Disc} : \mathbf{Set} \rightleftarrows \mathsf{rGrph} : V\). Therefore \(V\) preserves products if they exist.</p>
+
+<p>So suppose that the product \(K^0 \times K^1\) exists in \(\mathsf{rGrph}\). Then</p>
+
+\[|V(K^0 \times K^1)| = |V(K^0)| \cdot |V(K^1)| = 1 \cdot 2 = 2.\]
+
+<p>So we know that \(K^0 \times K^1\) has two vertices. Since we don’t allow loops in this category, there exactly two graphs with two vertices, either \(K^0 + K^0\) or \(K^1\).</p>
+
+<p>Now in order for \(K^0 + K^0\) to be a product it has to have maps \(f: K^0 + K^0 \to K^0\) and \(g: K^0 + K^0 \to K^1\). There’s only one map \(K^0 + K^0 \to K^0\), so that is fixed, and there are exactly four morphisms \(K^0 + K^0 \to K^1\).</p>
+
+<p>Now let us label the single vertex of \(K^0\) as \(*\), let the vertices of \(K^0 + K^0\) be \(a\) and \(b\), and let the vertices of \(K^1\) be \(0\) and \(1\). Then in order for \(K^0 + K^0\) to be the categorical product of \(K^0\) and \(K^1\), then the map \(K^0 \to K^1\) sending \(*\) to \(0\) must factor uniquely through a map \(K^0 \to K^0 + K^0\), but this is impossible, as there are always two choices for factorization. Either I send \(*\) to \(a\) and then \(a\) and \(b\) to \(0\) and \(1\), or I send \(*\) to \(b\) and then send \(a\) and \(b\) to \(1\) and \(0\). So \(K^0 + K^0\) is not the categorical product.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/catsofgraphs/nonexofproduct.png" alt="non-example of products" width="600" /></p>
+  <figcaption>Figure 3: Possible candidates for \(K^0 \times K^1\)</figcaption>
+</figure>
+</div>
+
+<p>Similarly \(K^1\) cannot be the categorical product simply because there is no map \(K^1 \to K^0\). Thus the product of \(K^0\) and \(K^1\) does not exist in \(\mathsf{rGrph}\).</p>
+
+<p>This might be a little dissapointing, but I think it is to be expected. We shouldn’t expect \(\mathsf{rGrph}\) to have nice limits. However, I claim that \(\mathsf{rGrph}\) and \(\mathsf{Grph}\) have the same monomorphisms, i.e. letting \(\mathsf{(r)Grph}_m\) denote the subcategory of monomorphisms, we have</p>
+
+\[\mathsf{Grph}_m \cong \mathsf{rGrph}_m.\]
+
+<p>First let us try and characterize the monomorphisms in \(\mathsf{Grph}\). Using the adjunction \(\text{Disc} \vdash V\) again, we know that \(V\) must preserve monomorphisms. In other words, if \(f: G \to H\) is a mono in \(\mathsf{Grph}\), then it cannot collapse edges. So every mono in \(\mathsf{Grph}\) is a morphism in \(\mathsf{rGrph}\).</p>
+
+<p>In fact we know more than this. Because the functor \(V : \mathsf{Grph} \to \mathbf{Set}\) is faithful. Indeed, maps of graphs are completely determined by where they send vertices. Thus the functor \(V\) makes \(\mathsf{Grph}\) into a <strong>concrete category</strong>. This is also true for \(\mathsf{rGrph}\). It is well known<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> that since \(V\) has a left adjoint, a morphism \(f\) in \(\mathsf{(r)Grph}\) is a monomorphism if and only if \(V(f)\) is injective.</p>
+
+<p>Thus a morphism in \(\mathsf{Grph}\) is a monomorphism if and only if it is injective on vertices. But this is the same for \(\mathsf{rGrph}\). Thus they have the same monomorphisms.</p>
+
+<p>In <a href="https://arxiv.org/abs/2104.01841">Spined Categories</a>, they consider the categories \(\mathsf{Gr}_{hom}\), which is our \(\mathsf{rGrph}\) and \(\mathsf{Gr}_{mono}\), which is our \(\mathsf{rGrph}_m \cong \mathsf{Grph}_m\). These are also called \(\mathsf{Gr}_H\) and \(\mathsf{Gr}_M\), respectively in <a href="https://arxiv.org/abs/2207.06091">Structured Decompositions</a>.</p>
+
+<p>Note that if \(f : G \to H\) and \(g : G \to K\) are monomorphisms in \(\mathsf{Grph}\), then the pushout \(H +_G K\) exists in \(\mathsf{Grph}\) as we showed last time, and it is not too hard to show that it also exists in \(\mathsf{rGrph}\)<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. However, this pushout might not exist in \(\mathsf{rGrph}_m\). Indeed, consider the following pushout.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/catsofgraphs/pushout.png" alt="pushout" width="600" /></p>
+  <figcaption>Figure 4: Example of a pushout in \(\mathsf{rGrph}\)</figcaption>
+</figure>
+</div>
+
+<p>Now there is a commutative diagram in \(\mathsf{rGrph}\) as follows:</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/catsofgraphs/nonmonococone.png" alt="induced map from pushout" width="600" /></p>
+  <figcaption>Figure 4: Induced map from pushout.</figcaption>
+</figure>
+</div>
+
+<p>Which induces a unique map \(h\). Now \(h\) cannot be a monomorphism, simply because there are more vertices in the domain than in the codomain. In other words, we’ve constructed a cocone in \(\mathsf{rGrph}_m\) and the colimit in \(\mathsf{rGrph}\) does not map to it by a monomorphism. Using this idea, we can show that not all pushouts exist in \(\mathsf{rGrph}_m \cong \mathsf{Grph}_m\).</p>
+
+<p>However the important thing to note is that pushouts <strong>along monomorphisms</strong> exist in \(\mathsf{rGrph}\), though the resulting induced map may not itself be a monomorphism. We’ll dive more deeply into this property in the next post on adhesive categories.</p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Such as those given <a href="https://www.researchgate.net/publication/344016939_Applications_of_Graph_Coloring_in_Modern_Computer_Science">here</a>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>See <a href="https://lovelylittlelemmas.rjprojects.net/concrete-categories-and-monomorphisms/">here</a> for proofs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Just consider the description of the pushout in \(\mathsf{Grph}\) and notice that none of the maps involve collapsing edges. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="math" /><category term="graphs," /><category term="category-theory" /><summary type="html"><![CDATA[We play around with some simple graphs to get a feel for their category.]]></summary></entry><entry><title type="html">The Category of Simple Graphs</title><link href="https://eminichiello67.github.io/blog/2024/catsofgraphs/" rel="alternate" type="text/html" title="The Category of Simple Graphs" /><published>2024-07-11T00:00:00+00:00</published><updated>2024-07-11T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2024/catsofgraphs</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2024/catsofgraphs/"><![CDATA[<p>I’ve been trying to learn more about algorithms and computer science lately, and so wanted to nail down how to do some simple categorical constructions with graphs.</p>
 
 <p>Interestingly, subtleties appear immediately. The biggest one is: what do you mean by a graph?</p>
 
@@ -32,7 +139,7 @@
       <td>loop graph</td>
       <td>No</td>
       <td>No</td>
-      <td>\(\leq 1\)</td>
+      <td>$\leq 1$</td>
     </tr>
     <tr>
       <td>pseudograph</td>
@@ -56,7 +163,7 @@
       <td>directed loop graph</td>
       <td>Yes</td>
       <td>No</td>
-      <td>\(\leq 1\)</td>
+      <td>$\leq 1$</td>
     </tr>
     <tr>
       <td>directed pseudograph</td>
@@ -75,15 +182,17 @@
 
 <p>So let’s get into the math. By a simple graph \(G\), what I mean is a set \(V(G)\) of <strong>vertices</strong> equipped with a binary, irreflexive, symmetric relation \((E(G) \subseteq V(G)^2)\), called the <strong>edge relation</strong>. So if \(u,v \in V\), then \((u,v) \in E(G)\), which we will also write as \(uv\) or \(u \sim v\) if there is an edge connecting \(u\) and \(v\).</p>
 
-<p>A map \(f: G \to G'\) of simple graphs is a function \(V(f): V(G) \to V(G')\) such that if \(uv \in E(G)\), then \(f(u)f(v) \in E(G')\). This gives us the category \(\mathsf{Grph}\) of simple graphs.</p>
+<p>A map \(f: G \to G'\) of simple graphs is a function \(V(f): V(G) \to V(G')\) such that if \(uv \in E(G)\), then \(f(u)f(v) \in E(G')\).</p>
 
 <p>But wait…is this actually what we want? There’s a small, kind of annoying thing we notice right away from this definition. With the above definition, the two inclusions \(* \to [*-*]\) of a simple graph with one vertex and no edges into the simple graph with two vertices and one edge are morphisms, which is good. However, there is <strong>no</strong> morphism in the other direction \([*-*] \to *\). This is because if we call the first graph \(G\) with vertices \(u\) and \(v\) and the second graph \(G'\) with single vertex \(w\), then \(uv \in E(G)\), but since \(E(G')\) is irreflexive, \(ww \notin E(G')\). Thus the function sending \(u\) and \(v\) to \(w\) does not define a morphism of simple graphs.</p>
 
 <p>So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don’t know, I’d like to consider some cases where you can collapse edges, that seems more natural and fun to me<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">3</a></sup>.</p>
 
-<p>Alright, so let’s redo this. Lets redefine a simple graph \(G\) to consist of a set \(V(G)\) of vertices and a binary, <strong>reflexive</strong>, symmetric relation \((E(G) \subseteq V(G)^2)\). So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can’t map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren’t there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges. Lets call the objects of \(\mathsf{Grph}\) just <em>graphs</em> from now on.</p>
+<p>Alright, so let’s redo this. Lets redefine a simple graph \(G\) to consist of a set \(V(G)\) of vertices and a binary, <strong>reflexive</strong>, symmetric relation \((E(G) \subseteq V(G)^2)\). So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can’t map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren’t there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges.</p>
 
-<p>Let’s use the same notion we described as above for morphisms, and use the same name \(\mathsf{Grph}\). Okay, now this is a nice category. I can visualize its objects easily, its got a concrete mathematical description, and its got some nice morphisms. So let’s see how to compute some limits and colimits here.</p>
+<p>Let \(\mathsf{Grph}\) denote the category whose objects are simple graphs and whose morphisms are allowed to collapse edges. In other words, the category of binary, reflexive, symmetric relations. Let \(\mathsf{rGrph}\) denote the category of simple graphs whose morphisms are <strong>not</strong> allowed to collapse edges. We can call this the category of <strong>rigid</strong> simple graphs. Lets call the objects of \(\mathsf{Grph}\) just <em>graphs</em> from now on.</p>
+
+<p>Okay, now lets explore \(\mathsf{Grph}\) some more. I can visualize its objects easily, its got a concrete mathematical description, and its got some nice morphisms. So let’s see how to compute some limits and colimits here.</p>
 
 <p>Now if you check the <a href="https://ncatlab.org/nlab/show/category+of+simple+graphs">nlab page for simple graphs</a>, you’ll see a fancy result identifying \(\mathsf{Grph}\) as a Grothendieck quasitopos, which is a very nice category. For this post, let’s just do things by hand to get a feel for this category. But from this abstract result, we know that \(\mathsf{Grph}\) has all limits, colimits and is cartesian closed.</p>
 
