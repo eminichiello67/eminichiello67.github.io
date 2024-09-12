@@ -9,6 +9,7 @@ nav_order: 2
 
 | Title | Event | Year | Links |
 | - | - | - | - |
+| Introduction to Categorical Database Theory | CUNY CityTech Math Department | 2024 | [Slides]({% link assets/slides/slides_intro_categorical_data.pdf%})
 | Introduction to Diffeology |[Zulip Online Category Theory Seminar](https://categorytheory.zulipchat.com/#narrow/stream/437647-event.3A-Online-CT-seminar) | 2024 | [Slides]({% link assets/slides/slides_introdiffeologyzulip.pdf %}) / [Video](https://www.youtube.com/watch?v=4tDJYLwXcL8&t=3s) |
 | Proqueries and Praqueries | ACT Conference | 2024 | [Slides]({% link assets/slides/slides_act_proqueries_and_praqueries_2024.pdf %}) / [Video](https://www.youtube.com/watch?v=oeqM-iJZVOU&t=15s) |
 | Presenting Profunctors | [NYC Category Theory Seminar](http://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html) | 2024 | [Slides]({% link assets/slides/slides_presentingprofunctors.pdf %}) / [Video](https://www.youtube.com/watch?v=0bquvu-kWRA&t=3203s) |
