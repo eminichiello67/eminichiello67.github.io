@@ -2,23 +2,22 @@
 <html lang="en">
 
   <!-- Head -->
-  <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+  <head>    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Introduction to Relational Theory | Emilio Minichiello</title>
-    <meta name="author" content="Emilio  Minichiello">
-    <meta name="description" content="Let's learn a little basic database theory.">
-    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+    <title>blog - page 2 | Emilio Minichiello</title>
+    <meta name="author" content="Emilio  Minichiello" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website" />
 
 
     <!-- Bootstrap & MDB -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
 
     <!-- Bootstrap Table -->
     <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
@@ -29,18 +28,18 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <!-- Code Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light" />
 
     
 
     <!-- Styles -->
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://eminichiello67.github.io/drafts/relational_theory_1/">
+    <link rel="canonical" href="https://eminichiello67.github.io/blog/page/2/">
 
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark" />
 
     <script src="/assets/js/theme.js"></script>
     <script src="/assets/js/dark_mode.js"></script>
@@ -75,8 +74,8 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/blog/">blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Other pages -->
@@ -120,40 +119,74 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- _layouts/post.html -->
+        <div class="post">
 
-<div class="post">
+  
+  
 
-  <header class="post-header">
-    <h1 class="post-title">Introduction to Relational Theory</h1>
-    <p class="post-meta">N/A</p>
-    <p class="post-tags">
-      <a href="/blog/N/A"> <i class="fas fa-calendar fa-sm"></i> N/A </a>
-        ·  
-        <a href="/blog/tag/database-theory">
-          <i class="fas fa-hashtag fa-sm"></i> database_theory</a>  
-          
-        ·  
-        <a href="/blog/category/math">
-          <i class="fas fa-tag fa-sm"></i> math</a>  
-          
+  
+  <div class="header-bar">
+    <h1>blog</h1>
+    <h2></h2>
+  </div>
+  
 
-    </p>
-  </header>
+  
 
-  <article class="post-content">
+  <ul class="post-list">
     
-    <div id="markdown-content">
-      <p>In this post, we will cover the relational theory of databases. This will help us set the stage for comparison with categorical database theory later on in the series.</p>
 
-<p><strong>Rem:</strong> In what follows, we fix a countably infinite set $\mathsf{Dom}$, called the <strong>domain</strong>, whose elements $c \in \mathsf{Dom}$ we call <strong>constants</strong>. There will be much to say about the domain later.</p>
+    
+    
+    
+    
 
-<p>We also note that everything we present in what follows is known as the <strong>unnamed relational formalism</strong>. There is an alternative <strong>named relational formalism</strong>, which requires a set of attributes. These are different frameworks that are ultimately equivalent. There are pros and cons to both formalisms: the unnamed formalism is mathematically simpler and closer to traditional model theory, which is why I chose it for this post, but the named formalism allows for the definition of a natural join operation, and tends to be used more by database theorists.</p>
+    <li><h3>
+        
+          <a class="post-title" href="/blog/2023/diffeological_spaces_1-copy/">Diffeological Spaces, Part 1</a>
+        
+      </h3>
+      <p>The inaugural post! What is a diffeological space?</p>
+      <p class="post-meta">
+        5 min read &nbsp; &middot; &nbsp;
+        June 21, 2023
+      </p>
+      <p class="post-tags">
+        <a href="/blog/2023">
+          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
 
-<p><strong>Def:</strong> A <strong>relational database schema</strong> consists of a set $\mathbf{R}$, whose elements we call <strong>relation symbols</strong>, along with a function $\text{ar}: \mathbf{R} \to \mathbb{N}$ called the <strong>arity function</strong>. If $R \in \mathbf{R}$, and $\text{ar}(R) = n$, then we say that $R$ has <strong>arity</strong> $n$.</p>
+          
+          &nbsp; &middot; &nbsp;
+            
+            <a href="/blog/tag/diffeological-spaces">
+              <i class="fas fa-hashtag fa-sm"></i> diffeological_spaces</a> &nbsp;
+              
+          
 
-    </div>
-  </article>
+          
+          &nbsp; &middot; &nbsp;
+            
+            <a href="/blog/category/math">
+              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
+              
+          
+    </p></li>
+
+    
+  </ul>
+
+  <nav aria-label="Blog page naviation">
+  <ul class="pagination pagination-lg justify-content-center">
+    <li class="page-item ">
+      <a class="page-link" href="/blog/" tabindex="-1" aria-disabled="1">Newer</a>
+    </li><li class="page-item "><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
+      <li class="page-item active"><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
+      <li class="page-item disabled">
+      <a class="page-link" href="">Older</a>
+    </li>
+  </ul>
+</nav>
+
 </div>
 
       
@@ -162,7 +195,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2024 Emilio  Minichiello. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+        &copy; Copyright 2024 Emilio  Minichiello. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 Last updated: November 14, 2024.
       </div>
     </footer>
