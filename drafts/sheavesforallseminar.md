@@ -1,0 +1,5 @@
+This page is for the idea about an online seminar based around sheaf theory.
+
+We'll call it Sheaves for All, and its main purpose will be to talk about all kinds of applications of sheaves to all different kinds of areas of matheamtics. I can give the inaugral first few talks about my notes, although maybe that's not the best idea. Maybe Cheyne would be willing to cohost. I should compile a list of people to reach out to ahead of time and solicit some future talks.
+
+Here are some people: Cheyne Glass, Tim Hosgood, Justin Curry, Dmitri Pavlov, Dan Grady, Urs Schreiber, Michael Robinson, Sam McCrosson, Matthew Cushman, Severin Bunk, Tibor Beke, Benjamin Bumpus, Daniel Rosiak, Nicolas Berkouk, Robert Ghrist, Gregory Ginot, LINAS VEPŠTAS, Andrew Blumberg, Damien Calaque, Rick Jardine, Andre Joyal, Kristaps Balodis (K-theory guy), John Terilla, Samantha Jarvis, David Corfield, Colin McLarty, David Roberts, Matteo Cappuci, Sridhar Ramesh

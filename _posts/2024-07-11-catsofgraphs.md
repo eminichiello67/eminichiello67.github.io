@@ -72,7 +72,7 @@ The proof is the same idea as for products.
 
 I'll also leave it to you to check that $$\varnothing$$, the graph with no vertices, is the intial object in $$\mathbf{Grph}$$ and $$*$$, the graph with one vertex, is the terminal object in $$\mathbf{Grph}$$.
 
-Now for pushouts. Given maps of graphs $$f: A \to B$$ and $$g: A \to C$$, let $$B+_A C$$ denote the graph with $$V(B +_A C) = V(B) +_{V(A)} V(C)$$, (i.e. $$V(B +_A C)$$ is the set $$V(B) + V(C)$$ quotiented by the equivalence relation $$\simeq$$ where $$v \simeq w$$ if there exist $$a \in V(A)$$ such that $$v = f(a)$$ and $$w = g(a)$$) and let $$E(B +_A C)$$ be defined as follows. If $$x,y \in V(B +_A C)$$, then $$x \sim_{B +_A C} y$$ if there exists $$v,v' \in V(B)$$ with $$v \sim_B v'$$, $$[v] = x$$ and $$[v'] = y$$ or $$w,w' \in V(C)$$ with $$w \sim_C w'$$, $$[w] = x$$ and $$[w'] = y$$. In other words, there is an edge between $$[v]$$ and $$[w]$$ if there is some representative edge in $$B$$ or $$C$$.
+Now for pushouts. Given maps of graphs $$f: A \to B$$ and $$g: A \to C$$, let $$B+_A C$$ denote the graph with $$V(B +_A C) = V(B) +_{V(A)} V(C)$$, (i.e. $$V(B +_A C)$$ is the set $$V(B) + V(C)$$ quotiented by the smallest equivalence relation containing the relation $$\simeq$$ where $$v \simeq w$$ if there exists an $$a \in V(A)$$ such that $$v = f(a)$$ and $$w = g(a)$$) and let $$E(B +_A C)$$ be defined as follows. If $$x,y \in V(B +_A C)$$, then $$x \sim_{B +_A C} y$$ if there exists $$v,v' \in V(B)$$ with $$v \sim_B v'$$, $$[v] = x$$ and $$[v'] = y$$ or $$w,w' \in V(C)$$ with $$w \sim_C w'$$, $$[w] = x$$ and $$[w'] = y$$. In other words, there is an edge between $$[v]$$ and $$[w]$$ if there is some representative edge in $$B$$ or $$C$$.
 
 There are maps $$i_B : B \to B+_A C$$ and $$i_C : C \to B +_A C$$ given by inclusion.
 
@@ -92,7 +92,7 @@ Note that this is a generalization of the well-known [clique sum construction](h
 
 Finally, let's look at pullbacks.
 
-Given maps $$f : A \to B$$ and $$g: A \to C$$ of graphs, let $$B \times_A C$$ denote the graph with $$V(B \times_A C) = V(B) \times_{V(A)} V(C)$$ and with $$E(B \times_A C)$$ defined as follows. We have $$(b,c) \sim_{B \times_A C} (b',c')$$ if $$b \sim_B b'$$ and $$c \sim_C c'$$.
+Given maps $$f : B \to A$$ and $$g: C \to A$$ of graphs, let $$B \times_A C$$ denote the graph with $$V(B \times_A C) = V(B) \times_{V(A)} V(C)$$ and with $$E(B \times_A C)$$ defined as follows. We have $$(b,c) \sim_{B \times_A C} (b',c')$$ if $$b \sim_B b'$$ and $$c \sim_C c'$$.
 
 **Lemma**: $$B \times_A C$$ is the pullback of $$f$$ and $$g$$ in $$\mathsf{Grph}$$.
 

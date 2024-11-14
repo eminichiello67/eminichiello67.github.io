@@ -37,35 +37,11 @@ So in this sense, $$\mathsf{rGrph}$$ is preferable, as it provides a link to the
 {% endfigure %}
 </div>
 
-So now let us inspect $$\mathsf{rGrph}$$. We know from last time that we should not expect $$\mathsf{rGrph}$$ to be as nice a category as $$\mathsf{Grph}$$. It is not hard to see that they have the same coproducts, but the latter category doesn't have all pushouts (though it does have all pushouts of monomorphisms, more on this later).
-
-Let us also show that it doesn't have binary products. Let $$A = K^0$$ be the graph with one vertex and no edges and let $$B = K^1$$ be the graph with two vertices $$0$$ and $$1$$ and a single edge connecting them. 
-
-Now as last time, we have an adjunction $$\text{Disc} : \mathbf{Set} \rightleftarrows \mathsf{rGrph} : V$$. Therefore $$V$$ preserves products if they exist.
-
-So suppose that the product $$K^0 \times K^1$$ exists in $$\mathsf{rGrph}$$. Then 
-
-$$|V(K^0 \times K^1)| = |V(K^0)| \cdot |V(K^1)| = 1 \cdot 2 = 2.$$
-
-So we know that $$K^0 \times K^1$$ has two vertices. Since we don't allow loops in this category, there exactly two graphs with two vertices, either $$K^0 + K^0$$ or $$K^1$$.
-
-Now in order for $$K^0 + K^0$$ to be a product it has to have maps $$f: K^0 + K^0 \to K^0$$ and $$g: K^0 + K^0 \to K^1$$. There's only one map $$K^0 + K^0 \to K^0$$, so that is fixed, and there are exactly four morphisms $$K^0 + K^0 \to K^1$$.
-
-Now let us label the single vertex of $$K^0$$ as $$*$$, let the vertices of $$K^0 + K^0$$ be $$a$$ and $$b$$, and let the vertices of $$K^1$$ be $$0$$ and $$1$$. Then in order for $$K^0 + K^0$$ to be the categorical product of $$K^0$$ and $$K^1$$, then the map $$K^0 \to K^1$$ sending $$*$$ to $$0$$ must factor uniquely through a map $$K^0 \to K^0 + K^0$$, but this is impossible, as there are always two choices for factorization. Either I send $$*$$ to $$a$$ and then $$a$$ and $$b$$ to $$0$$ and $$1$$, or I send $$*$$ to $$b$$ and then send $$a$$ and $$b$$ to $$1$$ and $$0$$. So $$K^0 + K^0$$ is not the categorical product.
-
-<div align="center">
-{% figure caption:"Figure 3: Possible candidates for $$K^0 \times K^1$$" %}
-<img src="../../../assets/img/posts/catsofgraphs/nonexofproduct.png" alt="non-example of products" width="600"/>
-{% endfigure %}
-</div>
-
-Similarly $$K^1$$ cannot be the categorical product simply because there is no map $$K^1 \to K^0$$. Thus the product of $$K^0$$ and $$K^1$$ does not exist in $$\mathsf{rGrph}$$. 
-
-This might be a little dissapointing, but I think it is to be expected. We shouldn't expect $$\mathsf{rGrph}$$ to have nice limits. However, I claim that $$\mathsf{rGrph}$$ and $$\mathsf{Grph}$$ have the same monomorphisms, i.e. letting $$\mathsf{(r)Grph}_m$$ denote the subcategory of monomorphisms, we have
+So now let us inspect $$\mathsf{rGrph}$$. We know from last time that we should not expect $$\mathsf{rGrph}$$ to be as nice a category as $$\mathsf{Grph}$$. It is not hard to see that they have the same coproducts, but the latter category doesn't have all pushouts (though it does have all pushouts of monomorphisms, more on this later). Now I claim that $$\mathsf{rGrph}$$ and $$\mathsf{Grph}$$ have the same monomorphisms, i.e. letting $$\mathsf{(r)Grph}_m$$ denote the subcategory of monomorphisms, we have
 
 $$\mathsf{Grph}_m \cong \mathsf{rGrph}_m.$$
 
-First let us try and characterize the monomorphisms in $$\mathsf{Grph}$$. Using the adjunction $$\text{Disc} \vdash V$$ again, we know that $$V$$ must preserve monomorphisms. In other words, if $$f: G \to H$$ is a mono in $$\mathsf{Grph}$$, then it cannot collapse edges. So every mono in $$\mathsf{Grph}$$ is a morphism in $$\mathsf{rGrph}$$.
+First let us try and characterize the monomorphisms in $$\mathsf{Grph}$$. Using the adjunction $$\text{Disc} \dashv V$$ again, we know that $$V$$ must preserve monomorphisms. In other words, if $$f: G \to H$$ is a mono in $$\mathsf{Grph}$$, then it cannot collapse edges. So every mono in $$\mathsf{Grph}$$ is a morphism in $$\mathsf{rGrph}$$.
 
 In fact we know more than this. Because the functor $$V : \mathsf{Grph} \to \mathbf{Set}$$ is faithful. Indeed, maps of graphs are completely determined by where they send vertices. Thus the functor $$V$$ makes $$\mathsf{Grph}$$ into a **concrete category**. This is also true for $$\mathsf{rGrph}$$. It is well known[^2] that since $$V$$ has a left adjoint, a morphism $$f$$ in $$\mathsf{(r)Grph}$$ is a monomorphism if and only if $$V(f)$$ is injective.
 
