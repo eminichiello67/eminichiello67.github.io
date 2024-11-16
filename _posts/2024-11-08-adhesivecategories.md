@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pushouts along monomorphisms.
-date:   August 30, 2024
+date: November 14, 2024
 description: A quick post to discuss adhesive categories.
 tags: graphs, category-theory
 categories: math
