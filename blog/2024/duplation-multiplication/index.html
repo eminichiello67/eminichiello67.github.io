@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MAT2440 - Discrete Structures and Algorithms I | Emilio Minichiello</title>
+    <title>Duplation-Mediation Multiplication | Emilio Minichiello</title>
     <meta name="author" content="Emilio  Minichiello">
-    <meta name="description" content="">
+    <meta name="description" content="Let's discuss an alternative algorithm for multiplication.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -36,7 +36,7 @@
     <!-- Styles -->
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://eminichiello67.github.io/mat2440/">
+    <link rel="canonical" href="https://eminichiello67.github.io/blog/2024/duplation-multiplication/">
 
     <!-- Dark Mode -->
     
@@ -75,8 +75,8 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/blog/">blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Other pages -->
@@ -120,52 +120,79 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- page.html -->
-        <div class="post">
+        <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">MAT2440 - Discrete Structures and Algorithms I</h1>
-            <p class="post-description"></p>
-          </header>
+<div class="post">
 
-          <article>
-            <p>This is the class page for Fall 2024, MAT2440 - Discrete Structures and Algorithms I at CUNY CityTech.</p>
+  <header class="post-header">
+    <h1 class="post-title">Duplation-Mediation Multiplication</h1>
+    <p class="post-meta">November 16, 2024</p>
+    <p class="post-tags">
+      <a href="/blog/2024"> <i class="fas fa-calendar fa-sm"></i> 2024 </a>
+        ·  
+        <a href="/blog/tag/fun">
+          <i class="fas fa-hashtag fa-sm"></i> fun,</a>  
+          <a href="/blog/tag/algorithms">
+          <i class="fas fa-hashtag fa-sm"></i> algorithms</a>  
+          
+        ·  
+        <a href="/blog/category/math">
+          <i class="fas fa-tag fa-sm"></i> math</a>  
+          
 
-<p><strong>Instructor:</strong> Emilio Minichiello</p>
+    </p>
+  </header>
 
-<p><strong>Email:</strong> emilio.minichielloepstein04 (at) citytech.cuny.edu</p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>I’ve been learning about algorithms lately, and I learned about an alternative algorithm for multiplication. Doubtless most readers here will probably have heard of this algorithm, its super well-known, but I had never heard of it before, and I had a surprisingly hard time understanding why it worked. So I’m gonna write a short, fun little blog post about this.</p>
 
-<p><strong>Meeting Time:</strong> Tuesdays, Thursdays 10am - 11:40am.</p>
+<p>The algorithm is called by many names, one of which is Russian peasant multiplication[^1]. I think this is a pretty shitty name, so I’m just going to call it <strong>duplation-mediation multiplication</strong>. The reason for that name should become apparent shortly. This algorithm is super old, it was used by the ancient Egyptians for example, and I think it is actually easier to do than the method of multiplying that I learned in elementary schoool.</p>
 
-<p><strong>Location:</strong> Namm Hall N-922</p>
+<p>The algorithm goes like this. Suppose we want to multiply \(9 \times 6\). We write them side-by-side and then keep dividing \(9\) by \(2\), throwing away any remainder, until we get to \(1\). On the other side, we keep multiplying \(6\) by \(2\). The operation of multiplying by \(2\) is called <strong>duplation</strong> and the operation of dividing by \(2\) and throwing away the remainder is called <strong>mediation</strong>, hence the name of the algorithm. In other words, mediation is the operation \(x \mapsto \lfloor x/2 \rfloor\) and duplation is \(x \mapsto 2x\).</p>
 
-<p><strong>Office Hours:</strong> Tuesdays, 12:30 - 2:30pm, Namm Hall — or by appointment.</p>
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/duplation/pic1.jpg" alt="Step 1 of Duplation-Mediation" width="500"></p>
+  <figcaption>Figure 1: Step 1 of Duplation-Mediation</figcaption>
+</figure>
+</div>
 
-<p><strong>Prerequisites:</strong> (MAT 1375 or higher) and (CST 1201 or CST 2403 or MAT 1630)</p>
+<p>Okay, now the next step is to cross out all of the rows in which the left hand number is even.</p>
 
-<p><strong>Course Information:</strong> In this course you’ll start your journey as an applied mathematician. We’ll learn how to prove mathematical statements, which is really what math is all about. We’ll come to understand propositional logic and set theory, the basic language of all mathematics. Then we’ll move on to analyzing basic algorithms and number theory. All the while we’ll get use Python as a way to</p>
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/duplation/pic2.jpg" alt="Step 2 of Duplation-Mediation" width="400"></p>
+  <figcaption>Figure 2: Step 2 of Duplation-Mediation</figcaption>
+</figure>
+</div>
 
-<p><strong>Textbook:</strong> Discrete Mathematics and its Applications, 8th edition by Kenneth H. Rosen (Sections 1 - 5)</p>
+<p>Finally we add up the numbers on the left hand column.</p>
 
-<p><strong>Grading:</strong> 3 exams (15% each, 45% total), 1 final (25%), programming assignments (20%), class participation (10%).</p>
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/duplation/pic3.jpg" alt="Step 3 of Duplation-Mediation" width="400"></p>
+  <figcaption>Figure 3: Step 3 of Duplation-Mediation</figcaption>
+</figure>
+</div>
 
-<p><strong>Homework:</strong> I will not be collecting homework, but students should be expected to present their solutions to the class at the start of the next lecture.</p>
+<p>Like magic, we get the right answer \(9 \times 6 = 54\)! When I first saw this I was kind of baffled. It was clear to me that something was going on with converting the numbers to binary, but I wasn’t quite sure what was happening.</p>
 
-<p><strong>Programming Assignments:</strong> There will be at least 4 programming assignments during the course. We will use Python for these assignments. You will not need to download Python, instead you can use an online IDE like <a href="https://www.online-python.com/" rel="external nofollow noopener" target="_blank">https://www.online-python.com/</a>. We will not have time in the course to learn the basics of Python. There are tons of great, free online resources to learn Python such as <a href="https://www.codecademy.com/learn/learn-python-3" rel="external nofollow noopener" target="_blank">codeacademy</a>.</p>
+<p>The first thing I noticed is that if we convert our numbers from decimal to binary, then the operation of mediation \(x \mapsto \lfloor x/2 \rfloor\) is the same thing as taking the right-shift in binary. In other words, if we consider \(9\) in binary, which is \([9]_2 = 1001\), then \([\lfloor 9/2 \rfloor]_2 = [4]_2 = 100\). Similarly, duplation \(x \mapsto 2x\) is the same thing as left-shift in binary, for example since \([6]_2 = 110\) and \([2 \times 6]_2 = [12]_2 = 1100\). So that was interesting, but what was up with the crossing out part?</p>
 
-<p><strong>Student Wellness:</strong> We all experience stressful and difficult events as a normal part of life. As your instructor, I
-believe your mental health is an important part of your academic success. Success in this course depends heavily on your personal health and wellbeing. Be sure to check out the <a href="https://www.citytech.cuny.edu/wellness-center/" rel="external nofollow noopener" target="_blank">Student Wellness Center</a> and CityTech’s <a href="https://www.citytech.cuny.edu/counseling/" rel="external nofollow noopener" target="_blank">Counseling Services</a>.</p>
+<p>Well what helped me understand this the most was by writing \(9\) in its binary expansion. \(9 = 2^3 + 2^0 = 8 + 1\). So \(9 \times 6 = (2^3 + 2^0) \times 6 = 2^0 \times 6 + 2^3 \times 6\). In the pictures above, we have \(2^0 \times 6 = 6\) appearing at the top, and \(2^3 \times 6 = 48\) appearing at the bottom. In other words, we crossed out the other two rows because \(2^1\) and \(2^2\) don’t appear in the binary expansion of \(9\)!</p>
 
-<p><strong>Academic Integrity:</strong>
-The instructor of the course has the authority to give a grade of F if the student submits the work of another person in a manner that
-represents their work, or knowingly permits one’s work to be submitted by another person without the instructor’s permission. For further information see the <a href="https://www.citytech.cuny.edu/current-student/docs/StudentHandbook.pdf" rel="external nofollow noopener" target="_blank">NYCCT Student Handbook</a>, pages 95-99.</p>
+<p>But why does the left hand column give the binary expansion of \(9\)? Well, what is the binary expansion of \(9\)? It is \(1001\). The rightmost digit is \(1\) because \(9\) is odd, i.e. \(9 \text{ mod } 2 = 1\). The next digit can be obtained by looking at the right shift of \(1001\), which is \(100\), which in decimal is \(\lfloor 9/2 \rfloor = 4\). Since this number is even, the rightmost digit is \(0\). Doing this again we have \(\lfloor 4/2 \rfloor = 2 = 10\), and \(\lfloor 2 \rfloor = 1\) in decimal and binary. In other words, you can easily obtain the binary representation of any integer by just keep on dividing it in half and seeing whether it is even or odd.</p>
 
-<p>For more info and the homework schedule, see the <a href="https://www.citytech.cuny.edu/mathematics/docs/courses/MAT2440.pdf" rel="external nofollow noopener" target="_blank">Course Outline</a>.</p>
+<p>Hopefully this little post brought you some joy and taught you something new. It should be said that this algorithm is technically not any more efficien than the usual way of multiplying, they are both \(\mathcal{O}(n^2)\). But I find multiplying and dividing by \(2\) mentally easier, and then at the end we just sum them up.</p>
 
+<hr>
+<p>[^1] According to Wikipedia, it also goes by ancient Egyptian multiplication, Ethiopian multiplication, Russian multiplication and peasant multiplication.</p>
 
-          </article>
-
-        </div>
+    </div>
+  </article>
+</div>
 
       
     </div>
