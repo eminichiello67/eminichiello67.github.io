@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-16T16:05:06+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">Duplation-Mediation Multiplication</title><link href="https://eminichiello67.github.io/blog/2024/duplation-multiplication/" rel="alternate" type="text/html" title="Duplation-Mediation Multiplication" /><published>2024-11-16T00:00:00+00:00</published><updated>2024-11-16T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2024/duplation-multiplication</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2024/duplation-multiplication/"><![CDATA[<p>I’ve been learning about algorithms lately, and I learned about an alternative algorithm for multiplication. Doubtless most readers here will probably have heard of this algorithm, its super well-known, but I had never heard of it before, and I had a surprisingly hard time understanding why it worked. So I’m gonna write a short, fun little blog post about this.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-12-08T16:20:32+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">Discrete Homotopy Theory, pt. 1</title><link href="https://eminichiello67.github.io/blog/2024/discretehomotopytheory1/" rel="alternate" type="text/html" title="Discrete Homotopy Theory, pt. 1" /><published>2024-12-08T00:00:00+00:00</published><updated>2024-12-08T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2024/discretehomotopytheory1</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2024/discretehomotopytheory1/"><![CDATA[<p>I learned about something really cool yesterday and now I feel the need to share it.</p>
+
+<p>I learned about a really new field of math called Discrete Homotopy Theory. This is a homotopy theory for simple graphs that seems different than the classical homotopy theory of graphs thought of as CW complexes. Fascinatingly, there turn out to be two “exotic” homotopy theories for undirected graphs. One of them is called \(\times\)-homotopy theory. <a href="https://arxiv.org/abs/1901.01619">This paper</a> gives a pretty good introduction to it. The other is called discrete homotopy theory or A-homotopy theory[^1]. I’m going to talk about this one for this post, simply because I haven’t gotten the time yet to investigate \(\times\)-homotopy theory!</p>
+
+<p>The first thing we must always do when talking about graphs is figure out which category of graphs we are working in. For discrete homotopy theory, this category[^2] is \(\mathbf{Gr}_{r}\). This is the category whose objects are sets equipped with binary, symmetric, reflexive relations, and whose morphisms are functions that preserve the relation. The category for \(\times\)-directed homotopy theory is \(\mathbf{Gr}_{\ell}\), the category of loop graphs, i.e. those graphs that can have loops. The category \(\mathbf{Gr}_{r}\) is a full subcategory of \(\mathbf{Gr}_{\ell}\) on those graphs where every vertex has a loop.</p>
+
+<p>We can think of the objects of this category as simple graphs where morphisms can collapse edges. This category is a quasitopos, with a nice discussion about this on the <a href="https://ncatlab.org/nlab/show/category+of+simple+graphs">nlab</a>. We are going to refer to the objects of \(\mathbf{Gr}_r\) simply as graphs.</p>
+
+<p>Given two graphs \(G\) and \(H\), let \(G \square H\) denote the <a href="https://en.wikipedia.org/wiki/Cartesian_product_of_graphs">box product</a>. In other words, this is the graph with \(V(G \square H) = V(G) \times V(H)\) and where there is an edge \((g,h)(g',h')\) if there is an edge \(gg'\) and \(h=h'\) or \(g=g'\) and there is an edge \(hh'\). Note that this is <strong>not</strong> the categorical product in \(\mathbf{Gr}_r\). However it is a symmetric monoidal closed product[^3]!</p>
+
+<p>Let \(I_n\) denote the interval graph on \(n+1\) vertices.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/discretehomotopy/intervalgraphs.png" alt="interval graphs" width="600" /></p>
+  <figcaption>Figure 1: Interval graphs</figcaption>
+</figure>
+</div>
+
+<p>Let \(f, g: G \to H\) be maps of graphs in \(\mathbf{Gr}_{r}\). An <strong>A-homotopy</strong> between \(f\) and \(g\) is a map \(h: G \square I_n \to H\) for some \(n \geq 0\) such that \(h(-,0) = f\) and \(h(-,n) = g\). So there is some similarity with classical homotopy theory, but we are allowed to have a whole bunch of different interval objects, and any of one them works.</p>
+
+<p>Now its easy to define homotopy equivalence. A map \(f: G \to H\) of graphs is an \(A\)-homotopy equivalence if there exists a map \(g : H \to G\) and homotopies \(gf \simeq 1_G\) and \(fg \simeq 1_H\). Okay so here’s a crazy fact: if we let \(C^n\) denote the cycle with \(n\) vertices, then \(C^n\) is contractible if and only if \(n = 3\) or \(4\). This kind of blew my mind when I first saw it, and also made me scratch my head. Why in the world should that be the case.</p>
+
+<p>Well the only way to understand it is to work out the example. Let’s draw what a map \(h : C^3 \square I_1 \to C^3\) should look like.</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/discretehomotopy/c3homotopy.png" alt="C3 homotopy map" width="600" /></p>
+  <figcaption>Figure 2: \(C^3\) Homotopy map</figcaption>
+</figure>
+</div>
+
+<p>Now remember maps in this category can collapse edges. We want \(h\) to squash all of the top part of \(C^3 \square I_1\) to a single vertex and keep the lower floor as is. This is easy to do, simply map \(h(i,0) = i\) and have \(h(i,1) = (x,1)\) for all \(i \in \{ x , y, z \}\).</p>
+
+<p>This gives a homotopy in one direction, and the other one can be crafted using the same argument, showing that \(C^3\) is null-homotopic, i.e. it is homotopy equivalent to one of its vertices!</p>
+
+<p>We can do a similar argument for \(C^4\).</p>
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/discretehomotopy/c4homotopy.png" alt="C4 homotopy map" width="600" /></p>
+  <figcaption>Figure 3: \(C^4\) Homotopy map</figcaption>
+</figure>
+</div>
+
+<p>Shockingly, this won’t work for \(C^5\)! Why not? Well, lets take a look at \(C^5\).</p>
+
+<div align="center">
+<figure>
+<p><img src="../../../assets/img/posts/discretehomotopy/c5.png" alt="C5" width="600" /></p>
+  <figcaption>Figure 4: \(C^5\)</figcaption>
+</figure>
+</div>
+
+<p>In order to collapse \(C^5\) onto a vertex using a homotopy, we have to be able to collapse the white and red vertices. But since they are connected to the yellow and green vertices, those need to be collapsed too. In effect we would need to map the white vertex to the yellow verte and the red to the green vertex, but this can’t happen, because there’s no edge between the yellow vertex and the green vertex!</p>
+
+<p>I don’t think I’ve fully digested how this kind of homotopy theory feels, but there’s some really cool results on this already. For instance, one can equip \(\mathbf{Gr}_r\) with a fibration category structure, proven <a href="https://arxiv.org/pdf/2408.05289">Kapulkin, Mavinkurve</a> effectively giving it a complete \(\infty\)-category structure. Its currently an open problem if this \(\infty\)-category is equivalent to the typical \(\infty\)-category of spaces! However in that paper, the authors also prove that if we \(1\)-truncate both the \(\infty\)-category of graphs up to \(A\)-weak homotopy equivalence and the \(\infty\)-category of spaces (getting the \(\infty\)-category of groupoids), then they do get an equivalence!</p>
+
+<p>This is super fascinating to me, I’m excited to dig into more of this work when I get the chance.</p>
+
+<hr />
+<p>[^1] Not to be confused with \(A^1\)-homotopy theory from algebraic geometry!</p>
+
+<p>[^2] If you’ve been reading my other posts on categories of graphs, I apologize for the change in notation. I will hopefully write a new post soon enough explaining all that I have learned about the zoo of categories of graphs and why I’ve changed notation. In old posts, I referred to \(\mathbf{Gr}_{r}\) as \(\mathbf{Grph}\).</p>
+
+<p>[^3] In fact, by a <a href="https://arxiv.org/pdf/2310.00493">lovely result of Kapulkin and Kershaw</a>, the box product and the categorical product are the only symmetric monoidal closed products on \(\mathbf{Gr}_r\)!</p>]]></content><author><name></name></author><category term="math" /><category term="graphs," /><category term="homotopy-theory," /><category term="category-theory" /><summary type="html"><![CDATA[Short post where I describe a key insight of Discrete Homotopy Theory]]></summary></entry><entry><title type="html">Duplation-Mediation Multiplication</title><link href="https://eminichiello67.github.io/blog/2024/duplation-multiplication/" rel="alternate" type="text/html" title="Duplation-Mediation Multiplication" /><published>2024-11-16T00:00:00+00:00</published><updated>2024-11-16T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2024/duplation-multiplication</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2024/duplation-multiplication/"><![CDATA[<p>I’ve been learning about algorithms lately, and I learned about an alternative algorithm for multiplication. Doubtless most readers here will probably have heard of this algorithm, its super well-known, but I had never heard of it before, and I had a surprisingly hard time understanding why it worked. So I’m gonna write a short, fun little blog post about this.</p>
 
 <p>The algorithm is called by many names, one of which is Russian peasant multiplication[^1]. I think this is a pretty shitty name, so I’m just going to call it <strong>duplation-mediation multiplication</strong>. The reason for that name should become apparent shortly. This algorithm is super old, it was used by the ancient Egyptians for example, and I think it is actually easier to do than the method of multiplying that I learned in elementary schoool.</p>
 
@@ -47,7 +111,7 @@ A category \(\mathcal{C}\) is <strong>adhesive</strong> if</p>
 
 <ul>
   <li>it has pullbacks, and</li>
-  <li>pushouts along monomorphisms<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> exist and are Van Kampen.</li>
+  <li>pushouts along monomorphisms<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> exist and are Van Kampen.</li>
 </ul>
 
 <p>Okay, so this might seem a little weird at first glance. What exactly does it mean for pushouts along monomorphisms to be Van Kampen? What does that have to do with graphs? All in due time, be patient!</p>
@@ -73,7 +137,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p>Now if we have a diagram \(Y_0 \xleftarrow{g_0} Y_1 \xrightarrow{g_1} Y_2\) such that for every diagram \(X_0 \xleftarrow{f_0} X_1 \xrightarrow{f_1} X_2\) and maps \(\alpha_0 : X_0 \to Y_0, \alpha_1 : X_1 \to Y_1\) and \(\alpha_2 : X_2 \to Y_2\) that define a natural transformation such that each commutative square is a pullback (which we call a cartesian natural transformation), and we consider the resulting map \(\alpha : X \to Y\) where \(X = X_0 +_{X_1} X_2\) and \(Y = Y_0 +_{Y_1} Y_2\), then we say that it the diagram has an <strong>effective colimit</strong> if \(X_0 \cong Y_0 \times_{Y} X\), \(X_1 \cong Y_1 \times_{Y} X\) and \(X_2 \cong Y_2 \times_{Y} X\). In other words, given some pieces, we glue them together and break them apart again to get the original pieces.</p>
 
-<p>A colimit is Van Kampen precisely when it is universal and effective. Here’s a fun exercise: Show that the category \(\mathbf{Set}\) does not have all effective pushouts. In other words, not all of \(\mathbf{Set}\)’s colimits are Van Kampen! When I first heard this I was quite surprised, because I thought \(\mathbf{Set}\) is the best category ever. It turns out, and I won’t be precise here, but the problem here is not really with \(\mathbf{Set}\). Instead, the problem is that we are only looking at \(1\)-categories. It turns out that having all colimits being Van Kampen is precisely what defines an \(\infty\)-topos<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
+<p>A colimit is Van Kampen precisely when it is universal and effective. Here’s a fun exercise: Show that the category \(\mathbf{Set}\) does not have all effective pushouts. In other words, not all of \(\mathbf{Set}\)’s colimits are Van Kampen! When I first heard this I was quite surprised, because I thought \(\mathbf{Set}\) is the best category ever. It turns out, and I won’t be precise here, but the problem here is not really with \(\mathbf{Set}\). Instead, the problem is that we are only looking at \(1\)-categories. It turns out that having all colimits being Van Kampen is precisely what defines an \(\infty\)-topos<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
 
 <p>However, \(\mathbf{Set}\) does have Van Kampen pushouts when the maps \(g_0, g_1\) in the diagram \(Y_0 \xleftarrow{g_0} Y_1 \xrightarrow{g_1} Y_2\) are monomorphisms. This is the property of \(\mathbf{Set}\) that we generalize to define adhesive categories.</p>
 
@@ -99,10 +163,10 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>Technically an adhesive category is one where you have Van Kampen pushouts when one of the two maps is a monomorphism. For our case however we need both maps to be monos. So maybe it would be better to call these bi-adhesive categories or something, but let’s just stick with the adhesive terminology for now. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>See <a href="https://www.math.uwo.ca/faculty/kapulkin/seminars/hottestfiles/Anel-2019-05-2-HoTTEST.pdf">here</a> for more. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
@@ -131,7 +195,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 </figure>
 </div>
 
-<p>So in this sense, \(\mathsf{rGrph}\) is preferable, as it provides a link to the following key \(\mathbf{NP}\)-complete computational problem: Given a graph \(G\) and \(n \geq 3\), does \(G\) have an \(n\)-coloring? The theory of this computational problem ties into many areas of computer science<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+<p>So in this sense, \(\mathsf{rGrph}\) is preferable, as it provides a link to the following key \(\mathbf{NP}\)-complete computational problem: Given a graph \(G\) and \(n \geq 3\), does \(G\) have an \(n\)-coloring? The theory of this computational problem ties into many areas of computer science<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
 
 <div align="center">
 <figure>
@@ -146,13 +210,13 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p>First let us try and characterize the monomorphisms in \(\mathsf{Grph}\). Using the adjunction \(\text{Disc} \dashv V\) again, we know that \(V\) must preserve monomorphisms. In other words, if \(f: G \to H\) is a mono in \(\mathsf{Grph}\), then it cannot collapse edges. So every mono in \(\mathsf{Grph}\) is a morphism in \(\mathsf{rGrph}\).</p>
 
-<p>In fact we know more than this. Because the functor \(V : \mathsf{Grph} \to \mathbf{Set}\) is faithful. Indeed, maps of graphs are completely determined by where they send vertices. Thus the functor \(V\) makes \(\mathsf{Grph}\) into a <strong>concrete category</strong>. This is also true for \(\mathsf{rGrph}\). It is well known<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> that since \(V\) has a left adjoint, a morphism \(f\) in \(\mathsf{(r)Grph}\) is a monomorphism if and only if \(V(f)\) is injective.</p>
+<p>In fact we know more than this. Because the functor \(V : \mathsf{Grph} \to \mathbf{Set}\) is faithful. Indeed, maps of graphs are completely determined by where they send vertices. Thus the functor \(V\) makes \(\mathsf{Grph}\) into a <strong>concrete category</strong>. This is also true for \(\mathsf{rGrph}\). It is well known<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> that since \(V\) has a left adjoint, a morphism \(f\) in \(\mathsf{(r)Grph}\) is a monomorphism if and only if \(V(f)\) is injective.</p>
 
 <p>Thus a morphism in \(\mathsf{Grph}\) is a monomorphism if and only if it is injective on vertices. But this is the same for \(\mathsf{rGrph}\). Thus they have the same monomorphisms.</p>
 
 <p>In <a href="https://arxiv.org/abs/2104.01841">Spined Categories</a>, they consider the categories \(\mathsf{Gr}_{hom}\), which is our \(\mathsf{rGrph}\) and \(\mathsf{Gr}_{mono}\), which is our \(\mathsf{rGrph}_m \cong \mathsf{Grph}_m\). These are also called \(\mathsf{Gr}_H\) and \(\mathsf{Gr}_M\), respectively in <a href="https://arxiv.org/abs/2207.06091">Structured Decompositions</a>.</p>
 
-<p>Note that if \(f : G \to H\) and \(g : G \to K\) are monomorphisms in \(\mathsf{Grph}\), then the pushout \(H +_G K\) exists in \(\mathsf{Grph}\) as we showed last time, and it is not too hard to show that it also exists in \(\mathsf{rGrph}\)<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. However, this pushout might not exist in \(\mathsf{rGrph}_m\). Indeed, consider the following pushout.</p>
+<p>Note that if \(f : G \to H\) and \(g : G \to K\) are monomorphisms in \(\mathsf{Grph}\), then the pushout \(H +_G K\) exists in \(\mathsf{Grph}\) as we showed last time, and it is not too hard to show that it also exists in \(\mathsf{rGrph}\)<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>. However, this pushout might not exist in \(\mathsf{rGrph}_m\). Indeed, consider the following pushout.</p>
 
 <div align="center">
 <figure>
@@ -178,13 +242,13 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>Such as those given <a href="https://www.researchgate.net/publication/344016939_Applications_of_Graph_Coloring_in_Modern_Computer_Science">here</a>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>See <a href="https://lovelylittlelemmas.rjprojects.net/concrete-categories-and-monomorphisms/">here</a> for proofs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3" role="doc-endnote">
+    <li id="fn:3">
       <p>Just consider the description of the pushout in \(\mathsf{Grph}\) and notice that none of the maps involve collapsing edges. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
@@ -194,7 +258,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p>There’s a ton of different notions of graphs, each with their own uses and conventions. For right now, I’m mainly interested in undirected graphs with at most one edge between two vertices and no loops. These kinds of graphs are often called <strong>simple graphs</strong>, and they seem (at least upon my beginner knowledge) to be slightly more central to algorithms and computer science than directed graphs, or graphs with multiple edges (also called multigraphs).</p>
 
-<p>Now there’s quite a bit written about this zoo of kinds of graphs, such as the thesis <a href="https://scholarworks.umt.edu/cgi/viewcontent.cgi?referer=&amp;httpsredir=1&amp;article=1986&amp;context=etd">The Categories of Graphs</a><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> and this <a href="https://ncatlab.org/nlab/show/graph">nlab page</a>, so I won’t talk too much about it. Here’s a table summarizing the graphs in the nlab article.</p>
+<p>Now there’s quite a bit written about this zoo of kinds of graphs, such as the thesis <a href="https://scholarworks.umt.edu/cgi/viewcontent.cgi?referer=&amp;httpsredir=1&amp;article=1986&amp;context=etd">The Categories of Graphs</a><sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> and this <a href="https://ncatlab.org/nlab/show/graph">nlab page</a>, so I won’t talk too much about it. Here’s a table summarizing the graphs in the nlab article.</p>
 
 <table>
   <thead>
@@ -261,7 +325,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p>Category theorists are probably most used to working with directed pseudographs, since categories are directed pseudographs with extra structure (identity loops and composition).</p>
 
-<p>Right off the bat, let us note that the category \(\mathsf{DPGrph}\) of directed pseudographs is super nice. Indeed, if we let \((* \rightrightarrows *)\) denote the category with two objects \(E\) and \(V\) and two non-identity morphisms \(s, t : E \to V\), then a directed pseudograph is the same thing as a functor \(G : (* \rightrightarrows *) \to \mathbf{Set}\). Thus \(\mathsf{DPGrph} = \mathbf{Set}^{* \rightrightarrows *}\) is a Grothendieck topos, in particular it is a copresheaf category, really the nicest kind of category around. Doing any sort of construction in this category should be dumb simple, as (co)limits in copresheaf categories are computed objectwise<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
+<p>Right off the bat, let us note that the category \(\mathsf{DPGrph}\) of directed pseudographs is super nice. Indeed, if we let \((* \rightrightarrows *)\) denote the category with two objects \(E\) and \(V\) and two non-identity morphisms \(s, t : E \to V\), then a directed pseudograph is the same thing as a functor \(G : (* \rightrightarrows *) \to \mathbf{Set}\). Thus \(\mathsf{DPGrph} = \mathbf{Set}^{* \rightrightarrows *}\) is a Grothendieck topos, in particular it is a copresheaf category, really the nicest kind of category around. Doing any sort of construction in this category should be dumb simple, as (co)limits in copresheaf categories are computed objectwise<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
 
 <p>So let’s get into the math. By a simple graph \(G\), what I mean is a set \(V(G)\) of <strong>vertices</strong> equipped with a binary, irreflexive, symmetric relation \((E(G) \subseteq V(G)^2)\), called the <strong>edge relation</strong>. So if \(u,v \in V\), then \((u,v) \in E(G)\), which we will also write as \(uv\) or \(u \sim v\) if there is an edge connecting \(u\) and \(v\).</p>
 
@@ -269,7 +333,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p>But wait…is this actually what we want? There’s a small, kind of annoying thing we notice right away from this definition. With the above definition, the two inclusions \(* \to [*-*]\) of a simple graph with one vertex and no edges into the simple graph with two vertices and one edge are morphisms, which is good. However, there is <strong>no</strong> morphism in the other direction \([*-*] \to *\). This is because if we call the first graph \(G\) with vertices \(u\) and \(v\) and the second graph \(G'\) with single vertex \(w\), then \(uv \in E(G)\), but since \(E(G')\) is irreflexive, \(ww \notin E(G')\). Thus the function sending \(u\) and \(v\) to \(w\) does not define a morphism of simple graphs.</p>
 
-<p>So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don’t know, I’d like to consider some cases where you can collapse edges, that seems more natural and fun to me<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">3</a></sup>.</p>
+<p>So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don’t know, I’d like to consider some cases where you can collapse edges, that seems more natural and fun to me<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
 
 <p>Alright, so let’s redo this. Lets redefine a simple graph \(G\) to consist of a set \(V(G)\) of vertices and a binary, <strong>reflexive</strong>, symmetric relation \((E(G) \subseteq V(G)^2)\). So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can’t map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren’t there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges.</p>
 
@@ -283,7 +347,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p>Also note that Wikipedia considers for its <a href="https://en.wikipedia.org/wiki/Graph_homomorphism">definition of graph homomorphism</a> to be loop graphs with maps between them that aren’t allowed to collapse loops or edges.</p>
 
-<p>First off, lets notice there is a nice functor \(V : \mathsf{Grph} \to \mathbf{Set}\) that sends a graph to its set of vertices. If I have a map of graphs, then I get a map of their corresponding sets of vertices. This functor has a left adjoint \(\text{Disc} : \mathbf{Set} \to \mathsf{Grph}\) that sends a set \(S\) to the graph \(\text{Disc}(S)\), which has \(V(\text{Disc}(S)) = S\) and \(E(\text{Disc}(S)) = \varnothing\)<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">4</a></sup>. In other words \(\text{Disc}(S)\) is the <strong>discrete graph</strong> on the set \(S\). Now \(V\) also has a right adjoint \(\text{CoDisc}: \mathbf{Set} \to \mathsf{Grph}\) which sends a set \(S\) to the graph \(\text{CoDisc}(S)\), whose set of vertices is \(S\), and where every pair of vertices is connected by an edge.</p>
+<p>First off, lets notice there is a nice functor \(V : \mathsf{Grph} \to \mathbf{Set}\) that sends a graph to its set of vertices. If I have a map of graphs, then I get a map of their corresponding sets of vertices. This functor has a left adjoint \(\text{Disc} : \mathbf{Set} \to \mathsf{Grph}\) that sends a set \(S\) to the graph \(\text{Disc}(S)\), which has \(V(\text{Disc}(S)) = S\) and \(E(\text{Disc}(S)) = \varnothing\)<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>. In other words \(\text{Disc}(S)\) is the <strong>discrete graph</strong> on the set \(S\). Now \(V\) also has a right adjoint \(\text{CoDisc}: \mathbf{Set} \to \mathsf{Grph}\) which sends a set \(S\) to the graph \(\text{CoDisc}(S)\), whose set of vertices is \(S\), and where every pair of vertices is connected by an edge.</p>
 
 <p>Okay, so \(V\) has left and right adjoints, so that means it preserves whatever (co)limits exist in \(\mathsf{Grph}\), and we know what (co)limits in \(\mathbf{Set}\) look like. So if we take a (co)imit \(\lim_i G_i\) of graphs, we know that \(V(\lim_i G_i) \cong \lim_i V(G_i)\). So that helps us guess what (co)limits should be in \(\mathsf{Grph}\).</p>
 
@@ -335,16 +399,16 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>In this reference, all of these examples of graphs are derived from a more general structure, which they call a <em>conceptual graph</em>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>See Riehl’s <a href="https://math.jhu.edu/~eriehl/context.pdf">Category Theory in Context</a> Proposition 3.3.9 for a more precise description of what I mean. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:4" role="doc-endnote">
+    <li id="fn:4">
       <p>However we do lose something really important when we use these morphisms and not the more strict ones. If we let \(K^n\) denote the \(n\)-clique, i.e. the complete graph on \(n\) vertices, then with the strict morphisms that don’t collapse edges, maps of graphs \(G \to K^n\) are equivalent to \(n\)-colorings of \(G\). If we allow morphisms to collapse edges, then there are always such maps, we can just collapse everything to a single vertex for instance, so we lose the correspondence. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3" role="doc-endnote">
+    <li id="fn:3">
       <p>Technically it should be \(E(F(S)) = \Delta_{S}\), the diagonal, i.e. the set \(\Delta_S = \{ (s, s) \in S \times S \}\) since we are asking for the edge relation to be reflexive, but going forward, let’s just ignore these “ghost edges.” <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
@@ -352,7 +416,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p><strong>Definition</strong>: A <strong>cartesian space</strong> is a finite dimensional smooth manifold diffeomorphic to \(\mathbb{R}^n\) for some \(n \geq 0\). Given a set \(X\), a <strong>parametrization</strong> is a set function \(p : U \to X\) where \(U\) is a cartesian space. If \(M\) is a finite dimensional smooth manifold, and \(\mathcal{U} = \{ U_i \subseteq M \}\) is a collection of subsets of \(M\), we say that \(\mathcal{U}\) is a <strong>good open cover</strong> if each \(U_i\) is a cartesian space, every finite intersection \(U_{i_0} \cap \dots \cap U_{i_n}\) is either empty or a cartesian space, and \(\bigcup_i U_i = M\).</p>
 
-<p><strong>Definition</strong><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>: Given a set \(X\), a <strong>diffeology</strong> \(\mathcal{D}_X\) on \(X\) consists of a set of parametrizations \(p: U \to X\) satisfying the following three conditions:</p>
+<p><strong>Definition</strong><sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>: Given a set \(X\), a <strong>diffeology</strong> \(\mathcal{D}_X\) on \(X\) consists of a set of parametrizations \(p: U \to X\) satisfying the following three conditions:</p>
 <ol>
   <li>All parametrizations with domain \(\mathbb{R}^0\) belong to \(\mathcal{D}_X\), namely all the points of \(X\),</li>
   <li>If \(p : V \to X\) is a parametrization, and \(f: U \to V\) is a smooth map between cartesian spaces, then the composition \(p \circ f\) belongs to \(\mathcal{D}_X\),</li>
@@ -379,14 +443,14 @@ If \(\mathcal{D}_X\) is a diffeology, then we call a parametrization \(p : U \to
 <hr />
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>The astute reader will note that this is not the definition of a diffeogical space as given in the <a href="https://www.google.com/books/edition/Diffeology/Nb0xAAAAQBAJ?hl=en">“Diffeology textbook”</a>. However, in <a href="https://arxiv.org/abs/2202.11023">my paper</a>, I prove that the category of diffeological spaces as given in the Diffeology textbook and the category of diffeological spaces as given in the definition above are equivalent. The above definition is far more convenient to work with for my purposes. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>]]></content><author><name></name></author><category term="math" /><category term="diffeological_spaces" /><summary type="html"><![CDATA[The definition of diffeological spaces]]></summary></entry><entry><title type="html">Diffeological Spaces, Part 2</title><link href="https://eminichiello67.github.io/blog/2023/diffeological_spaces_2/" rel="alternate" type="text/html" title="Diffeological Spaces, Part 2" /><published>2023-06-23T00:00:00+00:00</published><updated>2023-06-23T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2023/diffeological_spaces_2</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2023/diffeological_spaces_2/"><![CDATA[<p>Let’s dive into the history of diffeological spaces. Note that this is a history very biased towards my interests in diffeology and leaves out many important developments in the theory.</p>
 
 <ul>
-  <li>(1973): Kuo-Tsai Chen wrote a <a href="https://www.jstor.org/stable/1970846?origin=crossref">paper</a> where he introduced Chen spaces, a class of smooth spaces very similar to diffeological spaces, for the purpose of proving a “loop space deRham Theorem” (his words). This Theorem states that one can calculate the cohomology of the loop space of a manifold using a technique called “iterated integrals.” The important point here is being able to define differential forms on the loop space of a manifold, which is almost never a finite dimensional smooth manifold. While this is not directly relevant<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> to diffeological spaces, it shows that such ideas about generalized smooth spaces were “in the air.”</li>
+  <li>(1973): Kuo-Tsai Chen wrote a <a href="https://www.jstor.org/stable/1970846?origin=crossref">paper</a> where he introduced Chen spaces, a class of smooth spaces very similar to diffeological spaces, for the purpose of proving a “loop space deRham Theorem” (his words). This Theorem states that one can calculate the cohomology of the loop space of a manifold using a technique called “iterated integrals.” The important point here is being able to define differential forms on the loop space of a manifold, which is almost never a finite dimensional smooth manifold. While this is not directly relevant<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> to diffeological spaces, it shows that such ideas about generalized smooth spaces were “in the air.”</li>
 </ul>
 
 <ul>
@@ -429,7 +493,7 @@ tore”</a>, which studies what will become the most famous example of a diffeol
     <p>(2010s): There is a huge influx of interest in diffeology. Papers are written about diffeology with connections to <a href="https://arxiv.org/abs/0911.3212">mathematical physics</a>, <a href="https://arxiv.org/abs/1309.3001">Lie groupoid theory</a>, <a href="https://arxiv.org/abs/0903.2871">foliations</a>, <a href="https://arxiv.org/abs/1311.6394">homotopy theory</a>, and more. Some particularly important papers are written in this period.</p>
     <ul>
       <li>Two definitions of tangent spaces, the internal and external, are given for diffeological spaces in <a href="https://arxiv.org/abs/1411.5425">“Tangent Spaces and Tangent Bundles for Diffeological Spaces.”</a> by Christensen and Wu. They are shown to be isomorphic for manifolds, and agree with the usual definition of tangent space. They are shown not to agree in general, and many fascinating examples are given.</li>
-      <li>A compactly generated model structure<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> is proven to exist for diffeological spaces by Kihara in <a href="https://arxiv.org/abs/1605.06794">“Model category for Diffeological Spaces.”</a> In order to make this model structure work, Kihara alters the diffeology on simplices.</li>
+      <li>A compactly generated model structure<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> is proven to exist for diffeological spaces by Kihara in <a href="https://arxiv.org/abs/1605.06794">“Model category for Diffeological Spaces.”</a> In order to make this model structure work, Kihara alters the diffeology on simplices.</li>
       <li>A deep study of diffeological vector spaces is made in <a href="https://arxiv.org/abs/1703.07564">“Diffeological Vector Spaces”</a> by Christensen and Wu. Many new fascinating examples of misbehaving diffeological spaces are given.</li>
     </ul>
   </li>
@@ -452,20 +516,20 @@ tore”</a>, which studies what will become the most famous example of a diffeol
 
 <p><br /></p>
 <ul>
-  <li>(2023): PIZ finally publishes his paper <a href="https://link.springer.com/article/10.1007/s11856-023-2486-8">“Cech-deRham bicomplex in diffeology”</a> on the Cech-deRham obstruction for diffeological spaces that was originally written in 1988.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup></li>
+  <li>(2023): PIZ finally publishes his paper <a href="https://link.springer.com/article/10.1007/s11856-023-2486-8">“Cech-deRham bicomplex in diffeology”</a> on the Cech-deRham obstruction for diffeological spaces that was originally written in 1988.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></li>
 </ul>
 
 <hr />
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>However, Iglesias-Zemmour writes in his <a href="http://math.huji.ac.il/~piz/documents/AITD.pdf">Introduction to Diffeology</a> (where I obtained much of this history) that diffeological spaces were “built on the model” of Chen spaces. Later work by <a href="https://arxiv.org/abs/0802.2225">Stacey</a> and <a href="https://arxiv.org/abs/0807.1704">Baez-Hoffnung</a> showed how Chen spaces are directly comparable to diffeological spaces. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>Another model structure was proven to exist on diffeological spaces in <a href="https://arxiv.org/abs/2011.12842">“A model structure on diffeological spaces, I”</a>, though it took many years to develop and Kihara’s help in amending previous proofs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3" role="doc-endnote">
+    <li id="fn:3">
       <p>I can’t help but mention that at the time of writing, there are four different versions of Cech cohomology for diffeological spaces in the literature. Indeed, there is PIZ’s, defined in his paper above. There is Krepski, Watts and Wolbert’s diffeological Cech cohomology given in <a href="https://arxiv.org/abs/2111.01032">“Sheaves, principal bundles, and Čech cohomology for diffeological spaces”</a>. There is my version of Cech cohomology for diffeological spaces defined in <a href="https://arxiv.org/abs/2202.11023">“Diffeological Principal Bundles and Principal Infinity Bundles”</a> which is called \(\infty\)-stack cohomology. Finally there is Ahmadi’s version of diffeological Cech cohomology given in <a href="https://arxiv.org/abs/2303.03251">“Diffeological Cech Cohomology.”</a> It is currently an open question as to whether any of these cohomologies agree for all diffeological spaces. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>

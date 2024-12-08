@@ -153,7 +153,7 @@ A category \(\mathcal{C}\) is <strong>adhesive</strong> if</p>
 
 <ul>
   <li>it has pullbacks, and</li>
-  <li>pushouts along monomorphisms<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> exist and are Van Kampen.</li>
+  <li>pushouts along monomorphisms<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> exist and are Van Kampen.</li>
 </ul>
 
 <p>Okay, so this might seem a little weird at first glance. What exactly does it mean for pushouts along monomorphisms to be Van Kampen? What does that have to do with graphs? All in due time, be patient!</p>
@@ -179,7 +179,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <p>Now if we have a diagram \(Y_0 \xleftarrow{g_0} Y_1 \xrightarrow{g_1} Y_2\) such that for every diagram \(X_0 \xleftarrow{f_0} X_1 \xrightarrow{f_1} X_2\) and maps \(\alpha_0 : X_0 \to Y_0, \alpha_1 : X_1 \to Y_1\) and \(\alpha_2 : X_2 \to Y_2\) that define a natural transformation such that each commutative square is a pullback (which we call a cartesian natural transformation), and we consider the resulting map \(\alpha : X \to Y\) where \(X = X_0 +_{X_1} X_2\) and \(Y = Y_0 +_{Y_1} Y_2\), then we say that it the diagram has an <strong>effective colimit</strong> if \(X_0 \cong Y_0 \times_{Y} X\), \(X_1 \cong Y_1 \times_{Y} X\) and \(X_2 \cong Y_2 \times_{Y} X\). In other words, given some pieces, we glue them together and break them apart again to get the original pieces.</p>
 
-<p>A colimit is Van Kampen precisely when it is universal and effective. Here’s a fun exercise: Show that the category \(\mathbf{Set}\) does not have all effective pushouts. In other words, not all of \(\mathbf{Set}\)’s colimits are Van Kampen! When I first heard this I was quite surprised, because I thought \(\mathbf{Set}\) is the best category ever. It turns out, and I won’t be precise here, but the problem here is not really with \(\mathbf{Set}\). Instead, the problem is that we are only looking at \(1\)-categories. It turns out that having all colimits being Van Kampen is precisely what defines an \(\infty\)-topos<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
+<p>A colimit is Van Kampen precisely when it is universal and effective. Here’s a fun exercise: Show that the category \(\mathbf{Set}\) does not have all effective pushouts. In other words, not all of \(\mathbf{Set}\)’s colimits are Van Kampen! When I first heard this I was quite surprised, because I thought \(\mathbf{Set}\) is the best category ever. It turns out, and I won’t be precise here, but the problem here is not really with \(\mathbf{Set}\). Instead, the problem is that we are only looking at \(1\)-categories. It turns out that having all colimits being Van Kampen is precisely what defines an \(\infty\)-topos<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
 
 <p>However, \(\mathbf{Set}\) does have Van Kampen pushouts when the maps \(g_0, g_1\) in the diagram \(Y_0 \xleftarrow{g_0} Y_1 \xrightarrow{g_1} Y_2\) are monomorphisms. This is the property of \(\mathbf{Set}\) that we generalize to define adhesive categories.</p>
 
@@ -205,10 +205,10 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>Technically an adhesive category is one where you have Van Kampen pushouts when one of the two maps is a monomorphism. For our case however we need both maps to be monos. So maybe it would be better to call these bi-adhesive categories or something, but let’s just stick with the adhesive terminology for now. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>See <a href="https://www.math.uwo.ca/faculty/kapulkin/seminars/hottestfiles/Anel-2019-05-2-HoTTEST.pdf" rel="external nofollow noopener" target="_blank">here</a> for more. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
@@ -225,7 +225,7 @@ and let \(Y = Y_0 +_{Y_1} Y_2\) be its colimit, i.e. pushout. Suppose we have a 
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Emilio  Minichiello. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: November 16, 2024.
+Last updated: December 08, 2024.
       </div>
     </footer>
 

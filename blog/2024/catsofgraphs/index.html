@@ -152,7 +152,7 @@
 
 <p>There’s a ton of different notions of graphs, each with their own uses and conventions. For right now, I’m mainly interested in undirected graphs with at most one edge between two vertices and no loops. These kinds of graphs are often called <strong>simple graphs</strong>, and they seem (at least upon my beginner knowledge) to be slightly more central to algorithms and computer science than directed graphs, or graphs with multiple edges (also called multigraphs).</p>
 
-<p>Now there’s quite a bit written about this zoo of kinds of graphs, such as the thesis <a href="https://scholarworks.umt.edu/cgi/viewcontent.cgi?referer=&amp;httpsredir=1&amp;article=1986&amp;context=etd" rel="external nofollow noopener" target="_blank">The Categories of Graphs</a><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> and this <a href="https://ncatlab.org/nlab/show/graph" rel="external nofollow noopener" target="_blank">nlab page</a>, so I won’t talk too much about it. Here’s a table summarizing the graphs in the nlab article.</p>
+<p>Now there’s quite a bit written about this zoo of kinds of graphs, such as the thesis <a href="https://scholarworks.umt.edu/cgi/viewcontent.cgi?referer=&amp;httpsredir=1&amp;article=1986&amp;context=etd" rel="external nofollow noopener" target="_blank">The Categories of Graphs</a><sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> and this <a href="https://ncatlab.org/nlab/show/graph" rel="external nofollow noopener" target="_blank">nlab page</a>, so I won’t talk too much about it. Here’s a table summarizing the graphs in the nlab article.</p>
 
 <table>
   <thead>
@@ -219,7 +219,7 @@
 
 <p>Category theorists are probably most used to working with directed pseudographs, since categories are directed pseudographs with extra structure (identity loops and composition).</p>
 
-<p>Right off the bat, let us note that the category \(\mathsf{DPGrph}\) of directed pseudographs is super nice. Indeed, if we let \((* \rightrightarrows *)\) denote the category with two objects \(E\) and \(V\) and two non-identity morphisms \(s, t : E \to V\), then a directed pseudograph is the same thing as a functor \(G : (* \rightrightarrows *) \to \mathbf{Set}\). Thus \(\mathsf{DPGrph} = \mathbf{Set}^{* \rightrightarrows *}\) is a Grothendieck topos, in particular it is a copresheaf category, really the nicest kind of category around. Doing any sort of construction in this category should be dumb simple, as (co)limits in copresheaf categories are computed objectwise<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
+<p>Right off the bat, let us note that the category \(\mathsf{DPGrph}\) of directed pseudographs is super nice. Indeed, if we let \((* \rightrightarrows *)\) denote the category with two objects \(E\) and \(V\) and two non-identity morphisms \(s, t : E \to V\), then a directed pseudograph is the same thing as a functor \(G : (* \rightrightarrows *) \to \mathbf{Set}\). Thus \(\mathsf{DPGrph} = \mathbf{Set}^{* \rightrightarrows *}\) is a Grothendieck topos, in particular it is a copresheaf category, really the nicest kind of category around. Doing any sort of construction in this category should be dumb simple, as (co)limits in copresheaf categories are computed objectwise<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
 
 <p>So let’s get into the math. By a simple graph \(G\), what I mean is a set \(V(G)\) of <strong>vertices</strong> equipped with a binary, irreflexive, symmetric relation \((E(G) \subseteq V(G)^2)\), called the <strong>edge relation</strong>. So if \(u,v \in V\), then \((u,v) \in E(G)\), which we will also write as \(uv\) or \(u \sim v\) if there is an edge connecting \(u\) and \(v\).</p>
 
@@ -227,7 +227,7 @@
 
 <p>But wait…is this actually what we want? There’s a small, kind of annoying thing we notice right away from this definition. With the above definition, the two inclusions \(* \to [*-*]\) of a simple graph with one vertex and no edges into the simple graph with two vertices and one edge are morphisms, which is good. However, there is <strong>no</strong> morphism in the other direction \([*-*] \to *\). This is because if we call the first graph \(G\) with vertices \(u\) and \(v\) and the second graph \(G'\) with single vertex \(w\), then \(uv \in E(G)\), but since \(E(G')\) is irreflexive, \(ww \notin E(G')\). Thus the function sending \(u\) and \(v\) to \(w\) does not define a morphism of simple graphs.</p>
 
-<p>So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don’t know, I’d like to consider some cases where you can collapse edges, that seems more natural and fun to me<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">3</a></sup>.</p>
+<p>So basically, with the most naive definition above, morphisms of simple graphs cannot collapse edges. Now this might be reasonable for your particular use case, but I don’t know, I’d like to consider some cases where you can collapse edges, that seems more natural and fun to me<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
 
 <p>Alright, so let’s redo this. Lets redefine a simple graph \(G\) to consist of a set \(V(G)\) of vertices and a binary, <strong>reflexive</strong>, symmetric relation \((E(G) \subseteq V(G)^2)\). So technically, these are different mathematical objects. You might visualize them as undirected graphs with unique edges and where every vertex has exactly one loop. But this is kinda silly. I can’t map these loops to anything other than the unique loop where I send the underlying vertex to, so it might as well be like they aren’t there. It makes more sense to just identify these with the intuitive notion of a simple graph: undirected, unique edges, no loops, and just allow morphisms to collapse edges.</p>
 
@@ -241,7 +241,7 @@
 
 <p>Also note that Wikipedia considers for its <a href="https://en.wikipedia.org/wiki/Graph_homomorphism" rel="external nofollow noopener" target="_blank">definition of graph homomorphism</a> to be loop graphs with maps between them that aren’t allowed to collapse loops or edges.</p>
 
-<p>First off, lets notice there is a nice functor \(V : \mathsf{Grph} \to \mathbf{Set}\) that sends a graph to its set of vertices. If I have a map of graphs, then I get a map of their corresponding sets of vertices. This functor has a left adjoint \(\text{Disc} : \mathbf{Set} \to \mathsf{Grph}\) that sends a set \(S\) to the graph \(\text{Disc}(S)\), which has \(V(\text{Disc}(S)) = S\) and \(E(\text{Disc}(S)) = \varnothing\)<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">4</a></sup>. In other words \(\text{Disc}(S)\) is the <strong>discrete graph</strong> on the set \(S\). Now \(V\) also has a right adjoint \(\text{CoDisc}: \mathbf{Set} \to \mathsf{Grph}\) which sends a set \(S\) to the graph \(\text{CoDisc}(S)\), whose set of vertices is \(S\), and where every pair of vertices is connected by an edge.</p>
+<p>First off, lets notice there is a nice functor \(V : \mathsf{Grph} \to \mathbf{Set}\) that sends a graph to its set of vertices. If I have a map of graphs, then I get a map of their corresponding sets of vertices. This functor has a left adjoint \(\text{Disc} : \mathbf{Set} \to \mathsf{Grph}\) that sends a set \(S\) to the graph \(\text{Disc}(S)\), which has \(V(\text{Disc}(S)) = S\) and \(E(\text{Disc}(S)) = \varnothing\)<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>. In other words \(\text{Disc}(S)\) is the <strong>discrete graph</strong> on the set \(S\). Now \(V\) also has a right adjoint \(\text{CoDisc}: \mathbf{Set} \to \mathsf{Grph}\) which sends a set \(S\) to the graph \(\text{CoDisc}(S)\), whose set of vertices is \(S\), and where every pair of vertices is connected by an edge.</p>
 
 <p>Okay, so \(V\) has left and right adjoints, so that means it preserves whatever (co)limits exist in \(\mathsf{Grph}\), and we know what (co)limits in \(\mathbf{Set}\) look like. So if we take a (co)imit \(\lim_i G_i\) of graphs, we know that \(V(\lim_i G_i) \cong \lim_i V(G_i)\). So that helps us guess what (co)limits should be in \(\mathsf{Grph}\).</p>
 
@@ -293,16 +293,16 @@
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>In this reference, all of these examples of graphs are derived from a more general structure, which they call a <em>conceptual graph</em>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>See Riehl’s <a href="https://math.jhu.edu/~eriehl/context.pdf" rel="external nofollow noopener" target="_blank">Category Theory in Context</a> Proposition 3.3.9 for a more precise description of what I mean. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
-    <li id="fn:4" role="doc-endnote">
+    <li id="fn:4">
       <p>However we do lose something really important when we use these morphisms and not the more strict ones. If we let \(K^n\) denote the \(n\)-clique, i.e. the complete graph on \(n\) vertices, then with the strict morphisms that don’t collapse edges, maps of graphs \(G \to K^n\) are equivalent to \(n\)-colorings of \(G\). If we allow morphisms to collapse edges, then there are always such maps, we can just collapse everything to a single vertex for instance, so we lose the correspondence. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
-    <li id="fn:3" role="doc-endnote">
+    <li id="fn:3">
       <p>Technically it should be \(E(F(S)) = \Delta_{S}\), the diagonal, i.e. the set \(\Delta_S = \{ (s, s) \in S \times S \}\) since we are asking for the edge relation to be reflexive, but going forward, let’s just ignore these “ghost edges.” <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
@@ -319,7 +319,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Emilio  Minichiello. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: November 16, 2024.
+Last updated: December 08, 2024.
       </div>
     </footer>
 

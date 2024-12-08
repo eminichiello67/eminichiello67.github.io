@@ -174,7 +174,7 @@
 </figure>
 </div>
 
-<p>So in this sense, \(\mathsf{rGrph}\) is preferable, as it provides a link to the following key \(\mathbf{NP}\)-complete computational problem: Given a graph \(G\) and \(n \geq 3\), does \(G\) have an \(n\)-coloring? The theory of this computational problem ties into many areas of computer science<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+<p>So in this sense, \(\mathsf{rGrph}\) is preferable, as it provides a link to the following key \(\mathbf{NP}\)-complete computational problem: Given a graph \(G\) and \(n \geq 3\), does \(G\) have an \(n\)-coloring? The theory of this computational problem ties into many areas of computer science<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
 
 <div align="center">
 <figure>
@@ -189,13 +189,13 @@
 
 <p>First let us try and characterize the monomorphisms in \(\mathsf{Grph}\). Using the adjunction \(\text{Disc} \dashv V\) again, we know that \(V\) must preserve monomorphisms. In other words, if \(f: G \to H\) is a mono in \(\mathsf{Grph}\), then it cannot collapse edges. So every mono in \(\mathsf{Grph}\) is a morphism in \(\mathsf{rGrph}\).</p>
 
-<p>In fact we know more than this. Because the functor \(V : \mathsf{Grph} \to \mathbf{Set}\) is faithful. Indeed, maps of graphs are completely determined by where they send vertices. Thus the functor \(V\) makes \(\mathsf{Grph}\) into a <strong>concrete category</strong>. This is also true for \(\mathsf{rGrph}\). It is well known<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> that since \(V\) has a left adjoint, a morphism \(f\) in \(\mathsf{(r)Grph}\) is a monomorphism if and only if \(V(f)\) is injective.</p>
+<p>In fact we know more than this. Because the functor \(V : \mathsf{Grph} \to \mathbf{Set}\) is faithful. Indeed, maps of graphs are completely determined by where they send vertices. Thus the functor \(V\) makes \(\mathsf{Grph}\) into a <strong>concrete category</strong>. This is also true for \(\mathsf{rGrph}\). It is well known<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> that since \(V\) has a left adjoint, a morphism \(f\) in \(\mathsf{(r)Grph}\) is a monomorphism if and only if \(V(f)\) is injective.</p>
 
 <p>Thus a morphism in \(\mathsf{Grph}\) is a monomorphism if and only if it is injective on vertices. But this is the same for \(\mathsf{rGrph}\). Thus they have the same monomorphisms.</p>
 
 <p>In <a href="https://arxiv.org/abs/2104.01841" rel="external nofollow noopener" target="_blank">Spined Categories</a>, they consider the categories \(\mathsf{Gr}_{hom}\), which is our \(\mathsf{rGrph}\) and \(\mathsf{Gr}_{mono}\), which is our \(\mathsf{rGrph}_m \cong \mathsf{Grph}_m\). These are also called \(\mathsf{Gr}_H\) and \(\mathsf{Gr}_M\), respectively in <a href="https://arxiv.org/abs/2207.06091" rel="external nofollow noopener" target="_blank">Structured Decompositions</a>.</p>
 
-<p>Note that if \(f : G \to H\) and \(g : G \to K\) are monomorphisms in \(\mathsf{Grph}\), then the pushout \(H +_G K\) exists in \(\mathsf{Grph}\) as we showed last time, and it is not too hard to show that it also exists in \(\mathsf{rGrph}\)<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. However, this pushout might not exist in \(\mathsf{rGrph}_m\). Indeed, consider the following pushout.</p>
+<p>Note that if \(f : G \to H\) and \(g : G \to K\) are monomorphisms in \(\mathsf{Grph}\), then the pushout \(H +_G K\) exists in \(\mathsf{Grph}\) as we showed last time, and it is not too hard to show that it also exists in \(\mathsf{rGrph}\)<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>. However, this pushout might not exist in \(\mathsf{rGrph}_m\). Indeed, consider the following pushout.</p>
 
 <div align="center">
 <figure>
@@ -221,13 +221,13 @@
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>Such as those given <a href="https://www.researchgate.net/publication/344016939_Applications_of_Graph_Coloring_in_Modern_Computer_Science" rel="external nofollow noopener" target="_blank">here</a>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>See <a href="https://lovelylittlelemmas.rjprojects.net/concrete-categories-and-monomorphisms/" rel="external nofollow noopener" target="_blank">here</a> for proofs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
-    <li id="fn:3" role="doc-endnote">
+    <li id="fn:3">
       <p>Just consider the description of the pushout in \(\mathsf{Grph}\) and notice that none of the maps involve collapsing edges. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
@@ -244,7 +244,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Emilio  Minichiello. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: November 16, 2024.
+Last updated: December 08, 2024.
       </div>
     </footer>
 
