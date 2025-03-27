@@ -4,7 +4,7 @@ title: research
 permalink: /research/
 subtitle:
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 # Preprints and Publications

@@ -4,7 +4,7 @@ title: compassion
 permalink: /compassion/
 subtitle:
 nav: true
-nav_order: 3
+nav_order: 5
 ---
 
 I subscribe to the belief that we need more compassion in mathematics. Whether that be in the form of giving more compassionate talks, being more aware of the effects of mental health, or being more inclusive of minority groups of all kinds.
