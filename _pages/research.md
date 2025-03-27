@@ -4,7 +4,7 @@ title: research
 permalink: /research/
 subtitle:
 nav: true
-nav_order: 2
+nav_order: 1
 ---
 
 # Preprints and Publications
@@ -25,3 +25,12 @@ nav_order: 2
 Management Systems, (2023) [arXiv:2302.05417](https://arxiv.org/abs/2302.05417)
 
 * C. Sormani, D. Kazaras, D. Afrifa, V. Antonetti, M. Dinowitz, H. Drillick, M. Farahzad, S. George, A. L. Hepburn, L. T. Huynh, E. Minichiello, J. M. Pillati, S. Rendla, A. Yamin, Smocked Metric Spaces and their Tangent Cones, Missouri J. Math. Sci. 33(1): 27-99 (2021), [arXiv:1906.03403](https://arxiv.org/abs/1906.03403)
+
+## Other work
+
+Warning: The following is really first draft material and may contain errors.
+
+* [Notes on the Quillen model structure on simplicial sets](https://drive.google.com/file/d/1gfixen941y64URgFulQc_mAi-rpLSvS4/view) - (2021)
+* [My oral exam presentation slides](https://drive.google.com/file/d/1kWf42MRZoT70t3P5bGJkn_OGTbfY_AdM/view) - (2021)
+* [An alternate proof that a simplicial group is a Kan complex](https://drive.google.com/file/d/1VG5DeCVk9kOQoleOC2xyrQ5NH5ZDSp6K/view?usp=sharing) - (2020)
+* [My B.A. Thesis: Conformal Modulus and Extremal Families](https://drive.google.com/file/d/1QWl2AN-c6jZMd7PklYVPxo6BG1OkHF8u/view?usp=sharing) - (2019)
