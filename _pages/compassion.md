@@ -17,9 +17,7 @@ Below I give some links that I think are really important to this idea.
 
 ### Organizations and Groups
 * [AWM](https://awm-math.org/) - Association for Women in Mathematics,
-* [Spectra](https://lgbtmath.org/) - The Association for LGBTQ+ Mathematicians,
+* [Spectra](https://lgbtmath.org/) - The Association for LGBTQ+ Mathematicians. I am a proud member of their [allylist](https://www.lgbtmath.org/Allyship.html). For a really fascinating account on the history of Spectra, read [this](https://digitalcommons.lmu.edu/cgi/viewcontent.cgi?article=1154&context=math_fac),
 * [ENYGMMA](https://sites.google.com/stonybrook.edu/enygmma/home) - Empowering New York Gender Minority Mathematicians
 
 If you know of any other resources for compassionate mathematics, let me know.
-
-<!-- I am on the [Spectra Allylist](https://lgbtmath.org/Allyship.html), meaning I self-identify as an ally to the LGBTQ+ community. For a really fascinating account on the history of Spectra, read [this](https://digitalcommons.lmu.edu/cgi/viewcontent.cgi?article=1154&context=math_fac). -->
