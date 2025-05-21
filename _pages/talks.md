@@ -9,6 +9,9 @@ nav_order: 4
 
 | Title | Event | Year | Links |
 | - | - | - | - |
+| Coverages and Grothendieck Toposes | [Topology, Geometry, and Physics Seminar](https://www.zeinalian.com/workshop) | 2025 | [Video Link 1](https://youtu.be/G6kCMcRfRlI?si=AOORPnpkbdg5VRCg), [Video Link 2](https://youtu.be/nzwPPROcaKM?si=6lFFVUHDvHtVJI7p), [Video Link 3](https://youtu.be/c79Z_m4PasE) |
+| Diffeology for Everybody | [MAA Metro NY Annual Meeting](http://sections.maa.org/metrony/) | 2025 | [Slides](https://www.dropbox.com/scl/fi/auayu1qb6y4u3gawdnrdu/MAA_Diffeology_Presentation-1.pdf?rlkey=p3segbm3s1ubtpkifw56xifji&e=1&st=x9rg8nay&dl=0) |
+| Structured Decomposition Categories | [NYC Category Theory Seminar](http://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html) | 2025 | [Video Link](https://www.youtube.com/watch?v=h5sQqUIexu0&ab_channel=TheNewYorkCityCategoryTheorySeminar) |
 | Decision Problems on Graphs with Sheaves | [NYC Category Theory Seminar](http://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html) | 2024 | [Video](https://www.youtube.com/watch?v=EOjeZ_5Xbls) |
 | The Diffeological Cech-de Rham Obstruction | [Monthly Global Diffeology Seminar](https://diffeology.net/index.php/seminar/) | 2024 | [Slides]({% link assets/slides/slides_diffcechobstruction.pdf %}) |
 | Introduction to Categorical Database Theory | CUNY CityTech Math Department | 2024 | [Slides]({% link assets/slides/slides_intro_categorical_data.pdf%})
