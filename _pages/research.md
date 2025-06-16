@@ -8,36 +8,36 @@ nav_order: 1
 ---
 
 # Preprints and Publications
-* Structured Decompositions, 54 pages, (2025)
-B. Bumpus, Z. Kocsis, J. Master, E. Minichiello
+* Structured Decompositions, 54 pages, (2025)\
+[Ben Bumpus](https://bmbumpus.com/about-me/), [Zoltan Kocsis](https://existence.property/), [Jade Master](https://sites.google.com/view/jadeedenstarmaster/home), Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2207.06091)
 
-* Coverages and Grothendieck Toposes, 140 pages, (2025)
-E. Minichiello
+* Coverages and Grothendieck Toposes, 140 pages, (2025)\
+Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2503.20664)
 
-* Presenting Profunctors, 25 pages, **Proceedings of ACT 2024**, (2024)
-G. Goren, J. Meyers, E. Minichiello
+* Presenting Profunctors, 25 pages, **Proceedings of ACT 2024**, (2024)\
+[Gabriel Goren-Roig](https://gabrielgorenroig.github.io/), [Joshua Meyers](https://meygerjos.com/), Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2404.01406)
 
-* The Diffeological Čech-de Rham Obstruction, 41 pages, (2024)
-E. Minichiello
+* The Diffeological Čech-de Rham Obstruction, 41 pages, (2024)\
+Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2401.09400)
 
-* A Mathematical Model of Package Management Systems, 33 pages, (2023)
-G. Bazerman, E. Minichiello, R. Puzio
+* A Mathematical Model of Package Management Systems, 33 pages, (2023)\
+[Gershom Bazerman](https://gbaz.github.io/), Emilio Minichiello, Raymond Puzio\
 [arXiv link](https://arxiv.org/abs/2302.05417)
 
-* Diffeological Principal Bundles and Principal Infinity Bundles, 52 pages, **Journal of Homotopy and Related Structures** (2022)
-E. Minichiello
+* Diffeological Principal Bundles and Principal Infinity Bundles, 52 pages, **Journal of Homotopy and Related Structures** (2022)\
+Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2202.11023), [paper link](https://link.springer.com/article/10.1007/s40062-024-00347-4)
 
-* Categorical Models for Path Spaces, 34 pages, **Advances in Mathematics 415**, (2022)
-E. Minichiello, M. Rivera, M. Zeinalian
+* Categorical Models for Path Spaces, 34 pages, **Advances in Mathematics 415**, (2022)\
+Emilio Minichiello, [Manuel Rivera](https://riveramanuel.com/), [Mahmoud Zeinalian](https://www.zeinalian.com/)\
 [arXiv link](https://arxiv.org/abs/2201.03046), [paper link](https://www.sciencedirect.com/science/article/abs/pii/S0001870823000415)
 
-* Smocked Metric Spaces and their Tangent Cones, 69 pages, **Missouri Journal of Mathematical Sciences 33(1): 27-99** (2021)
-C. Sormani, D. Kazaras, D. Afrifa, V. Antonetti, M. Dinowitz, H. Drillick, M. Farahzad, S. George, A. L. Hepburn, L. T. Huynh, E. Minichiello, J. M. Pillati, S. Rendla, A. Yamin
+* Smocked Metric Spaces and their Tangent Cones, 69 pages, **Missouri Journal of Mathematical Sciences 33(1): 27-99** (2021)\
+C. Sormani, D. Kazaras, D. Afrifa, V. Antonetti, M. Dinowitz, H. Drillick, M. Farahzad, S. George, A. L. Hepburn, L. T. Huynh, E. Minichiello, J. M. Pillati, S. Rendla, A. Yamin\
 [arXiv link](https://arxiv.org/abs/1906.03403), [paper link](https://projecteuclid.org/journals/missouri-journal-of-mathematical-sciences/volume-33/issue-1/Smocked-Metric-Spaces-and-Their-Tangent-Cones/10.35834/2021/3301027.short)
 
 ## Other work
