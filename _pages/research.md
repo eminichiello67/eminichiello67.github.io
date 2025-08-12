@@ -8,6 +8,10 @@ nav_order: 1
 ---
 
 # Preprints and Publications
+* Thomason-Type Model Structures on Simplicial Complexes and Graphs, 41 pages, (2025)\
+Emilio Minichiello\
+[arXiv link](https://arxiv.org/abs/2508.08195)
+
 * Structured Decompositions, 54 pages, (2025)\
 [Ben Bumpus](https://bmbumpus.com/about-me/), [Zoltan Kocsis](https://existence.property/), [Jade Master](https://sites.google.com/view/jadeedenstarmaster/home), Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2207.06091)
