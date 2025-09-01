@@ -28,7 +28,7 @@ Okay, now the next step is to cross out all of the rows in which the left hand n
 {% endfigure %}
 </div>
 
-Finally we add up the numbers on the left hand column.
+Finally we add up the numbers on the right hand column.
 
 <div align="center">
 {% figure caption:"Figure 3: Step 3 of Duplation-Mediation" %}
@@ -42,9 +42,9 @@ The first thing I noticed is that if we convert our numbers from decimal to bina
 
 Well what helped me understand this the most was by writing $$9$$ in its binary expansion. $$9 = 2^3 + 2^0 = 8 + 1$$. So $$9 \times 6 = (2^3 + 2^0) \times 6 = 2^0 \times 6 + 2^3 \times 6$$. In the pictures above, we have $$2^0 \times 6 = 6$$ appearing at the top, and $$2^3 \times 6 = 48$$ appearing at the bottom. In other words, we crossed out the other two rows because $$2^1$$ and $$2^2$$ don't appear in the binary expansion of $$9$$!
 
-But why does the left hand column give the binary expansion of $$9$$? Well, what is the binary expansion of $$9$$? It is $$1001$$. The rightmost digit is $$1$$ because $$9$$ is odd, i.e. $$9 \text{ mod } 2 = 1$$. The next digit can be obtained by looking at the right shift of $$1001$$, which is $$100$$, which in decimal is $$\lfloor 9/2 \rfloor = 4$$. Since this number is even, the rightmost digit is $$0$$. Doing this again we have $$\lfloor 4/2 \rfloor = 2 = 10$$, and $$\lfloor 2 \rfloor = 1$$ in decimal and binary. In other words, you can easily obtain the binary representation of any integer by just keep on dividing it in half and seeing whether it is even or odd. 
+But why does the left hand column give the binary expansion of $$9$$? Well, what is the binary expansion of $$9$$? It is $$1001$$. The rightmost digit is $$1$$ because $$9$$ is odd, i.e. $$9 \text{ mod } 2 = 1$$. The next digit can be obtained by looking at the right shift of $$1001$$, which is $$100$$, which in decimal is $$\lfloor 9/2 \rfloor = 4$$. Since this number is even, the rightmost digit is $$0$$. Doing this again we have $$\lfloor 4/2 \rfloor = 2 = 10$$, and $$\lfloor 2 \rfloor = 1$$ in decimal and binary. In other words, you can easily obtain the binary representation of any integer by just keep on dividing it in half and seeing whether it is even or odd.
 
-Hopefully this little post brought you some joy and taught you something new. It should be said that this algorithm is technically not any more efficien than the usual way of multiplying, they are both $$\mathcal{O}(n^2)$$. But I find multiplying and dividing by $$2$$ mentally easier, and then at the end we just sum them up.
+Hopefully this little post brought you some joy and taught you something new. It should be said that this algorithm is technically not any more efficient than the usual way of multiplying, they are both $$\mathcal{O}(n^2)$$. But I find multiplying and dividing by $$2$$ mentally easier, and then at the end we just sum them up.
 
 
 ---
