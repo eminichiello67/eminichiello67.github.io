@@ -169,6 +169,15 @@ Here we list some papers in the burgeoning subject of discrete homotopy theory, 
 </details>
 
 <details>
+    <summary>(2017) <strong>Box Complexes and Homotopy Theory of Graphs</strong> by Takahiro Matsushita</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<ul>
+    <li>Homology, Homotopy and Applications, vol. 19(2), 2017, pp.175–197 (<a href="http://dx.doi.org/10.4310/HHA.2017.v19.n2.a10">link</a>) </li>
+</ul>
+</details>
+
+<details>
     <summary>(2025) <strong>Thomason-Type Model Structures on Simplicial Complexes and Graphs</strong> by Emilio Minichiello</summary>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
