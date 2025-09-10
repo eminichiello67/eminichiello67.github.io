@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-09-10T17:38:26+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">Papers on Graph Homotopy Theory</title><link href="https://eminichiello67.github.io/blog/2025/graphhomotopytheory/" rel="alternate" type="text/html" title="Papers on Graph Homotopy Theory" /><published>2025-09-01T00:00:00+00:00</published><updated>2025-09-01T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2025/graphhomotopytheory</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2025/graphhomotopytheory/"><![CDATA[<p>Here we list some papers in the burgeoning subject of discrete homotopy theory, which considers applications of homotopy theory to discrete mathematics. The largest branch of this subject is graph homotopy theory, which itself splits into two sub-pieces: the \(\times\)-homotopy theory and the \(A\)-homotopy theory, which can be thought of as the simplicial graph homotopy theory and the cubical graph homotopy theory, respectively. This page will be updated occasionally</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eminichiello67.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eminichiello67.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-09-10T17:57:05+00:00</updated><id>https://eminichiello67.github.io/feed.xml</id><title type="html">Emilio Minichiello</title><subtitle></subtitle><entry><title type="html">Papers on Graph Homotopy Theory</title><link href="https://eminichiello67.github.io/blog/2025/graphhomotopytheory/" rel="alternate" type="text/html" title="Papers on Graph Homotopy Theory" /><published>2025-09-01T00:00:00+00:00</published><updated>2025-09-01T00:00:00+00:00</updated><id>https://eminichiello67.github.io/blog/2025/graphhomotopytheory</id><content type="html" xml:base="https://eminichiello67.github.io/blog/2025/graphhomotopytheory/"><![CDATA[<p>Here we list some papers in the burgeoning subject of discrete homotopy theory, which considers applications of homotopy theory to discrete mathematics. The largest branch of this subject is graph homotopy theory, which itself splits into two sub-pieces: the \(\times\)-homotopy theory and the \(A\)-homotopy theory, which can be thought of as the simplicial graph homotopy theory and the cubical graph homotopy theory, respectively. This page will be updated occasionally</p>
 
 <hr />
 
@@ -154,6 +154,15 @@
 
 <ul>
     <li>	Journal of Combinatorial Theory, Series A 116.1 (2009): 180-194. (<a href="https://doi.org/10.1016/j.jcta.2008.06.001">link</a>) </li>
+</ul>
+</details>
+
+<details>
+    <summary>(2017) <strong>Box Complexes and Homotopy Theory of Graphs</strong> by Takahiro Matsushita</summary>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<ul>
+    <li>Homology, Homotopy and Applications, vol. 19(2), 2017, pp.175–197 (<a href="http://dx.doi.org/10.4310/HHA.2017.v19.n2.a10">link</a>) </li>
 </ul>
 </details>
 
