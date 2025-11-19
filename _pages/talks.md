@@ -9,6 +9,7 @@ nav_order: 4
 
 | Title | Event | Year | Links |
 | - | - | - | - |
+| Thomason-Type Model Structures on Simplicial Complexes and Graphs | [NYC Category Theory Seminar](http://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html) | 2025 | [Video Link](https://www.youtube.com/watch?v=Fl-MdOfLrkk) |
 | Coverages and Grothendieck Toposes | [Topology, Geometry, and Physics Seminar](https://www.zeinalian.com/workshop) | 2025 | [Video Link 1](https://youtu.be/G6kCMcRfRlI?si=AOORPnpkbdg5VRCg), [Video Link 2](https://youtu.be/nzwPPROcaKM?si=6lFFVUHDvHtVJI7p), [Video Link 3](https://youtu.be/c79Z_m4PasE) |
 | Diffeology for Everybody | [MAA Metro NY Annual Meeting](http://sections.maa.org/metrony/) | 2025 | [Slides](https://www.dropbox.com/scl/fi/auayu1qb6y4u3gawdnrdu/MAA_Diffeology_Presentation-1.pdf?rlkey=p3segbm3s1ubtpkifw56xifji&e=1&st=x9rg8nay&dl=0) |
 | Structured Decomposition Categories | [NYC Category Theory Seminar](http://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html) | 2025 | [Video Link](https://www.youtube.com/watch?v=h5sQqUIexu0&ab_channel=TheNewYorkCityCategoryTheorySeminar) |

@@ -188,6 +188,16 @@ Here we list some papers in the burgeoning subject of discrete homotopy theory, 
 
 ---
 
+## Path Homology
+<details>
+    <summary>(2012) <strong>Homologies of Path Complexes and Digraphs</strong> by Alexander Grigor'yan, Yong Lin, Yuri Muranov, Shing-Tung Yau</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<ul>
+    <li>arXiv (<a href="https://arxiv.org/abs/1207.2834">link</a>) </li>
+</ul>
+</details>
+
 ## Čech Closure Spaces and Pseudotopological Spaces
 
 <details>
