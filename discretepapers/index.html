@@ -9,9 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Papers on Graph Homotopy Theory | Emilio Minichiello</title>
+    <title>discretepapers | Emilio Minichiello</title>
     <meta name="author" content="Emilio  Minichiello">
-    <meta name="description" content="A repository of papers">
+    <meta name="description" content="">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -35,7 +35,7 @@
     <!-- Styles -->
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://eminichiello67.github.io/blog/2025/graphhomotopytheory/">
+    <link rel="canonical" href="https://eminichiello67.github.io/discretepapers/">
 
     <!-- Dark Mode -->
     
@@ -73,8 +73,8 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/blog/">blog</a>
               </li>
 
               <!-- Other pages -->
@@ -93,8 +93,8 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/teaching/">teaching</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/discretepapers/">discretepapers</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/discretepapers/">discretepapers<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Toogle theme mode -->
@@ -120,37 +120,69 @@
 
         <!-- Content -->
         <div class="container mt-5">
-             <!-- _layouts/post.html -->
+             <!-- page.html -->
+        <div class="post">
 
-<div class="post">
-    <header class="post-header">
-        <h1 class="post-title">Papers on Graph Homotopy Theory</h1>
-        <p class="post-meta">
-            September 1, 2025</p>
-        <p class="post-tags">
-            <a href="/blog/2025">
-                <i class="fas fa-calendar fa-sm"></i> 2025
-            </a>   ·   <a href="/blog/tag/graphs">
-                <i class="fas fa-hashtag fa-sm"></i> graphs,</a>
-              <a href="/blog/tag/homotopy">
-                <i class="fas fa-hashtag fa-sm"></i> homotopy</a>
-              <a href="/blog/tag/theory">
-                <i class="fas fa-hashtag fa-sm"></i> theory</a>
-                
-            ·   <a href="/blog/category/math">
-                <i class="fas fa-tag fa-sm"></i> math</a>
-              
-        </p>
-    </header>
+          <header class="post-header">
+            <h1 class="post-title">discretepapers</h1>
+            <p class="post-description"></p>
+          </header>
 
-    <article class="post-content">
-        
-        <div id="markdown-content">
-<p>Here we list some papers in the burgeoning subject of discrete homotopy theory, which considers applications of homotopy theory to discrete mathematics. The largest branch of this subject is graph homotopy theory, which itself splits into two sub-pieces: the \(\times\)-homotopy theory and the \(A\)-homotopy theory, which can be thought of as the simplicial graph homotopy theory and the cubical graph homotopy theory, respectively. This page will be updated occasionally</p>
+          <article>
+            <p>This page is a repository of papers that study discrete mathematical structures like graphs and simplicial complexes using tools of algebraic topology: namely homology and homotopy groups. It will be updated occasionally.</p>
+
+<hr>
+<h1 id="graph-homotopy-and-homology">Graph Homotopy and Homology</h1>
+<p>In this section we look at various ways of obtaining homotopy and homology theories from graphs.</p>
+
+<hr>
+
+<h2 id="x-homotopy-theory">X-Homotopy Theory</h2>
+<p>We obtain a space from a simple, undirected graph \(G\) by looking at the simplicial complex \(\text{Cl}(G)\), called its <strong>clique complex</strong>. We can study important combinatorial properties of the graph \(G\) using the homotopy and homology of various constructions of its clique complex. For example, in 1978 Lovász proved Kneser’s conjecture by obtaining the chromatic number of the family of Kneser graphs. This began the area of topological combinatorics. He did this by finding a lower bound on the chromatic number of a graph in terms of the homotopy connectivity of \(\text{Cl}(G^{K_2})\). For more on this check out <a href="https://www.sciencedirect.com/science/article/pii/0097316578900225" rel="external nofollow noopener" target="_blank">Lovász’s original paper</a>, this <a href="https://web.archive.org/web/20041129001951/http://www.univie.ac.at/EMIS/newsletter/current/current9.pdf" rel="external nofollow noopener" target="_blank">survey by Mark de Longueville</a>, this <a href="https://arxiv.org/abs/2307.00299v3" rel="external nofollow noopener" target="_blank">paper on the state-of-the-art</a> regarding these ideas and <a href="https://doi.org/10.1016/j.ejc.2008.04.009" rel="external nofollow noopener" target="_blank">Dochtermann’s paper (Remark 3.6)</a> displaying the connection of Hom complexes with clique complexes.</p>
+
+<details>
+    <summary>(2009) <strong>Hom complexes and homotopy theory in the category of graphs </strong> by Anton Dochtermann</summary>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<ul>
+    <li>European Journal of Combinatorics 30.2 (2009): 490-509 (<a href="https://doi.org/10.1016/j.ejc.2008.04.009" rel="external nofollow noopener" target="_blank">link</a>) </li>
+    <li>This is the paper that starts \(\times\)-homotopy theory of undirected, simple loop graphs (graphs with at most one loop at each vertex, at most one edge between any two vertices), evolving out of the study of the Hom complex of loop graphs by Babson, Kozlov, Csorba, Matsushita amongst many others.</li>
+</ul>
+</details>
+
+<details>
+    <summary>(2009) <strong>Homotopy groups of Hom complexes of graphs</strong> by Anton Dochtermann</summary>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<ul>
+    <li>	Journal of Combinatorial Theory, Series A 116.1 (2009): 180-194. (<a href="https://doi.org/10.1016/j.jcta.2008.06.001" rel="external nofollow noopener" target="_blank">link</a>) </li>
+</ul>
+</details>
+
+<details>
+    <summary>(2017) <strong>Box Complexes and Homotopy Theory of Graphs</strong> by Takahiro Matsushita</summary>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<ul>
+    <li>Homology, Homotopy and Applications, vol. 19(2), 2017, pp.175–197 (<a href="http://dx.doi.org/10.4310/HHA.2017.v19.n2.a10" rel="external nofollow noopener" target="_blank">link</a>) </li>
+    <li>In this paper, Matsushita crafts two model structures on the category of loop graphs \( \mathbf{Gr}_\ell \). One of these model structures is Quillen equivalent to the classical Quillen model structure on spaces, and the other is Quillen equivalent to a \(\mathbb{Z}_2\)-equivariant version of the classical model structure on spaces. In my paper below, I show that the former model structure is actually right transferred from spaces, and factors through a model structure on reflexive graphs and on simplicial complexes, showing they are all Quillen equivalent.</li>
+</ul>
+</details>
+
+<details>
+    <summary>(2025) <strong>Thomason-Type Model Structures on Simplicial Complexes and Graphs</strong> by Emilio Minichiello</summary>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<ul>
+    <li>arXiv (<a href="https://arxiv.org/abs/2508.08195" rel="external nofollow noopener" target="_blank">link</a>) </li>
+</ul>
+</details>
 
 <hr>
 
 <h2 id="a-homotopy-theory">A-Homotopy Theory</h2>
+<p>In A-homotopy theory, we craft a space from a simple, undirected graph by probing it with cubes. This theory was developed predominantly by Hélène Barcelo and her collaborators in the early 2000s, inspired by earlier work of Atkins studying networks using simplicial complexes.</p>
+
 <details>
     <summary>(2001) <strong>Foundations of a Connectivity Theory for Simplicial Complexes</strong> by Hélène Barcelo, Xenia Kramer, Reinhard Laubenbacher and Christopher Weaver.</summary>
     <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
@@ -292,51 +324,11 @@
 </ul>
 </details>
 
-<hr>
-
-<h2 id="x-homotopy-theory">X-Homotopy Theory</h2>
-
-<details>
-    <summary>(2009) <strong>Hom complexes and homotopy theory in the category of graphs </strong> by Anton Dochtermann</summary>
-    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-
-<ul>
-    <li>European Journal of Combinatorics 30.2 (2009): 490-509 (<a href="https://doi.org/10.1016/j.ejc.2008.04.009" rel="external nofollow noopener" target="_blank">link</a>) </li>
-</ul>
-</details>
+<h2 id="path-homology-or-glmy-theory">Path Homology or GLMY theory</h2>
+<p>The GLMY (Giro)</p>
 
 <details>
-    <summary>(2009) <strong>Homotopy groups of Hom complexes of graphs</strong> by Anton Dochtermann</summary>
-    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-
-<ul>
-    <li>	Journal of Combinatorial Theory, Series A 116.1 (2009): 180-194. (<a href="https://doi.org/10.1016/j.jcta.2008.06.001" rel="external nofollow noopener" target="_blank">link</a>) </li>
-</ul>
-</details>
-
-<details>
-    <summary>(2017) <strong>Box Complexes and Homotopy Theory of Graphs</strong> by Takahiro Matsushita</summary>
-    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-
-<ul>
-    <li>Homology, Homotopy and Applications, vol. 19(2), 2017, pp.175–197 (<a href="http://dx.doi.org/10.4310/HHA.2017.v19.n2.a10" rel="external nofollow noopener" target="_blank">link</a>) </li>
-</ul>
-</details>
-
-<details>
-    <summary>(2025) <strong>Thomason-Type Model Structures on Simplicial Complexes and Graphs</strong> by Emilio Minichiello</summary>
-    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-
-<ul>
-    <li>arXiv (<a href="https://arxiv.org/abs/2508.08195" rel="external nofollow noopener" target="_blank">link</a>) </li>
-</ul>
-</details>
-
-<hr>
-
-<h2 id="path-homology">Path Homology</h2>
-<details>
-    <summary>(2012) <strong>Homologies of Path Complexes and Digraphs</strong> by Alexander Grigor'yan, Yong Lin, Yuri Muranov, Shing-Tung Yau</summary>
+    <summary>(2012) <strong>Homologies of Path Complexes and Digraphs</strong> by Alexander Grigoyan, Yong Lin, Yuri Muranov, Shing-Tung Yau</summary>
     <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
 <ul>
@@ -363,9 +355,10 @@
     <li>	J. Appl. Comput. Topol. 8 (2024), no. 3, 579-641 (<a href="https://doi.org/10.1007/s41468-024-00183-8" rel="external nofollow noopener" target="_blank">link</a>) </li>
 </ul>
 </details>
-</div>
-    </article>
-</div>
+
+          </article>
+
+        </div>
  
         </div>
 
