@@ -9,7 +9,7 @@ nav_order: 1
 
 # Preprints and Publications
 * Hypercovers in Differential Geometry, 60 pages (preprint version) (2026)\
-Emilio Minichiello and [Cheyne Glass](https://cheynejglass.com/)\
+[Cheyne Glass](https://cheynejglass.com/), Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2602.11971)
 
 * Thomason-Type Model Structures on Simplicial Complexes and Graphs, 41 pages, **Applied Categorical Structures, Volume 34, article number 12, (2026)** (2025)\
