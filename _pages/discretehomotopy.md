@@ -148,7 +148,7 @@ In A-homotopy theory, we craft a space from a simple, undirected graph by probin
 (<a href="https://doi.org/10.5802/alco.151.">link</a>) </li>
     <li> The main theorem of this paper is the following: Suppose that \(G \) is a graph without 3 or 4-cycles. Then \(A_n(G,x) = 0 \) for every \(n \geq 2 \) and \(x \in G \).</li>
     <li> This result is the homotopy group analogue of a similar theorem proved by Barcelo, Greene, Jarrah and Welker for cubical homology.</li>
-    <li> This result can nowadays be proved using the covering space theory developed in [Kapulkin-Mavinkurve (2025)](https://doi.org/10.1016/j.aam.2024.102838). Indeed, a graph with no 3 or 4-cycles has a forest for an universal cover. Kapulkin-Mavinkurve prove that the universal cover induces an isomorphism on higher homotopy groups, proving the theorem, as forests can easily be shown to have zero higher A-homotopy groups.</li>
+    <li> This result can nowadays be proved using the covering space theory developed in <a href="https://doi.org/10.1016/j.aam.2024.102838">[Kapulkin-Mavinkurve (2025)]</a>. Indeed, a graph with no 3 or 4-cycles has a forest for an universal cover. Kapulkin-Mavinkurve prove that the universal cover induces an isomorphism on higher homotopy groups, proving the theorem, as forests can easily be shown to have zero higher A-homotopy groups.</li>
 </ul>
 </details>
 
@@ -171,7 +171,7 @@ In A-homotopy theory, we craft a space from a simple, undirected graph by probin
 <ul>
     <li>Compositio Mathematica 160, no. 12 (2024): 2856–903.
 (<a href="https://doi.org/10.1112/S0010437X24007486.">link</a>) </li>
-    <li>This paper proved the following conjecture from [Babson, Barcelo,Longueville and Laubenbacher (2006)](https://doi.org/10.1007/s10801-006-9100-0): Given a graph \(G\), there exists a topological space \(X_G\) such that \(A_n(G) \cong \pi_n(X_G) \) for all \(n \geq 0\). </li>
+    <li>This paper proved the following conjecture from <a href="https://doi.org/10.1007/s10801-006-9100-0">[Babson, Barcelo,Longueville and Laubenbacher (2006)] </a>: Given a graph \(G\), there exists a topological space \(X_G\) such that \(A_n(G) \cong \pi_n(X_G) \) for all \(n \geq 0\). </li>
     <li>Kapulkin-Carranza prove this by crafting a cubical nerve functor from graphs to cubical sets. After some very involved calculations, they show that this cubical nerve is a cubical Kan complex, and can transfer a category of fibrations structure over to graphs, and prove that the homotopy groups of this cubical Kan complex are precisely the A-homotopy groups. This gives a powerful tool to study the A-homotopy groups of a graph, but this cubical nerve functor is still very hard to study. Even for the simplest graphs, it is wildly huge, with nondegenerate cells in every dimension (consider the map \(Q_n \to K_2 \) that takes the logical sum 0 + 0 = 1 + 1 = 0, 0 + 1 = 1 + 0 = 1, this is a nondegenerate graph map that is nondegenerate in every dimension).</li>
 </ul>
 </details>
@@ -207,16 +207,153 @@ In A-homotopy theory, we craft a space from a simple, undirected graph by probin
 
 
 ## Path Homology or GLMY theory
-The GLMY (Giro)
+The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau), constructs homology groups using the paths in a simple digraph (No loops, no multi-edges). It was defined in 2012, and many papers have now been written about it. Barcelo found a connection between path homology and cubical/A-homology of undirected simple graphs, and Asao found a spectral sequence relating path homology and Magnitude homology. GLMY (2014) defined corresponding homotopy groups for digraphs, and proved that by embedding simple graphs into digraphs, one obtains the A-homotopy groups.
 
 <details>
-    <summary>(2012) <strong>Homologies of Path Complexes and Digraphs</strong> by Alexander Grigoyan, Yong Lin, Yuri Muranov, Shing-Tung Yau</summary>
+    <summary>(2012) <strong>Homologies of Path Complexes and Digraphs</strong> by Alexander Grigor'yan, Yong Lin, Yuri Muranov, Shing-Tung Yau</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>arXiv (<a href="https://arxiv.org/pdf/1407.0234">link</a>) </li>
+        <li>Introduces path homology for digraphs (no loops, no multi-edges). Interestingly, they first define path homology for a new kind of object they define called a path complex, and they define path homology for path complexes. They show that every simplicial complex and digraph gives a path complex.</li>
+    </ul>
+</details>
+
+
+<details>
+    <summary>(2014) <strong>Homotopy Theory for Digraphs </strong> by Alexander Grigor'yan, Yong Lin, Yuri Muranov, Shing-Tung Yau</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>arXiv (<a href="https://arxiv.org/abs/1207.2834">link</a>) </li>
+        <li> Pure and Applied Mathematical Quarterly (2023) Note: It seems like this paper was published in 2014 and 2023?  (<a href="https://projecteuclid.org/journals/pure-and-applied-mathematics-quarterly/volume-10/issue-4/Homotopy-Theory-for-Digraphs/10.4310/PAMQ.2014.v10.n4.a2.full">link</a>) </li>
+        <li> Introduces simple digraph homotopy groups, proves that abelianization of \(\pi_1 \) in this theory is \( H_1 \) in path homology. Show that when restricting to simple graphs, this homotopy theory recovers A-homotopy theory </li>
+    </ul>
+    </details>
+
+<details>
+    <summary>(2018) <strong>Homology of Digraphs </strong> by Alexander Grigor'yan, Rolando Jimenez, Yuri Muranov</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li> Mathematical Notes 109.5 (2021): 712-726.(<a href="https://link.springer.com/article/10.1134/S0001434621050059">link</a>) </li>
+        <li> Extends cubical/A-homology of simple graphs to digraphs, compares this with path homology of digraphs. </li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2015) <strong>On a cohomology of digraphs and Hochschild cohomology</strong> by Alexander Grigor'yan, Yuri Muranov, Shing-Tung Yau</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>Journal of Homotopy and Related Structures 11.2 (2016): 209-230.(<a href="https://link.springer.com/article/10.1007/s40062-015-0103-1">link</a>) </li>
+        <li>Uses path cohomology of digraphs to give a new proof of a theorem of Gerstenhaber and Schack (1983) which gives an isomorphism between the cohomology of a simplicial complex and the Hocschild cohomology of an certain algebra associated with the simplicial complex.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2016) <strong>On the path homology theory of digraphs and Eilenberg–Steenrod axioms</strong> by Alexander Grigor'yan, Rolando Jimenez, Yuri Muranov, Shing-Tung Yau</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li> Homology, Homotopy and Applications 20.2 (2018): 179-205.(<a href="https://link.intlpress.com/JDetail/1805806044473344001">link</a>) </li>
+        <li>Proves that a version of the Eilenberg-Steenrod axioms holds for path homology of digraphs.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2023) <strong>On the path homology of Cayley digraphs and covering digraphs
+</strong> by Shaobo Di, Sergei O. Ivanov, Lev Mukoseev, Mengmeng Zhang </summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li> Journal of Algebra Volume 653, 1 September 2024, Pages 156-199(<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869324002333?via%3Dihub">link</a>) </li>
+        <li>Develops some covering space theory for digraphs and uses this to connect path homology of Cayley digraphs to group homology computations.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2025) <strong>Calculating Higher Digraph Homotopy Groups</strong> by Stephen Theriault, Jie Wu, Shing-Tung Yau and Mengmeng Zhang</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/pdf/2504.04119">arXiv link</a>) </li>
+        <li>Proves that GLMY homotopy groups of digraphs can be constructed using maps from maps from certain digraph cubes into the digraph. They also define the r-fundamental group of digraphs. They do a really fantastic computation which computes the path homology of the cayley digraph of \(\mathbb{Q}\) with generating subset \( \{1 / n! \, | \, n \geq 2 \}\).</li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2025) <strong>Closed Neighborhood Complexes of Graphs</strong> by Takahiro Matsushita</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/2511.12608">arXiv link</a>) </li>
+        <li>Proves that the closed neighborhood complex of a graph \(G \) has fundamental group isomorphic to the GLMY fundamental group of \( G \)</li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2026) <strong>Path Homology of Circulant Digraphs</strong> by Xinxiang Tang and Shing-Tung Yau</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/2602.04140">arXiv link</a>) </li>
+        <li>Computes path homology of circulant (di)graphs using linear algebra techniques.</li>
+    </ul>
+</details>
+
+## Magnitude Homology
+
+<details>
+    <summary>(2015) <strong>Categorifying the Magnitude of a Graph</strong> by Richard Hepworth and Simon Willerton</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/1505.04125">arXiv link</a>) </li>
+        <li>Homology, Homotopy and Applications, vol. 19(2), 2017, pp.31-60 (<a href="https://doi.org/10.4310/HHA.2017.v19.n2.a3">link</a>) </li>
+        <li>Categorifies the notion of Magnitude of Leinster's to a homology theory. This gives a bigraded homology \( MH_{k,l}(G) \) of a graph, whose euler characterstic power series gives Leinster's magnitude power series. Particularly interesting is the observation that many graphs have only nontrivial magnitude homology on the diagonal \(k = l \).</li>
+    </ul>
+</details>
+
+
+## Magnitude and Path Homology Spectral Sequence
+<details>
+    <summary>(2022) <strong>Magnitude Homology and Path Homology</strong> by Yasuhiko Asao</summary>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
 <ul>
-    <li>arXiv (<a href="https://arxiv.org/abs/1207.2834">link</a>) </li>
+    <li>Bulletin of the London Mathematical Society(<a href="https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/blms.12734">link</a>) </li>
+    <li>Crafts a spectral sequence whose first page gives magnitude homology and the diagonal of the second page gives path homology. As a consequence, proves that path homology is trivial in dim \( k \geq 2 \) and is nontrivial in dim 1 if any of the edges of an undirected graph is contained in a cycle of length \( \geq 5 \)</li>
 </ul>
 </details>
+
+<details>
+    <summary>(2023) <strong>The reachability homology of a directed graph </strong> by Richard Hepworth and Emily Roff</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/2404.06689">arXiv link</a>) </li>
+        <li>	International Mathematics Research Notices, 2025(3):1-18 (<a href="https://academic.oup.com/imrn/article/2025/3/rnae280/7978245">link</a>) </li>
+        <li>Studies the Magnitude-Path Spectral Sequence (MPSS) and calls the infinity page reachability homology. Gives a nice characterization of this homology and shows some interesting properties, i.e. Kunneth and Mayer-Vietoris Theorems.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2024) <strong>The fundamental group and the magnitude-path spectral sequence of a directed graph</strong> by Daisuke Kishimoto and Yichen Tong</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/2411.02838">arXiv link</a>) </li>
+        <li>J. London Math. Soc., 112 (<a href="https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/jlms.70210">link</a>) </li>
+        <li>Studies \(r\)-fundamental groups of digraphs using the magnitude-path spectral sequence.</li>
+    </ul>
+</details>
+
+
+
+<details>
+    <summary>(2024) <strong>Bigraded path homology and the magnitude-path spectral sequence
+</strong> by Richard Hepworth and Emily Roff</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/2404.06689">arXiv link</a>) </li>
+        <li>Studies the Magnitude-Path Spectral Sequence (MPSS) and finds that every page satisfies versions of excision and Mayer-Vietoris. They call page 2 bigraded path homology, and they construct a cofibration category structure on graphs where weak equivalences induce isomorphisms on bigraded path homology.</li>
+    </ul>
+</details>
+
+## Uberhomology
+
+## Classical Simplicial Complex topology
+
+## Matching Complexes
 
 ## Čech Closure Spaces and Pseudotopological Spaces
 
