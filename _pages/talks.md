@@ -9,6 +9,8 @@ nav_order: 4
 
 | Title | Event | Year | Links |
 | - | - | - | - |
+| Graphs and Homotopy Theory | [NY Combinatorics Day 2026](https://www.nycombinatorics.org/combinatorics-day/nycd-2026) | 2026 | [Slides]({% link assets/slides/slides_graphs_homotopy_theory_2026.pdf %})|
+| Graphs and Homotopy Theory | Iona College Math Seminar | 2026 | NA |
 | Introduction to Graph Homotopy Theory | [CUNY Math PhD Program Pizza Seminar](https://sites.google.com/site/gradcenterseminars/current-seminars/graduate-student-colloquium/2025-2026) | 2025 | NA |
 | Thomason-Type Model Structures on Simplicial Complexes and Graphs | [NYC Category Theory Seminar](http://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html) | 2025 | [Video Link](https://www.youtube.com/watch?v=Fl-MdOfLrkk) |
 | Coverages and Grothendieck Toposes | [Topology, Geometry, and Physics Seminar](https://www.zeinalian.com/workshop) | 2025 | [Video Link 1](https://youtu.be/G6kCMcRfRlI?si=AOORPnpkbdg5VRCg), [Video Link 2](https://youtu.be/nzwPPROcaKM?si=6lFFVUHDvHtVJI7p), [Video Link 3](https://youtu.be/c79Z_m4PasE) |

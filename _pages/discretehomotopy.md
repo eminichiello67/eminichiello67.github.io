@@ -17,7 +17,9 @@ In this section we look at various ways of obtaining homotopy and homology theor
 ---
 
 ## X-Homotopy Theory
-We obtain a space from a simple, undirected graph $$G$$ by looking at the simplicial complex $$\text{Cl}(G) $$, called its **clique complex**. We can study important combinatorial properties of the graph $$ G $$ using the homotopy and homology of various constructions of its clique complex. For example, in 1978 Lovász proved Kneser's conjecture by obtaining the chromatic number of the family of Kneser graphs. This began the area of topological combinatorics. He did this by finding a lower bound on the chromatic number of a graph in terms of the homotopy connectivity of $$\text{Cl}(G^{K_2})$$. For more on this check out [Lovász's original paper](https://www.sciencedirect.com/science/article/pii/0097316578900225), this [survey by Mark de Longueville](https://web.archive.org/web/20041129001951/http://www.univie.ac.at/EMIS/newsletter/current/current9.pdf), this [paper on the state-of-the-art](https://arxiv.org/abs/2307.00299v3) regarding these ideas and [Dochtermann's paper (Remark 3.6)](https://doi.org/10.1016/j.ejc.2008.04.009) displaying the connection of Hom complexes with clique complexes.
+We obtain a space from a simple, undirected graph $$G$$ by looking at the simplicial complex $$\text{Cl}(G) $$, called its **clique complex**. We can study important combinatorial properties of the graph $$ G $$ using the homotopy and homology of various constructions of its clique complex.
+
+For example, in 1978 Lovász proved Kneser's conjecture by obtaining the chromatic number of the family of Kneser graphs. This began the area of topological combinatorics. He did this by finding a lower bound on the chromatic number of a graph in terms of the homotopy connectivity of $$\text{Cl}(G^{K_2})$$. For more on this check out [Lovász's original paper](https://www.sciencedirect.com/science/article/pii/0097316578900225), this [survey by Mark de Longueville](https://web.archive.org/web/20041129001951/http://www.univie.ac.at/EMIS/newsletter/current/current9.pdf), this [paper on the state-of-the-art](https://arxiv.org/abs/2307.00299v3) regarding these ideas and [Dochtermann's paper (Remark 3.6)](https://doi.org/10.1016/j.ejc.2008.04.009) displaying the connection of Hom complexes with clique complexes.
 
 <details>
     <summary>(2009) <strong>Hom complexes and homotopy theory in the category of graphs </strong> by Anton Dochtermann</summary>
@@ -262,7 +264,7 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <ul>
         <li> Journal of Algebra Volume 653, 1 September 2024, Pages 156-199(<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869324002333?via%3Dihub">link</a>) </li>
-        <li>Develops some covering space theory for digraphs and uses this to connect path homology of Cayley digraphs to group homology computations.</li>
+        <li>Develops some covering space theory for digraphs and uses this to connect path homology of Cayley digraphs to group homology computations. There is some really incredible stuff buried in this paper. For one, they show the following incredible result: to any digraph \(G\) one can associate the space \(N(G) = N(\text{Rch}(G)) \), which is the nerve of the preorder on \(G \) where \(x \leq y \) if \(d(x,y) < \infty \). One can then filter this simplicial set as \(N^0(G) \subseteq N^1(G) \subseteq N^2(G) \subseteq \dots \subseteq N(G) \) where each \(N^k(G) \) consists of the subcomplex of length \(k\) paths. The quotients \(M^k(G) = N^{k+1}(G)/N^k(G) \) are called the magnitude spaces, and the spectral sequence obtained from the homology of the filtered space \(N(G)\) is precisely the magnitude-path spectral sequence! This immediately raises lots of interesting questions and ideas. For example, nobody has talked about the homotopy groups of these spaces as far as I've seen. </li>
     </ul>
 </details>
 
@@ -293,7 +295,7 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
     </ul>
 </details>
 
-## Magnitude Homology
+## Magnitude Homology + Magnitude-Path Spectral Sequence
 
 <details>
     <summary>(2015) <strong>Categorifying the Magnitude of a Graph</strong> by Richard Hepworth and Simon Willerton</summary>
@@ -306,7 +308,6 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
 </details>
 
 
-## Magnitude and Path Homology Spectral Sequence
 <details>
     <summary>(2022) <strong>Magnitude Homology and Path Homology</strong> by Yasuhiko Asao</summary>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
@@ -316,6 +317,7 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
     <li>Crafts a spectral sequence whose first page gives magnitude homology and the diagonal of the second page gives path homology. As a consequence, proves that path homology is trivial in dim \( k \geq 2 \) and is nontrivial in dim 1 if any of the edges of an undirected graph is contained in a cycle of length \( \geq 5 \)</li>
 </ul>
 </details>
+
 
 <details>
     <summary>(2023) <strong>The reachability homology of a directed graph </strong> by Richard Hepworth and Emily Roff</summary>
@@ -349,9 +351,40 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
     </ul>
 </details>
 
+<details>
+    <summary>(2025) <strong>Torsion in Magnitude Homology Theories</strong> by Patrick Martin and Radmila Sazdanovic</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/2503.11976">arXiv link</a>) </li>
+        <li>Shows the existence of torsion in Eulerian magnitude homology of finite graphs.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>(2025) <strong>Eulerian magnitude homology: diagonality, injective words, and regular path homology</strong> by Luigi Caputi and Giuliamaria Menara</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/2503.06722">arXiv link</a>) </li>
+        <li>Explores Eulerian magnitude homology and the MPSS. Shows that if a graph has certain diagonal Eulerian magnitude homology then it is a complete graph. Shows that for regular magnitude homology the MPSS converges to the homology of the complex of injective words on a digraph.</li>
+    </ul>
+</details>
+
+
+
+
 ## Uberhomology
 
-## Classical Simplicial Complex topology
+## Clique Complexes and Independence Complexes
+<details>
+    <summary>(2012) <strong>Small flag complexes with torsion</strong> by Richard Hepworth and Emily Roff</summary>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <ul>
+        <li>(<a href="https://arxiv.org/abs/1208.3892">arXiv link</a>) </li>
+        <li>Canadian mathematical bulletin 57.2 (2014): 225-230 (<a href="https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/small-flag-complexes-with-torsion/E3AEBE3A52C9819E4E34648F75681529">link </a>) </li>
+        <li>Classifies all flag simplicial complexes with 12 or fewer vertices that have torsion in \(H_1 \). No flag complexes with 10 or fewer vertices have torsion in \(H_1\). Also shows that all posets with 12 or fewer elements have no torsion in first homology for their order complex. This proves a conjecture that the smallest poset whose order complex is homotopy equivalent to \(\mathbb{RP}^2 \) has 13 vertices. </li>
+    </ul>
+</details>
+
 
 ## Matching Complexes
 
