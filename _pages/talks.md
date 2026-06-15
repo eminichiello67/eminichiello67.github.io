@@ -9,6 +9,7 @@ nav_order: 4
 
 | Title | Event | Year | Links |
 | - | - | - | - |
+|Lovász’s Theorem on Chromatic Number of Graphs | [NY Graph Theory Workshop 2026](https://www.nycombinatorics.org/NYGTW/nygtw2026) | 2026 | N/A |
 | Graphs and Homotopy Theory | [NY Combinatorics Day 2026](https://www.nycombinatorics.org/combinatorics-day/nycd-2026) | 2026 | [Slides]({% link assets/slides/slides_graphs_homotopy_theory_2026.pdf %})|
 | Graphs and Homotopy Theory | Iona College Math Seminar | 2026 | NA |
 | Introduction to Graph Homotopy Theory | [CUNY Math PhD Program Pizza Seminar](https://sites.google.com/site/gradcenterseminars/current-seminars/graduate-student-colloquium/2025-2026) | 2025 | NA |

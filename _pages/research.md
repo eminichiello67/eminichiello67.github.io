@@ -8,11 +8,15 @@ nav_order: 1
 ---
 
 # Preprints and Publications
-* Hypercovers in Differential Geometry, 60 pages (preprint version) (2026)\
+* A Parameterized Algorithm for Testing whether the Limit of a Diagram is Empty, 18 pages, **submitted** (2026)\
+[Ernst Althaus](https://www.algorithmics.informatik.uni-mainz.de/people/ernst-althaus/), [Benjamin Merlin Bumpus](https://bmbumpus.com/about-me/), [James Fairbanks](https://jpfairbanks.com/), Emilio Minichiello, [Daniel Rosiak](https://danielrosiak.com/) \
+[arXiv link](https://arxiv.org/abs/2605.24240)
+
+* Hypercovers in Differential Geometry, 60 pages, **submitted** (2026)\
 [Cheyne Glass](https://cheynejglass.com/), Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2602.11971)
 
-* Thomason-Type Model Structures on Simplicial Complexes and Graphs, 41 pages, **Applied Categorical Structures, Volume 34, article number 12, (2026)** (2025)\
+* Thomason-Type Model Structures on Simplicial Complexes and Graphs, 41 pages, **Applied Categorical Structures, Volume 34, article number 12** (2025) \
 Emilio Minichiello\
 [arXiv link](https://arxiv.org/abs/2508.08195), [journal link](https://link.springer.com/article/10.1007/s10485-026-09850-6)
 

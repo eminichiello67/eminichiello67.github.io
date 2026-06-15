@@ -1407,74 +1407,18 @@ ${math}
   // See the License for the specific language governing permissions and
   // limitations under the License.
 
-  function addPolyfill(polyfill, polyfillLoadedCallback) {
-    console.debug('Runlevel 0: Polyfill required: ' + polyfill.name);
-    const script = document.createElement('script');
-    script.src = polyfill.url;
-    script.async = false;
-    if (polyfillLoadedCallback) {
-      script.onload = function() { polyfillLoadedCallback(polyfill); };
-    }
-    script.onerror = function() {
-      new Error('Runlevel 0: Polyfills failed to load script ' + polyfill.name);
-    };
-    document.head.appendChild(script);
-  }
-
-  const polyfills = [
-    {
-      name: 'WebComponents',
       support: function() {
         return 'customElements' in window &&
                'attachShadow' in Element.prototype &&
                'getRootNode' in Element.prototype &&
                'content' in document.createElement('template') &&
                'Promise' in window &&
-               'from' in Array;
-      },
-      url: 'https://distill.pub/third-party/polyfills/webcomponents-lite.js'
-    }, {
-      name: 'IntersectionObserver',
+
       support: function() {
         return 'IntersectionObserver' in window &&
-               'IntersectionObserverEntry' in window;
-      },
-      url: 'https://distill.pub/third-party/polyfills/intersection-observer.js'
-    },
-  ];
 
-  class Polyfills {
-
-    static browserSupportsAllFeatures() {
-      return polyfills.every((poly) => poly.support());
-    }
-
-    static load(callback) {
-      // Define an intermediate callback that checks if all is loaded.
-      const polyfillLoaded = function(polyfill) {
-        polyfill.loaded = true;
-        console.debug('Runlevel 0: Polyfill has finished loading: ' + polyfill.name);
-        // console.debug(window[polyfill.name]);
-        if (Polyfills.neededPolyfills.every((poly) => poly.loaded)) {
-          console.debug('Runlevel 0: All required polyfills have finished loading.');
-          console.debug('Runlevel 0->1.');
-          window.distillRunlevel = 1;
           callback();
-        }
-      };
-      // Add polyfill script tags
-      for (const polyfill of Polyfills.neededPolyfills) {
-        addPolyfill(polyfill, polyfillLoaded);
-      }
-    }
 
-    static get neededPolyfills() {
-      if (!Polyfills._neededPolyfills) {
-        Polyfills._neededPolyfills = polyfills.filter((poly) => !poly.support());
-      }
-      return Polyfills._neededPolyfills;
-    }
-  }
 
   // Copyright 2018 The Distill Template Authors
   //
@@ -1683,7 +1627,7 @@ d-appendix > distill-appendix {
   (function(exports) {
 
       function BibtexParser() {
-          
+
           this.months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
           this.notKey = [',','{','}',' ','='];
           this.pos = 0;
@@ -1819,7 +1763,7 @@ d-appendix > distill-appendix {
                       return k.toLowerCase();
                   else
                       throw "Value expected:" + this.input.substring(start) + ' for key: ' + k;
-              
+
               }        };
 
           this.value = function() {
@@ -1842,7 +1786,7 @@ d-appendix > distill-appendix {
                       return this.input.substring(start, this.pos);
                   } else {
                       this.pos++;
-                      
+
                   }            }        };
 
           this.key_equals_value = function() {
@@ -1917,7 +1861,7 @@ d-appendix > distill-appendix {
                   }
                   this.match("}");
               }        };
-      }    
+      }
       exports.toJSON = function(bibtex) {
           var b = new BibtexParser();
           b.setInput(bibtex);
@@ -1947,7 +1891,7 @@ d-appendix > distill-appendix {
               out += '}\n\n';
           }
           return out;
-          
+
       };
 
   })( exports);
@@ -2202,11 +2146,7 @@ ul li:last-of-type {
       if (this.entries) {
         this.displayEntries(this.entries);
       }
-    }
 
-    //TODO This causes an infinite loop on firefox with polyfills.
-    // This is only needed for interactive editing so no priority.
-    // disconnectedCallback() {
     // const options = { detail: [this, this.keys], bubbles: true };
     // const event = new CustomEvent('onCiteKeyRemoved', options);
     // document.dispatchEvent(event);
@@ -9230,18 +9170,7 @@ distill-header .nav a {
     window.distill.templateHasLoaded = true;
   };
 
-  window.distill = { runlevel, initialize, templateIsLoading };
 
-  /* 0. Check browser feature support; synchronously polyfill if needed */
-  if (Polyfills.browserSupportsAllFeatures()) {
-    console.debug("Runlevel 0: No need for polyfills.");
-    console.debug("Runlevel 0->1.");
-    window.distill.runlevel += 1;
-    window.distill.initialize();
-  } else {
-    console.debug("Runlevel 0: Distill Template is loading polyfills.");
-    Polyfills.load(window.distill.initialize);
-  }
 
 })));
 //# sourceMappingURL=template.v2.js.map

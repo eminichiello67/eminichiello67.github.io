@@ -206,7 +206,7 @@ In A-homotopy theory, we craft a space from a simple, undirected graph by probin
 </ul>
 </details>
 
-
+---
 
 ## Path Homology or GLMY theory
 The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau), constructs homology groups using the paths in a simple digraph (No loops, no multi-edges). It was defined in 2012, and many papers have now been written about it. Barcelo found a connection between path homology and cubical/A-homology of undirected simple graphs, and Asao found a spectral sequence relating path homology and Magnitude homology. GLMY (2014) defined corresponding homotopy groups for digraphs, and proved that by embedding simple graphs into digraphs, one obtains the A-homotopy groups.
@@ -295,6 +295,8 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
     </ul>
 </details>
 
+---
+
 ## Magnitude Homology + Magnitude-Path Spectral Sequence
 
 <details>
@@ -369,10 +371,11 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
     </ul>
 </details>
 
-
-
+---
 
 ## Uberhomology
+
+---
 
 ## Clique Complexes and Independence Complexes
 <details>
@@ -385,8 +388,11 @@ The path homology, also known as GLMY-theory (for Grigor'yan, Lin, Muranov, Yau)
     </ul>
 </details>
 
+---
 
 ## Matching Complexes
+
+---
 
 ## Čech Closure Spaces and Pseudotopological Spaces
 
