@@ -6,22 +6,27 @@ subtitle:
 nav: true
 nav_order: 6
 ---
-## Spring 2026
 
-MAT4800 - Introduction to Category Theory
+# Spring 2027
+* MAT4800 - Introduction to Category Theory
+
+## Fall 2026
+* MAT1375 - Precalculus
+* MAT2440 - Discrete Structures and Algorithms I
+
+## Spring 2026
+* MAT4800 - Introduction to Category Theory
 
 ## Fall 2025
 
-MAT1375 - Precalculus
-
-MAT2540 - Discrete Structures and Algorithms II
+* MAT1375 - Precalculus
+* MAT2540 - Discrete Structures and Algorithms II
 
 ## Spring 2025
 
-MAT1375 - Precalculus
+* MAT1375 - Precalculus
 
 ## Fall 2024
 
-MAT1375 - Precalculus
-
-MAT2440 - Discrete Structures and Algorithms I
+* MAT1375 - Precalculus
+* MAT2440 - Discrete Structures and Algorithms I

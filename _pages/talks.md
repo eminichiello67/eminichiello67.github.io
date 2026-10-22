@@ -9,6 +9,9 @@ nav_order: 4
 
 | Title | Event | Year | Links |
 | - | - | - | - |
+| Introduction to Locally Presentable Categories | [New York City Category Theory Seminar](https://www.sci.brooklyn.cuny.edu/~noson/Seminar/) | 2026 | [Video](https://www.youtube.com/watch?v=CPK7qVxpikc&t=1970s) |
+| Graph Homotopy Theory | [Applied Topology in Albany (ATiA) Seminar](https://albanymath.github.io/ATiA/) | 2026 | [Abstract](https://albanymath.github.io/ATiA/flyers/261016-seminar.pdf) |
+| Thomason-Type Model Structures on Simplicial Complexes and Graphs | [Homology and Homotopy in the World of Graphs (Switzerland, EPFL)](https://sites.google.com/view/hhgraphs/home-page) | 2026 | [Slides](https://drive.google.com/file/d/1GRg7ffRXrxMz-tcj5a9Q0aicgnmE523j/view?usp=sharing) |
 |Lovász’s Theorem on Chromatic Number of Graphs | [NY Graph Theory Workshop 2026](https://www.nycombinatorics.org/NYGTW/nygtw2026) | 2026 | N/A |
 | Graphs and Homotopy Theory | [NY Combinatorics Day 2026](https://www.nycombinatorics.org/combinatorics-day/nycd-2026) | 2026 | [Slides]({% link assets/slides/slides_graphs_homotopy_theory_2026.pdf %})|
 | Graphs and Homotopy Theory | Iona College Math Seminar | 2026 | NA |
